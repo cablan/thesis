@@ -1,0 +1,89 @@
+[comment encoding = UTF-8 /]
+[module generateDataTypes('http://www.eclipse.org/emf/2002/Ecore', 'http://www.eclipse.org/uml2/5.0.0/UML')]
+[import streamgen::main::queryUtils /]
+
+[template public generateDatatype(aClass : Class, aModel: Model)]
+[file (aClass.getModel().name.toLower().concat('/datatypes/').concat(aClass.name).concat('.java'), false)]
+package [aClass.getModel().name.toLower().concat('.datatypes')/];
+
+import java.io.Serializable;
+import java.lang.reflect.Field;
+
+[if hasStereotype(aModel, 'FlinkApplication') and aModel.eContents(Class)-> exists(c | hasStereotype(c, 'CassandraSink') and (getInputsConveyed(c)-> first() = aClass.name))]
+import com.datastax.driver.mapping.annotations.Table;
+
+@Table(name = "[aClass.name/]", keyspace = "[aModel.name.concat('_ks')/]")
+[/if]
+public class [aClass.name/] implements Serializable{
+
+  [for (p: Property | aClass.attribute) separator('\n')]
+    private [p.type.name.substitute('ELong', 'Long')/] [p.name/];
+  [/for]
+
+	private String tupleId;
+
+	private String streamId;
+
+	public String getTupleId() {
+		return this.tupleId;
+	}
+	
+	public void setTupleId(String tupleId) {
+		this.tupleId = tupleId;
+	}
+
+	public String getStreamId() {
+		return this.streamId;
+	}
+	
+	public void setStreamId(String streamId) {
+		this.streamId = streamId;
+	}
+ 
+    public [aClass.name/]() {
+
+    }
+
+    public [aClass.name/]([for (p: Property | aClass.attribute) separator(', ')][p.type.name.substitute('ELong', 'Long')/] [p.name/][/for]) {
+    [for (p: Property | aClass.attribute)]
+        this.[p.name/] = [p.name/];
+    [/for]     
+    }
+
+    [for (p: Property | aClass.attribute) separator('\n')]
+    public [p.type.name.substitute('ELong', 'Long')/] get[p.name.toUpperFirst()/]() {
+        return [p.name/];
+    }
+
+    public void set[p.name.toUpperFirst()/]([p.type.name.substitute('ELong', 'Long')/] [p.name/]) {
+        this.[p.name/] = [p.name/];
+    }
+    [/for]
+
+	@Override
+	public int hashCode() {
+		return this.tupleId.hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object other) {
+		Field t;
+		try {
+			t = other.getClass().getDeclaredField("tupleId");
+			t.setAccessible(true);
+			return this.tupleId.equals((String) t.get(other));
+		} catch (NoSuchFieldException | SecurityException e) {
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+		
+		return false;
+
+	}
+
+}
+[/file]
+[/template]

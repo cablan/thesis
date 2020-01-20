@@ -1,0 +1,6 @@
+TODO
++Define Index
++Define title for the thesis
++Ask about the proceadures to make to the enrollment with the thesis
++Ask development doubts (email)
++Ask about the repository

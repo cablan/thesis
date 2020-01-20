@@ -1,0 +1,65 @@
+[comment encoding = UTF-8 /]
+[module generatePrivacyPolicy('http://www.eclipse.org/emf/2002/Ecore', 'http://www.eclipse.org/uml2/5.0.0/UML')]
+
+[import streamgen::main::queryUtils/]
+
+[template public generateVCP(aClass : Class)]
+
+[file (aClass.getModel().name.toLower().concat('/privacypolicy/').concat(aClass.name).concat('.java'), false)]
+
+package [aClass.getModel().name.toLower().concat('.privacypolicy')/];
+
+  [for (c:Class | aClass.getModel().eContents(Class)) ]
+    [if hasStereotype(c, 'StreamDatatype')]
+      [for (subc:Class | c.eContents(Class)) ]
+import [aClass.getModel().name.toLower()/].datatypes.[subc.name/];
+      [/for]
+    [/if]
+  [/for]
+
+import org.apache.flink.api.java.tuple.Tuple;
+import org.apache.flink.streaming.api.functions.co.RichCoFlatMapFunction;
+import org.apache.flink.configuration.Configuration;
+import org.apache.flink.util.Collector;
+import java.util.*;
+
+public class [aClass.name/] implements VCPFunction<[getInputsConveyed(aClass)->first()/], [getOutputsConveyed(aClass)->first()/], Tuple, TimeWindow> {
+	
+
+
+}
+
+[/file]
+
+[/template]
+
+
+[template public generateDSEP(aClass : Class)]
+
+[file (aClass.getModel().name.toLower().concat('/privacypolicy/').concat(aClass.name).concat('.java'), false)]
+
+package [aClass.getModel().name.toLower().concat('.privacypolicy')/];
+
+  [for (c:Class | aClass.getModel().eContents(Class)) ]
+    [if hasStereotype(c, 'StreamDatatype')]
+      [for (subc:Class | c.eContents(Class)) ]
+import [aClass.getModel().name.toLower()/].datatypes.[subc.name/];
+      [/for]
+    [/if]
+  [/for]
+
+import org.apache.flink.api.java.tuple.Tuple;
+import org.apache.flink.streaming.api.functions.co.RichCoFlatMapFunction;
+import org.apache.flink.configuration.Configuration;
+import org.apache.flink.util.Collector;
+import java.util.*;
+
+public class [aClass.name/] implements DSEPFunction<[getInputsConveyed(aClass)->first()/], [getOutputsConveyed(aClass)->first()/], Tuple, TimeWindow> {
+	
+
+
+}
+
+[/file]
+
+[/template]

@@ -1,0 +1,8 @@
+https://www.eclipse.org/acceleo/resources.html
+https://wiki.eclipse.org/Acceleo/OCL_Operations_Reference
+https://wiki.eclipse.org/Acceleo/Acceleo_Operations_Reference
+https://wiki.eclipse.org/Acceleo/Getting_Started
+https://wiki.eclipse.org/Acceleo/User_Guide
+
+
+https://download.eclipse.org/modeling/mdt/uml2/javadoc/3.0.0/org/eclipse/uml2/uml/Element.html#applyStereotype(org.eclipse.uml2.uml.Stereotype)

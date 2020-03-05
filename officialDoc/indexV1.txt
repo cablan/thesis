@@ -1,0 +1,19 @@
+Introduction
+Context desc: dias, privacy policies, different than database because datas are flowing
+Thesis obj: modeling dias, develop components of the priv policies
+Thesis contr: speak about the template, user relationship with it and how to arrive to the current profile and implementation dia
+Structure: describe the chapters
+State of the art
+-What is a dia, examples, approaches, frameworks, characteristics of dias (flink, spark, speak about the different apps I read)
+-Privacy: what it means, kind of approaches enforcement of privacy and modeling of privacy. The approach of Michele
+-Modeling Metamodeling what they mean, kind of tools available, how acceleo, papyrus work...
+Requirements and design of the solution (sort chapter)
+-Overview of the idea of the project and of the solution
+Describing the details of the solution
+-Details of the metamodels upper and lower one, privacy policies
+-DESCRIBE WHAT I DID (bigger one)
+Evalution
+-Show that the approach make sense
+-Describe the example of the paper and how it works with the solution that I developed
+-The generated code has some characteristics similar to the ones of the article
+Conclusions

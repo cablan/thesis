@@ -1,5 +1,0 @@
-https://wiki.eclipse.org/Acceleo/User_Guide#Queries
-
-https://wiki.eclipse.org/Acceleo/Getting_Started
-
-https://wiki.eclipse.org/Acceleo/OCL_Operations_Reference

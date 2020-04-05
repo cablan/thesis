@@ -1,6 +1,0 @@
-cd ~/*/thesisCarlos/
-mv ./main/* ./
-pdflatex ./main.tex
-mv ./main.* ./main
-cp ./main/main.pdf ./doc.pdf
-xdg-open ./doc.pdf

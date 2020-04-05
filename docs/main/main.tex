@@ -1,0 +1,70 @@
+% For any doubt:
+% https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure
+
+\documentclass[12pt,twoside]{book}
+% This book is the official final thesis document
+
+% Required package definition
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm, bindingoffset=6mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+% Image path definition
+\graphicspath{ {images/} }
+
+% This is how our cover is gonna look like
+\title{
+{Thesis Title}\\
+{\large Politecnico di Milano}\\
+{\includegraphics[width=3cm, height=4cm]{university.png}}
+}
+\author{Carlos Blasco Andrés}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\chapter*{Abstract}
+Abstract goes here
+
+\chapter*{Dedication}
+To mum and dad
+
+\chapter*{Declaration}
+I declare that..
+
+\chapter*{Acknowledgements}
+I want to thank...
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\chapter{Introduction}
+\input{chapters/introduction}
+
+\chapter{State of the Art}
+\input{chapters/chapter2}
+
+\chapter{Requirements and Design}
+\input{chapters/chapter3}
+
+\chapter{Solution}
+\input{chapters/chapter4}
+
+\chapter{Evaluation}
+\input{chapters/chapter5}
+
+\chapter{Conclusion}
+\input{chapters/conclusions}
+
+\input{chapters/references}
+
+\end{document}

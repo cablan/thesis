@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_TURgkGoxEeqXt_UVVcuvWA/114" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_TURgkGoxEeqXt_UVVcuvWA/114 /streamgen/profile/StreamUML.profile.uml#_TUXnMGoxEeqXt_UVVcuvWA">
+  <uml:Model xmi:id="_p5Zr8HKYEeqlctBysCk6rQ" name="greatSellerApp">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_zixZ8HKYEeqlctBysCk6rQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Model" xmi:id="_VgGW4HKgEeqor8468tpfFw" name="greatSeller">
+      <packagedElement xmi:type="uml:Package" xmi:id="_UMFC4HKjEeqor8468tpfFw" name="greatSellerDataTypes">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_O8Hy4HKoEeqor8468tpfFw" name="InputTransaction">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_vi2NcHKoEeqor8468tpfFw" name="transactionId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_8R-ygHKoEeqor8468tpfFw" name="dataSubject">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_GwL2wHKpEeqor8468tpfFw" name="amount">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_NwHdUHKpEeqor8468tpfFw" name="recipientId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_SI5bcHKpEeqor8468tpfFw" name="IssuedTransactions">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_pujeIHKpEeqor8468tpfFw" name="dataSubject">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_tK4bEHKpEeqor8468tpfFw" name="NTransactions">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_zXWkYHKpEeqor8468tpfFw" name="SpentAmount">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_6d7lgHKpEeqor8468tpfFw" name="dataSubject">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_9uUYMHKpEeqor8468tpfFw" name="totalAmount">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_H2DdMHKqEeqor8468tpfFw" name="NumberUsers">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_OqEusHKqEeqor8468tpfFw" name="NTopUsers">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_IeeEUHcZEeqjf7nG_fBsrg" name="TupleParser"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ay8hQHcZEeqjf7nG_fBsrg" name="TupleSource"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_HB3G8HcaEeqjf7nG_fBsrg" name="rawTuples" informationSource="_ay8hQHcZEeqjf7nG_fBsrg" informationTarget="_IeeEUHcZEeqjf7nG_fBsrg">
+        <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_OMfFIHcbEeqjf7nG_fBsrg" name="TupleS2Sink"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_465hYHcbEeqjf7nG_fBsrg" name="TupleS2Generator"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Q6bcoHccEeqjf7nG_fBsrg" name="resultS2Tuple" informationSource="_465hYHcbEeqjf7nG_fBsrg" informationTarget="_OMfFIHcbEeqjf7nG_fBsrg">
+        <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hBfm0HccEeqjf7nG_fBsrg" name="TupleS4Generator"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3lk3wHccEeqjf7nG_fBsrg" name="TupleS4Sink"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_FFbvIHcdEeqjf7nG_fBsrg" name="resultS4Tuple" informationSource="_hBfm0HccEeqjf7nG_fBsrg" informationTarget="_3lk3wHccEeqjf7nG_fBsrg">
+        <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_kPtOcHdMEeqEm_3mTdKlkw" name="OP1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sCP9sHdMEeqEm_3mTdKlkw" name="OP2"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_vAFn0HdMEeqEm_3mTdKlkw" name="OP3"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_sSQ6MHdNEeqEm_3mTdKlkw" name="streamS1OP1" conveyed="_O8Hy4HKoEeqor8468tpfFw" informationSource="_IeeEUHcZEeqjf7nG_fBsrg" informationTarget="_kPtOcHdMEeqEm_3mTdKlkw"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_vXTYgHdNEeqEm_3mTdKlkw" name="streamS1OP2" conveyed="_O8Hy4HKoEeqor8468tpfFw" informationSource="_IeeEUHcZEeqjf7nG_fBsrg" informationTarget="_sCP9sHdMEeqEm_3mTdKlkw"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_BO8IcHdOEeqEm_3mTdKlkw" name="streamS3" visibility="public" conveyed="_zXWkYHKpEeqor8468tpfFw" informationSource="_sCP9sHdMEeqEm_3mTdKlkw" informationTarget="_vAFn0HdMEeqEm_3mTdKlkw"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_KH2C0HdOEeqEm_3mTdKlkw" name="streamS4" visibility="public" conveyed="_H2DdMHKqEeqor8468tpfFw" informationSource="_vAFn0HdMEeqEm_3mTdKlkw" informationTarget="_hBfm0HccEeqjf7nG_fBsrg"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WJJ4kHdOEeqEm_3mTdKlkw" name="streamS2" conveyed="_SI5bcHKpEeqor8468tpfFw" informationSource="_kPtOcHdMEeqEm_3mTdKlkw" informationTarget="_465hYHcbEeqjf7nG_fBsrg"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zgPDUHKYEeqlctBysCk6rQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zh4pIHKYEeqlctBysCk6rQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zh4pIXKYEeqlctBysCk6rQ" key="Version" value="0.0.115"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zh4pInKYEeqlctBysCk6rQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zh4pI3KYEeqlctBysCk6rQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zh4pJHKYEeqlctBysCk6rQ" key="Date" value="2020-03-19"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zh4pJXKYEeqlctBysCk6rQ" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zgb3oHKYEeqlctBysCk6rQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="/streamgen/profile/StreamUML.profile.uml#_TUXnMGoxEeqXt_UVVcuvWA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="/streamgen/profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
+    </profileApplication>
+  </uml:Model>
+  <StreamUML:FlinkApplication xmi:id="_ZbdjwHKhEeqor8468tpfFw" base_Model="_VgGW4HKgEeqor8468tpfFw"/>
+  <StreamUML:StreamDatatypes xmi:id="_BaL0sHKkEeqor8468tpfFw" base_Package="_UMFC4HKjEeqor8468tpfFw"/>
+  <StreamUML:MapTransformation xmi:id="_NQEyIHcZEeqjf7nG_fBsrg" base_Class="_IeeEUHcZEeqjf7nG_fBsrg" mapFunction="String[] fields = tuple.split(&quot;,&quot;); return new InputTransaction( fields[0],Long.parseLong(fields[1]));"/>
+  <StreamUML:SocketSource xmi:id="_m3q3YHcZEeqjf7nG_fBsrg" base_Class="_ay8hQHcZEeqjf7nG_fBsrg" host="localhost" port="8081"/>
+  <StreamUML:NonParallelStream xmi:id="_K-Ed0HcaEeqjf7nG_fBsrg" base_InformationFlow="_HB3G8HcaEeqjf7nG_fBsrg"/>
+  <StreamUML:TextFileSink xmi:id="_WB9MkHcbEeqjf7nG_fBsrg" base_Class="_OMfFIHcbEeqjf7nG_fBsrg" filepath="/home/cablan/Desktop/resultsS2.txt"/>
+  <StreamUML:MapTransformation xmi:id="_FhFl0HccEeqjf7nG_fBsrg" base_Class="_465hYHcbEeqjf7nG_fBsrg" mapFunction="String joinTuple=String.join(&quot;,&quot;,&quot;welcome&quot;,&quot;to&quot;,&quot;javatpoint&quot;);"/>
+  <StreamUML:NonParallelStream xmi:id="_NmYcgHcdEeqjf7nG_fBsrg" base_InformationFlow="_FFbvIHcdEeqjf7nG_fBsrg"/>
+  <StreamUML:NonParallelStream xmi:id="_SF570HcdEeqjf7nG_fBsrg" base_InformationFlow="_Q6bcoHccEeqjf7nG_fBsrg"/>
+  <StreamUML:TextFileSink xmi:id="_04cGoHcdEeqjf7nG_fBsrg" base_Class="_3lk3wHccEeqjf7nG_fBsrg" filepath="/home/cablan/Desktop/resultsS4.txt"/>
+  <StreamUML:MapTransformation xmi:id="_4bUXgHcdEeqjf7nG_fBsrg" base_Class="_hBfm0HccEeqjf7nG_fBsrg" mapFunction="String joinTuple=String.join(&quot;,&quot;,&quot;welcome&quot;,&quot;to&quot;,&quot;javatpoint&quot;);"/>
+</xmi:XMI>

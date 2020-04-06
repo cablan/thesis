@@ -271,15 +271,42 @@ A UML diagram making a description of all the UML diagrams can be seen in the fi
 \label{fig:UML Metamodel}
 \end{figure}
 
-\subsubsection{Class Diagram}
+\subsubsection{UML Diagrams}
+
+In spite of UML allows developers to use fourteen diagrams for modeling, some of such diagrams are the most commonly used. This is the case of the following ones.
+
+\subsubsection*{Class Diagram}
 
 This kind of diagram represents the model elements and the relationships that exist between such elements. The model elements, which are represented by means of nodes, can be: class, component, data type, interface, model or package among others. Regarding to the relationships between the nodes, they can be: association, association class, dependency, generalization or information flow among others.
 
 Class diagrams are commonly used to represent the metamodel of the syntax of a modeling languages. Due to the fact that this kind of diagrams is not able to fully express syntactical rules, usually they take advantage of constraint languages as Object Constraint Language (OCL).
 
+\subsubsection*{Profile Diagram}
 
+A profile diagram allows to create the model domain by adding model elements called stereotypes and making the corresponding relationships between them. The most commonly used relationships in this kind of diagrams are the composition and the generalization.
 
+%A profile diagram enables you to create domain and platform specific stereotypes and define the relationships between them. You can create stereotypes by drawing stereotype shapes and relate them with composition or generalization through the resource-centric interface. You can also define and visualize tagged values of stereotypes.
 
+\subsubsection{UML Frameworks}
+
+Due to the UML popularity among software developers, there are several frameworks working with it in order to make software development easier. Different platforms can be used for UML modeling but also platforms for converting a model to a source code can be found.
+
+\subsubsection*{Papyrus}
+
+UML can be found in a wide amalgam of platforms due to its utility for modeling. Moreever, there are some platforms that are the most commonly used for software development. This is the case of Eclipse.  Eclipse is the most popular Java Integrated Development Environment which allows a large amount of plugins in order to increase its functionalities.
+
+One of the plugins provided by Eclipse is Papyrus, an open-source UML tool. In spite of Papyrus was developed by the French Alternative Energies and Atomic Energy Commission (CEA-List), currently it is one of the most used UML tools for software development as it can be expanded with UML profile diagrams giving a wide functionality for modeling software applications.
+
+\subsubsection*{Acceleo}
+
+Regarding to platforms for converting an UML model into source code, Acceleo is an open-source generator from Eclipse Foundation. Acceleo is
+one of the Eclipse plugins that allows to transform UML models into source code files. It is written in Java and it is available for Linux, Windows and Mac OS.
+
+Acceleo uses its own language in order to generate the source codes. Such language is based on MOF Model to Text Transformation Language (MOFM2T) and on template focusing. A template contains some text which describes the data that should be extracted from the elements of the model and such data are extracted iteratively from each component of the model. Moreover, the descriptions of the information that should be taken from the model elements are written in OCL language.
+
+Finally, it is import to remark that Acceleo can extract the information from different types of models, such as EMF, UML or DSL and it is able to generate different source languages such as C, Java or Python.
+
+\subsection{Object Constraint Language (OCL)}
 
 
 

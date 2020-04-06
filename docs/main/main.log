@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  3 APR 2020 13:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  6 APR 2020 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -604,9 +604,7 @@ File: images/./chapter2/umlMetamodel.png Graphic file (type png)
 Package pdftex.def Info: images/./chapter2/umlMetamodel.png  used on input line
  269.
 (pdftex.def)             Requested size: 328.5299pt x 144.84224pt.
-) [29 <./images/./chapter2/umlMetamodel.png>] [30
-
-]
+ [29 <./images/./chapter2/umlMetamodel.png>]) [30]
 Chapter 3.
 (./chapters/chapter3.tex
 Overfull \hbox (37.02052pt too wide) in paragraph at lines 8--9
@@ -614,7 +612,9 @@ Overfull \hbox (37.02052pt too wide) in paragraph at lines 8--9
  com-po-nents) 1.11.0.20190220-
  []
 
-) [31] [32
+) [31
+
+] [32
 
 ]
 Chapter 4.
@@ -681,10 +681,10 @@ guage/what-is-uml/
 
 ) [41] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2493 strings out of 492982
- 34680 string characters out of 6134897
+ 2494 strings out of 492982
+ 34688 string characters out of 6134897
  101308 words of memory out of 5000000
- 5989 multiletter control sequences out of 15000+600000
+ 5990 multiletter control sequences out of 15000+600000
  10282 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,43p,1753b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -697,7 +697,7 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (41 pages, 684495 bytes).
+Output written on main.pdf (41 pages, 685844 bytes).
 PDF statistics:
  191 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams

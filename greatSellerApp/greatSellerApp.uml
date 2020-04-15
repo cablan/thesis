@@ -103,13 +103,13 @@
       <size xmi:type="StreamUML:TimeAmount" xmi:id="_yniW0n53EeqlmLNKapV4lA" timeUnit="Minutes" size="10"/>
     </window>
   </StreamUML:WindowedStream>
-  <StreamUML:KeyedStream xmi:id="_5k5NkHiwEeq954KYVFDGKw" base_InformationFlow="_WJJ4kHdOEeqEm_3mTdKlkw" key="_8R-ygHKoEeqor8468tpfFw"/>
-  <StreamUML:KeyedStream xmi:id="_A0oKsHixEeq954KYVFDGKw" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw" key="_6d7lgHKpEeqor8468tpfFw"/>
-  <StreamUML:WindowedStream xmi:id="_A4hzQHixEeq954KYVFDGKw" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw">
+  <StreamUML:KeyedStream xmi:id="_5k5NkHiwEeq954KYVFDGKw" base_InformationFlow="_WJJ4kHdOEeqEm_3mTdKlkw" isObservable="true" key="_8R-ygHKoEeqor8468tpfFw"/>
+  <StreamUML:KeyedStream xmi:id="_A0oKsHixEeq954KYVFDGKw" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw" isObservable="true" key="_6d7lgHKpEeqor8468tpfFw"/>
+  <StreamUML:WindowedStream xmi:id="_A4hzQHixEeq954KYVFDGKw" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw" isObservable="true">
     <window xmi:type="StreamUML:Window" xmi:id="_ynkzEX53EeqlmLNKapV4lA">
       <size xmi:type="StreamUML:TimeAmount" xmi:id="_ynkzEn53EeqlmLNKapV4lA" timeUnit="Hours" size="1"/>
     </window>
   </StreamUML:WindowedStream>
-  <StreamUML:RandomlyPartitionedStream xmi:id="_84OxIHixEeq954KYVFDGKw" base_InformationFlow="_KH2C0HdOEeqEm_3mTdKlkw"/>
+  <StreamUML:RandomlyPartitionedStream xmi:id="_84OxIHixEeq954KYVFDGKw" base_InformationFlow="_KH2C0HdOEeqEm_3mTdKlkw" isObservable="true"/>
   <StreamUML:TextFileSource xmi:id="_injRUH8BEeqfKe16nTK7Jg" base_Class="_ay8hQHcZEeqjf7nG_fBsrg" pathToFile="/home/cablan/Desktop/thesisFiles/tuples10File.txt"/>
 </xmi:XMI>

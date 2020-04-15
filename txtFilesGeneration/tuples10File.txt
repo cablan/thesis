@@ -1,0 +1,10 @@
+transaction1,Michele,182.27,product17
+transaction2,Michele,194.93,product11
+transaction3,Elisabetta,33.85,product9
+transaction4,Carlos,129.57,product19
+transaction5,Bob,54.61,product3
+transaction6,Michele,132.08,product8
+transaction7,Bob,54.61,product3
+transaction8,Elisabetta,176.89,product4
+transaction9,Michele,106.19,product14
+transaction10,Michele,54.61,product3

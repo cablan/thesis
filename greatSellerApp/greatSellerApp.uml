@@ -82,13 +82,12 @@
   <StreamUML:FlinkApplication xmi:id="_ZbdjwHKhEeqor8468tpfFw" base_Model="_VgGW4HKgEeqor8468tpfFw"/>
   <StreamUML:StreamDatatypes xmi:id="_BaL0sHKkEeqor8468tpfFw" base_Package="_UMFC4HKjEeqor8468tpfFw"/>
   <StreamUML:MapTransformation xmi:id="_NQEyIHcZEeqjf7nG_fBsrg" base_Class="_IeeEUHcZEeqjf7nG_fBsrg" mapFunction="String[] fields = tuple.split(&quot;,&quot;); return new InputTransaction( fields[0],Long.parseLong(fields[1]));"/>
-  <StreamUML:SocketSource xmi:id="_m3q3YHcZEeqjf7nG_fBsrg" base_Class="_ay8hQHcZEeqjf7nG_fBsrg" host="localhost" port="8081"/>
   <StreamUML:NonParallelStream xmi:id="_K-Ed0HcaEeqjf7nG_fBsrg" base_InformationFlow="_HB3G8HcaEeqjf7nG_fBsrg"/>
-  <StreamUML:TextFileSink xmi:id="_WB9MkHcbEeqjf7nG_fBsrg" base_Class="_OMfFIHcbEeqjf7nG_fBsrg" filepath="/home/cablan/Desktop/resultsS2.txt"/>
+  <StreamUML:TextFileSink xmi:id="_WB9MkHcbEeqjf7nG_fBsrg" base_Class="_OMfFIHcbEeqjf7nG_fBsrg" filepath="/home/cablan/Desktop/thesisFiles/resultsS2.txt"/>
   <StreamUML:MapTransformation xmi:id="_FhFl0HccEeqjf7nG_fBsrg" base_Class="_465hYHcbEeqjf7nG_fBsrg" mapFunction="String joinTuple=String.join(&quot;,&quot;,dataSubject,nTransactions);"/>
   <StreamUML:NonParallelStream xmi:id="_NmYcgHcdEeqjf7nG_fBsrg" base_InformationFlow="_FFbvIHcdEeqjf7nG_fBsrg"/>
   <StreamUML:NonParallelStream xmi:id="_SF570HcdEeqjf7nG_fBsrg" base_InformationFlow="_Q6bcoHccEeqjf7nG_fBsrg"/>
-  <StreamUML:TextFileSink xmi:id="_04cGoHcdEeqjf7nG_fBsrg" base_Class="_3lk3wHccEeqjf7nG_fBsrg" filepath="/home/cablan/Desktop/resultsS4.txt"/>
+  <StreamUML:TextFileSink xmi:id="_04cGoHcdEeqjf7nG_fBsrg" base_Class="_3lk3wHccEeqjf7nG_fBsrg" filepath="/home/cablan/Desktop/thesisFiles/resultsS4.txt"/>
   <StreamUML:WindowTransformation xmi:id="_Mv9a4HgaEeqTV5Y4B0bIkg" base_Class="_kPtOcHdMEeqEm_3mTdKlkw" windowFunction="out.collect(new TransactionsCount(key, new Integer(input.size), window.getEnd))"/>
   <StreamUML:WindowTransformation xmi:id="_TqUk8HgaEeqTV5Y4B0bIkg" base_Class="_vAFn0HdMEeqEm_3mTdKlkw" windowFunction="var cont = 0&#xA;    var lastTransactionIndex = -1&#xA;    var partialSums: mutable.Map[String,Int] = mutable.Map()&#xA;&#xA;    for (t &lt;- input) {&#xA;      if(partialSums.keySet.contains(t.dataSubject)){&#xA;        partialSums += (t.dataSubject -> (partialSums(t.dataSubject) + t.amount))&#xA;      } else{&#xA;        partialSums.put(t.dataSubject, t.amount)&#xA;      }&#xA;&#xA;      if(t.transactionId.substring(1, t.transactionId.length).toInt > lastTransactionIndex){&#xA;        lastTransactionIndex = t.transactionId.substring(1, t.transactionId.length).toInt&#xA;      }&#xA;    }&#xA;&#xA;    for (k &lt;- partialSums){&#xA;      if(k._2 > 1000){&#xA;        cont = cont + 1&#xA;      }&#xA;    }&#xA;    &#xA;    out.collect(new TopConsumers(cont, window.getEnd))"/>
   <StreamUML:WindowTransformation xmi:id="_gnyhsHiuEeq954KYVFDGKw" base_Class="_sCP9sHdMEeqEm_3mTdKlkw" windowFunction="var sum = 0&#xA;    var lastTransactionIndex = -1&#xA;&#xA;    for (t &lt;- input) {&#xA;      sum += t.amount&#xA;      if(t.transactionId.substring(1, t.transactionId.length).toInt > lastTransactionIndex){&#xA;        lastTransactionIndex = t.transactionId.substring(1, t.transactionId.length).toInt&#xA;      }"/>
@@ -112,4 +111,5 @@
     </window>
   </StreamUML:WindowedStream>
   <StreamUML:RandomlyPartitionedStream xmi:id="_84OxIHixEeq954KYVFDGKw" base_InformationFlow="_KH2C0HdOEeqEm_3mTdKlkw"/>
+  <StreamUML:TextFileSource xmi:id="_injRUH8BEeqfKe16nTK7Jg" base_Class="_ay8hQHcZEeqjf7nG_fBsrg" pathToFile="/home/cablan/Desktop/thesisFiles/tuples10File.txt"/>
 </xmi:XMI>

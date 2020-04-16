@@ -42,16 +42,13 @@
           </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:DataType" xmi:id="_9siHkH5yEeqlmLNKapV4lA" name="ContextCondition">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_mGQkYH5zEeqlmLNKapV4lA" name="domainVariable">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_WhQaYH-wEeqUTPy3f_yXig" name="observerId">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_pb0K8H5zEeqlmLNKapV4lA" name="operator">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Ze2M4H-wEeqUTPy3f_yXig" name="role">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_DIEtwH50EeqlmLNKapV4lA" name="modifiedValue">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_c3He0H50EeqlmLNKapV4lA" name="dataSubject">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_dBsBgH-wEeqUTPy3f_yXig" name="purpose">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
         </packagedElement>
@@ -78,8 +75,8 @@
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_KH2C0HdOEeqEm_3mTdKlkw" name="streamS4" visibility="public" conveyed="_H2DdMHKqEeqor8468tpfFw" informationSource="_vAFn0HdMEeqEm_3mTdKlkw" informationTarget="_3lk3wHccEeqjf7nG_fBsrg"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WJJ4kHdOEeqEm_3mTdKlkw" name="streamS2" conveyed="_SI5bcHKpEeqor8468tpfFw" informationSource="_kPtOcHdMEeqEm_3mTdKlkw" informationTarget="_465hYHcbEeqjf7nG_fBsrg"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_ro_-wH50EeqlmLNKapV4lA" name="SCFile"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Ivo9wH51EeqlmLNKapV4lA" name="RuleParser"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_hBbGoH51EeqlmLNKapV4lA" name="privacyRules" informationSource="_ro_-wH50EeqlmLNKapV4lA" informationTarget="_Ivo9wH51EeqlmLNKapV4lA">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Ivo9wH51EeqlmLNKapV4lA" name="ObserverParser"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_hBbGoH51EeqlmLNKapV4lA" name="observerTuple" informationSource="_ro_-wH50EeqlmLNKapV4lA" informationTarget="_Ivo9wH51EeqlmLNKapV4lA">
         <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_GsGGwH53EeqlmLNKapV4lA" name="DataSubjectEvictor"/>

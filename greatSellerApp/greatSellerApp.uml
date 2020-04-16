@@ -64,6 +64,12 @@
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_BO8IcHdOEeqEm_3mTdKlkw" name="streamS3" visibility="public" conveyed="_zXWkYHKpEeqor8468tpfFw" informationSource="_sCP9sHdMEeqEm_3mTdKlkw" informationTarget="_vAFn0HdMEeqEm_3mTdKlkw"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_KH2C0HdOEeqEm_3mTdKlkw" name="streamS4" visibility="public" conveyed="_H2DdMHKqEeqor8468tpfFw" informationSource="_vAFn0HdMEeqEm_3mTdKlkw" informationTarget="_3lk3wHccEeqjf7nG_fBsrg"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WJJ4kHdOEeqEm_3mTdKlkw" name="streamS2" conveyed="_SI5bcHKpEeqor8468tpfFw" informationSource="_kPtOcHdMEeqEm_3mTdKlkw" informationTarget="_465hYHcbEeqjf7nG_fBsrg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hCqBAH8KEeqfKe16nTK7Jg" name="TupleS3Generator"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_p_eLAH8KEeqfKe16nTK7Jg" name="TupleS3Sink"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_23DhcH8KEeqfKe16nTK7Jg" name="streamS3Tuple" informationSource="_hCqBAH8KEeqfKe16nTK7Jg" informationTarget="_p_eLAH8KEeqfKe16nTK7Jg">
+        <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_AnoDoH8LEeqfKe16nTK7Jg" name="streamS3Generation" conveyed="_zXWkYHKpEeqor8468tpfFw" informationSource="_sCP9sHdMEeqEm_3mTdKlkw" informationTarget="_hCqBAH8KEeqfKe16nTK7Jg"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zgPDUHKYEeqlctBysCk6rQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zh4pIHKYEeqlctBysCk6rQ" source="PapyrusVersion">
@@ -112,4 +118,13 @@
   </StreamUML:WindowedStream>
   <StreamUML:RandomlyPartitionedStream xmi:id="_84OxIHixEeq954KYVFDGKw" base_InformationFlow="_KH2C0HdOEeqEm_3mTdKlkw" isObservable="true"/>
   <StreamUML:TextFileSource xmi:id="_injRUH8BEeqfKe16nTK7Jg" base_Class="_ay8hQHcZEeqjf7nG_fBsrg" pathToFile="/home/cablan/Desktop/thesisFiles/tuples10File.txt"/>
+  <StreamUML:MapTransformation xmi:id="_xFSXIH8KEeqfKe16nTK7Jg" base_Class="_hCqBAH8KEeqfKe16nTK7Jg"/>
+  <StreamUML:TextFileSink xmi:id="_0hc8AH8KEeqfKe16nTK7Jg" base_Class="_p_eLAH8KEeqfKe16nTK7Jg"/>
+  <StreamUML:NonParallelStream xmi:id="_46VAwH8KEeqfKe16nTK7Jg" base_InformationFlow="_23DhcH8KEeqfKe16nTK7Jg"/>
+  <StreamUML:KeyedStream xmi:id="_LhOqcH8LEeqfKe16nTK7Jg" base_InformationFlow="_AnoDoH8LEeqfKe16nTK7Jg" key="_6d7lgHKpEeqor8468tpfFw"/>
+  <StreamUML:WindowedStream xmi:id="_Ll5IAH8LEeqfKe16nTK7Jg" base_InformationFlow="_AnoDoH8LEeqfKe16nTK7Jg">
+    <window xmi:type="StreamUML:Window" xmi:id="_O-SAIH8LEeqfKe16nTK7Jg">
+      <size xmi:type="StreamUML:TimeAmount" xmi:id="_PbW9sH8LEeqfKe16nTK7Jg" timeUnit="Hours" size="1"/>
+    </window>
+  </StreamUML:WindowedStream>
 </xmi:XMI>

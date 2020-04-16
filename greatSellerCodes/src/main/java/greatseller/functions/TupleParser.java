@@ -20,7 +20,10 @@ public class TupleParser extends RichMapFunction<String, InputTransaction> {
 	
 	@Override
 	public InputTransaction map(String tuple) throws Exception {
-		String[] fields = tuple.split(","); return new InputTransaction( fields[0],Long.parseLong(fields[1]));
+		
+		String[] fields = tuple.split(",");
+		
+		return new InputTransaction(Integer.parseInt(fields[0]),fields[1],Integer.parseInt(fields[2]),fields[3]);
 	}
 	
 }

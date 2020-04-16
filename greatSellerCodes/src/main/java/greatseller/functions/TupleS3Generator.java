@@ -12,6 +12,8 @@ import org.apache.flink.util.Collector;
 import java.util.*;
 
 public class TupleS3Generator extends RichMapFunction<SpentAmount, String> {
+	
+	private String joinTuple;
 
 	@Override 
 	public void open(Configuration conf) {
@@ -20,6 +22,8 @@ public class TupleS3Generator extends RichMapFunction<SpentAmount, String> {
 	
 	@Override
 	public String map(SpentAmount tuple) throws Exception {
+		
+		return joinTuple = String.join(",", tuple.getDataSubject(), tuple.getTotalAmount().toString());
 		
 	}
 	

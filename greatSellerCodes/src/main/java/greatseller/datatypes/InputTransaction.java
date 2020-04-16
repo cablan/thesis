@@ -9,7 +9,7 @@ public class InputTransaction implements Serializable{
 
     private String dataSubject;
 
-    private Real amount;
+    private Integer amount;
 
     private String recipientId;
 
@@ -37,7 +37,7 @@ public class InputTransaction implements Serializable{
 
     }
 
-    public InputTransaction(Integer transactionId, String dataSubject, Real amount, String recipientId) {
+    public InputTransaction(Integer transactionId, String dataSubject, Integer amount, String recipientId) {
         this.transactionId = transactionId;
         this.dataSubject = dataSubject;
         this.amount = amount;
@@ -60,11 +60,11 @@ public class InputTransaction implements Serializable{
         this.dataSubject = dataSubject;
     }
 
-    public Real getAmount() {
+    public Integer getAmount() {
         return amount;
     }
 
-    public void setAmount(Real amount) {
+    public void setAmount(Integer amount) {
         this.amount = amount;
     }
 

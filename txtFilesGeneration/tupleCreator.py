@@ -5,7 +5,7 @@ import random, sys
 dataSubjectList = ['Bob', 'Carlos', 'Elisabetta', 'Michele']
 numberProducts = 25 # Great Seller number of products available
 priceLowerLimit = 10
-priceUpperLimit = 20099
+priceUpperLimit = 200
 greatSellerStock = []
 
 if len(sys.argv) < 2:
@@ -19,7 +19,7 @@ fileLength = int(sys.argv[1])
 for eachProduct in range(numberProducts):
     # Great Seller strock definition
     name = 'product' + str(eachProduct + 1)
-    price = random.randint(priceLowerLimit, priceUpperLimit) / 100
+    price = random.randint(priceLowerLimit, priceUpperLimit)
     product = {'name': name, 'price': price}
     greatSellerStock = greatSellerStock + [product]
 

@@ -12,6 +12,8 @@ import org.apache.flink.util.Collector;
 import java.util.*;
 
 public class TupleS2Generator extends RichMapFunction<IssuedTransactions, String> {
+	
+	private String joinTuple;
 
 	@Override 
 	public void open(Configuration conf) {
@@ -20,8 +22,8 @@ public class TupleS2Generator extends RichMapFunction<IssuedTransactions, String
 	
 	@Override
 	public String map(IssuedTransactions tuple) throws Exception {
-		String joinTuple=String.join(",",dataSubject,nTransactions);
+		
+		return joinTuple = String.join(",", tuple.getDataSubject(), tuple.getNTransactions().toString());
 	}
 	
 }
-

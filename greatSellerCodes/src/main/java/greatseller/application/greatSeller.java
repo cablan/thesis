@@ -31,32 +31,30 @@ public class greatSeller {
        
        //uncomment the below if you want to set the default parallelism for the project.
        //env.setParallelism(1);
+       
+			DataStream<String> rawTuples = env.readTextFile("/home/cablan/Desktop/thesisFiles/tuples10File.txt");
+			;
 
-			DataStream<InputTransaction> streamS1OP1 = rawTuples
+			DataStream<InputTransaction> streamS1 = rawTuples
 				.map(new TupleParser())
 				;
-		
-				DataStream<String> rawTuples = env.readTextFile("/home/cablan/Desktop/thesisFiles/tuples10File.txt");
+			
+			DataStream<IssuedTransactions> streamS2 = streamS1
+			      	.keyBy("dataSubject")
+			        .timeWindow(Time.minutes(10))
+			        .apply(new OP1())
+					;
+			
+			DataStream<String> resultS2Tuple = streamS2
+			      	.keyBy("dataSubject")
+					.map(new TupleS2Generator())
 					;
 		
 			resultS2Tuple
 				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS2.txt")
 				.setParallelism(1);
-			DataStream<String> resultS2Tuple = streamS2
-		      	.keyBy("dataSubject")
-				.map(new TupleS2Generator())
-				;
 		
-			resultS4Tuple
-				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS4.txt")
-				.setParallelism(1);
-			DataStream<IssuedTransactions> streamS2 = streamS1OP1
-		      	.keyBy("dataSubject")
-		        .timeWindow(Time.minutes(10))
-		        .apply(new OP1())
-				;
-		
-			DataStream<SpentAmount> streamS3 = streamS1OP2
+			DataStream<SpentAmount> streamS3 = streamS1
 		      	.keyBy("dataSubject")
 		        .timeWindow(Time.minutes(10))
 		        .apply(new OP2())
@@ -68,13 +66,17 @@ public class greatSeller {
 		        .apply(new OP3())
 				;
 		
-			DataStream<String> streamS3Tuple = streamS3Generation
+			DataStream<String> streamS3Tuple = streamS3
 		      	.keyBy("dataSubject")
 				.map(new TupleS3Generator())
 				;
+			
+			streamS4
+			.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS4.txt")
+			.setParallelism(1);
 		
 			streamS3Tuple
-				.writeAsText("")
+				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS3.txt")
 				.setParallelism(1);
 
        JobExecutionResult result = env.execute();

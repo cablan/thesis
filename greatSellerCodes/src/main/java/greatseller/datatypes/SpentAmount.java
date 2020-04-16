@@ -7,7 +7,7 @@ public class SpentAmount implements Serializable{
 
     private String dataSubject;
 
-    private Real totalAmount;
+    private Integer totalAmount;
 
 	private String tupleId;
 
@@ -33,7 +33,7 @@ public class SpentAmount implements Serializable{
 
     }
 
-    public SpentAmount(String dataSubject, Real totalAmount) {
+    public SpentAmount(String dataSubject, Integer totalAmount) {
         this.dataSubject = dataSubject;
         this.totalAmount = totalAmount;
     }
@@ -46,11 +46,11 @@ public class SpentAmount implements Serializable{
         this.dataSubject = dataSubject;
     }
 
-    public Real getTotalAmount() {
+    public Integer getTotalAmount() {
         return totalAmount;
     }
 
-    public void setTotalAmount(Real totalAmount) {
+    public void setTotalAmount(Integer totalAmount) {
         this.totalAmount = totalAmount;
     }
 

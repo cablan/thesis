@@ -1,0 +1,11 @@
+greatseller/application/greatSeller.class
+greatseller/functions/OP1.class
+greatseller/functions/TupleS3Generator.class
+greatseller/functions/TupleParser.class
+greatseller/functions/OP3.class
+greatseller/functions/TupleS2Generator.class
+greatseller/datatypes/SpentAmount.class
+greatseller/datatypes/IssuedTransactions.class
+greatseller/datatypes/InputTransaction.class
+greatseller/datatypes/NumberUsers.class
+greatseller/functions/OP2.class

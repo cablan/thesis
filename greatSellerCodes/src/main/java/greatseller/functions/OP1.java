@@ -18,13 +18,14 @@ public class OP1 implements WindowFunction<InputTransaction, IssuedTransactions,
 	@Override
 	public void apply(Tuple key, TimeWindow window, Iterable<InputTransaction> windowContentIterator, Collector<IssuedTransactions> out) throws Exception {
 		
-		List<InputTransaction> windowContent = new  ArrayList<InputTransaction>();
-		for(InputTransaction x: windowContentIterator){
-			windowContent.add(x);
-		}
-		
-		out.collect(new TransactionsCount(key.getField(0), new Integer(input.size), window.getEnd))
-	}
+		int sum = 0;
 
+		for(InputTransaction x: windowContentIterator){
+			sum += x.getAmount();
+			}
+		
+		out.collect(new IssuedTransactions( key.getField(0), new Integer(sum)));
+		
+		}
 
 }

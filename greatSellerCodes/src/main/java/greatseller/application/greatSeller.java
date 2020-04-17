@@ -32,8 +32,8 @@ public class greatSeller {
        //uncomment the below if you want to set the default parallelism for the project.
        //env.setParallelism(1);
        
-			DataStream<String> rawTuples = env.readTextFile("/home/cablan/Desktop/thesisFiles/tuples10File.txt");
-			;
+       		DataStream<String> rawTuples = env.readTextFile("/home/cablan/Desktop/thesisFiles/tuples10File.txt");
+       		;
 
 			DataStream<InputTransaction> streamS1 = rawTuples
 				.map(new TupleParser())
@@ -44,12 +44,12 @@ public class greatSeller {
 			        .timeWindow(Time.minutes(10))
 			        .apply(new OP1())
 					;
-			
+
 			DataStream<String> resultS2Tuple = streamS2
 			      	.keyBy("dataSubject")
 					.map(new TupleS2Generator())
 					;
-		
+			
 			resultS2Tuple
 				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS2.txt")
 				.setParallelism(1);
@@ -70,13 +70,12 @@ public class greatSeller {
 		      	.keyBy("dataSubject")
 				.map(new TupleS3Generator())
 				;
-			
-			streamS4
-			.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS4.txt")
-			.setParallelism(1);
 		
 			streamS3Tuple
 				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS3.txt")
+				.setParallelism(1);
+			streamS4
+				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS4.txt")
 				.setParallelism(1);
 
        JobExecutionResult result = env.execute();

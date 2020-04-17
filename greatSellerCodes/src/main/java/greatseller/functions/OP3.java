@@ -18,34 +18,19 @@ public class OP3 implements WindowFunction<SpentAmount, NumberUsers, Tuple, Time
 	@Override
 	public void apply(Tuple key, TimeWindow window, Iterable<SpentAmount> windowContentIterator, Collector<NumberUsers> out) throws Exception {
 		
-		List<SpentAmount> windowContent = new  ArrayList<SpentAmount>();
-		for(SpentAmount x: windowContentIterator){
-			windowContent.add(x);
-		}
+		int cont = 0;
 		
-		var cont = 0
-    var lastTransactionIndex = -1
-    var partialSums: mutable.Map[String,Int] = mutable.Map()
+		int sum = 0;
 
-    for (t <- input) {
-      if(partialSums.key.getField(0)Set.contains(t.dataSubject)){
-        partialSums += (t.dataSubject -> (partialSums(t.dataSubject) + t.amount))
-      } else{
-        partialSums.put(t.dataSubject, t.amount)
-      }
-
-      if(t.transactionId.substring(1, t.transactionId.length).toInt > lastTransactionIndex){
-        lastTransactionIndex = t.transactionId.substring(1, t.transactionId.length).toInt
-      }
-    }
-
-    for (k <- partialSums){
-      if(k._2 > 1000){
-        cont = cont + 1
-      }
-    }
+		for(SpentAmount x: windowContentIterator){
+			sum += x.getTotalAmount();
+			}
+		
+		if(sum > 1000) {
+			cont += cont + 1;
+		}
     
-    out.collect(new TopConsumers(cont, window.getEnd))
+		out.collect(new NumberUsers(cont));
 	}
 
 

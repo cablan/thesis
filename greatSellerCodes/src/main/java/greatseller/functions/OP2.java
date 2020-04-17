@@ -19,18 +19,12 @@ public class OP2 implements WindowFunction<InputTransaction, SpentAmount, Tuple,
 	public void apply(Tuple key, TimeWindow window, Iterable<InputTransaction> windowContentIterator, Collector<SpentAmount> out) throws Exception {
 		
 		List<InputTransaction> windowContent = new  ArrayList<InputTransaction>();
+		
 		for(InputTransaction x: windowContentIterator){
 			windowContent.add(x);
 		}
 		
-		var sum = 0
-    var lastTransactionIndex = -1
-
-    for (t <- input) {
-      sum += t.amount
-      if(t.transactionId.substring(1, t.transactionId.length).toInt > lastTransactionIndex){
-        lastTransactionIndex = t.transactionId.substring(1, t.transactionId.length).toInt
-      }
+		out.collect(new SpentAmount(key.getField(0), new Integer(windowContent.size())));
 	}
 
 

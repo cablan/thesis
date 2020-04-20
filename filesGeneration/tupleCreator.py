@@ -1,12 +1,8 @@
 # Libraries
-import random, sys
+import random, sys, shelve
 
 # Predefined variables
 dataSubjectList = ['Bob', 'Carlos', 'Elisabetta', 'Michele']
-numberProducts = 25 # Great Seller number of products available
-priceLowerLimit = 10
-priceUpperLimit = 200
-greatSellerStock = []
 
 if len(sys.argv) < 2:
     print('Usage: python3 tupleCreator.py [fileLength]')
@@ -15,14 +11,9 @@ if len(sys.argv) < 2:
 # Running defined variables
 fileLength = int(sys.argv[1])
 
-# Built variables
-for eachProduct in range(numberProducts):
-    # Great Seller strock definition
-    name = 'product' + str(eachProduct + 1)
-    price = random.randint(priceLowerLimit, priceUpperLimit)
-    product = {'name': name, 'price': price}
-    greatSellerStock = greatSellerStock + [product]
-
+# Open the source binary shelf file
+shelfFile = shelve.open('stocks')
+greatSellerStock = shelfFile['greatSellerStock']
 
 # Open the destination file in write mode
 fileName = 'tuples' + str(fileLength) +'File.txt'
@@ -32,7 +23,7 @@ tuplesFile = open(fileName, 'w')
 for eachValue in range(fileLength):
     
     # Tuple values creation
-    transactionId = 'transaction' + str(eachValue + 1)
+    transactionId = str(eachValue + 1)
     dataSubject = dataSubjectList[random.randint(0, len(dataSubjectList)-1)]
     product = greatSellerStock[random.randint(0, len(greatSellerStock)-1)]
     amount = str(product['price'])

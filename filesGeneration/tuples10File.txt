@@ -1,0 +1,10 @@
+1,Bob,179,product3
+2,Bob,113,product19
+3,Bob,160,product9
+4,Carlos,196,product1
+5,Michele,194,product23
+6,Bob,185,product20
+7,Carlos,17,product4
+8,Michele,98,product18
+9,Elisabetta,120,product5
+10,Elisabetta,192,product15

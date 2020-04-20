@@ -74,6 +74,7 @@ public class greatSeller {
 			streamS3Tuple
 				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS3.txt")
 				.setParallelism(1);
+			
 			streamS4
 				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS4.txt")
 				.setParallelism(1);

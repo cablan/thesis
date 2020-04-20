@@ -18,8 +18,15 @@
 \contentsline {subsubsection}{\numberline {2.3.1.2}UML Frameworks}{30}
 \contentsline {subsection}{\numberline {2.3.2}Object Constraint Language (OCL)}{30}
 \contentsline {chapter}{\numberline {3}Requirements and Design}{33}
-\contentsline {chapter}{\numberline {4}Solution}{35}
-\contentsline {section}{\numberline {4.1}Code Generation}{38}
-\contentsline {subsection}{\numberline {4.1.1}Java Codes Generation}{38}
-\contentsline {chapter}{\numberline {5}Evaluation}{43}
-\contentsline {chapter}{\numberline {6}Conclusion}{45}
+\contentsline {section}{\numberline {3.1}Requirements}{33}
+\contentsline {section}{\numberline {3.2}Design}{33}
+\contentsline {subsection}{\numberline {3.2.1}Great Seller DIA}{33}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Great Seller Source}{34}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Great Seller Transformations}{34}
+\contentsline {subsubsection}{\numberline {3.2.1.3}Great Seller Sinks}{35}
+\contentsline {chapter}{\numberline {4}Solution}{37}
+\contentsline {section}{\numberline {4.1}Files Generation}{40}
+\contentsline {subsection}{\numberline {4.1.1}Source Files Generation}{40}
+\contentsline {subsection}{\numberline {4.1.2}Java Codes Generation}{40}
+\contentsline {chapter}{\numberline {5}Evaluation}{45}
+\contentsline {chapter}{\numberline {6}Conclusion}{47}

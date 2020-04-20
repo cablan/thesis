@@ -22,3 +22,12 @@ shelfFile['greatSellerStock'] = greatSellerStock
 
 # Closing the binary shelf file
 shelfFile.close()
+
+# Printing the generated stock in Latex table format
+string = ''
+
+for eachProduct in greatSellerStock:
+    string = string + eachProduct['name'] + ' & ' + str(eachProduct['price']) + ' \\\ ' + '\n'
+    string = string + '\hline' + '\n'
+
+print(string)

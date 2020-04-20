@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  11 APR 2020 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  20 APR 2020 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -404,27 +404,31 @@ s
 \f@nch@O@erf=\skip49
 \f@nch@O@olf=\skip50
 \f@nch@O@orf=\skip51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box26
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count91
 \scratchdimen=\dimen113
-\scratchbox=\box26
+\scratchbox=\box27
 \nofMPsegments=\count92
 \nofMParguments=\count93
 \everyMPshowfont=\toks18
@@ -523,12 +527,12 @@ e
 <images/university.png, id=1, 180.675pt x 180.675pt>
 File: images/university.png Graphic file (type png)
 <use images/university.png>
-Package pdftex.def Info: images/university.png  used on input line 32.
+Package pdftex.def Info: images/university.png  used on input line 33.
 (pdftex.def)             Requested size: 85.35835pt x 113.81206pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 32.
+(Font)              <14.4> on input line 33.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 32.
+(Font)              <7> on input line 33.
 [1
 
 
@@ -609,152 +613,164 @@ Package pdftex.def Info: images/./chapter2/umlMetamodel.png  used on input line
 ]
 Chapter 3.
 (./chapters/chapter3.tex
-Overfull \hbox (37.02052pt too wide) in paragraph at lines 8--9
+Overfull \hbox (37.02052pt too wide) in paragraph at lines 9--10
 []\OT1/cmr/m/n/12 m2e-Maven In-te-gra-tion for Eclipse (in-cludes In-cu-bat-ing
  com-po-nents) 1.11.0.20190220-
  []
 
-) [33] [34
+[33]
 
-]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[34] [35]
+<images/./chapter3/greatSellerApp.png, id=128, 502.87875pt x 231.86626pt>
+File: images/./chapter3/greatSellerApp.png Graphic file (type png)
+<use images/./chapter3/greatSellerApp.png>
+Package pdftex.def Info: images/./chapter3/greatSellerApp.png  used on input li
+ne 114.
+(pdftex.def)             Requested size: 251.43875pt x 115.93283pt.
+) [36 <./images/./chapter3/greatSellerApp.png>]
 Chapter 4.
 (./chapters/chapter4.tex
-<images/./chapter4/projPapyrus/Selection_001.png, id=124, 458.46281pt x 377.911
+<images/./chapter4/projPapyrus/Selection_001.png, id=133, 458.46281pt x 377.911
 88pt>
 File: images/./chapter4/projPapyrus/Selection_001.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_001.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_001.png  used 
 on input line 5.
 (pdftex.def)             Requested size: 137.5399pt x 113.37444pt.
-<images/./chapter4/projPapyrus/Selection_002.png, id=125, 496.10344pt x 554.822
+<images/./chapter4/projPapyrus/Selection_002.png, id=134, 496.10344pt x 554.822
 81pt>
 File: images/./chapter4/projPapyrus/Selection_002.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_002.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_002.png  used 
 on input line 14.
 (pdftex.def)             Requested size: 148.83217pt x 166.44812pt.
-<images/./chapter4/projPapyrus/Selection_003.png, id=126, 500.62032pt x 554.07p
+<images/./chapter4/projPapyrus/Selection_003.png, id=135, 500.62032pt x 554.07p
 t>
 File: images/./chapter4/projPapyrus/Selection_003.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_003.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_003.png  used 
 on input line 23.
 (pdftex.def)             Requested size: 150.18726pt x 166.22227pt.
-<images/./chapter4/projPapyrus/Selection_004.png, id=127, 694.7556pt x 384.9582
+<images/./chapter4/projPapyrus/Selection_004.png, id=136, 694.7556pt x 384.9582
 pt>
 File: images/./chapter4/projPapyrus/Selection_004.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_004.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_004.png  used 
 on input line 32.
 (pdftex.def)             Requested size: 208.42828pt x 115.48834pt.
-<images/./chapter4/projPapyrus/Selection_005.png, id=128, 497.60907pt x 555.575
+<images/./chapter4/projPapyrus/Selection_005.png, id=137, 497.60907pt x 555.575
 62pt>
 File: images/./chapter4/projPapyrus/Selection_005.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_005.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_005.png  used 
 on input line 41.
 (pdftex.def)             Requested size: 149.28386pt x 166.67397pt.
- [35 <./images/./chapter4/projPapyrus/Selection_001.png>] [36 <./images/./chapt
-er4/projPapyrus/Selection_002.png> <./images/./chapter4/projPapyrus/Selection_0
-03.png> <./images/./chapter4/projPapyrus/Selection_004.png>] [37 <./images/./ch
-apter4/projPapyrus/Selection_005.png>]
-<images/./chapter4/javaCodesGeneration/Selection_001.png, id=144, 472.01344pt x
+ [37
+
+ <./images/./chapter4/projPapyrus/Selection_001.png>] [38 <./images/./chapter4/
+projPapyrus/Selection_002.png> <./images/./chapter4/projPapyrus/Selection_003.p
+ng> <./images/./chapter4/projPapyrus/Selection_004.png>] [39 <./images/./chapte
+r4/projPapyrus/Selection_005.png>]
+<images/./chapter4/javaCodesGeneration/Selection_001.png, id=153, 472.01344pt x
  557.08125pt>
 File: images/./chapter4/javaCodesGeneration/Selection_001.png Graphic file (typ
 e png)
 <use images/./chapter4/javaCodesGeneration/Selection_001.png>
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_001.pn
-g  used on input line 82.
+g  used on input line 92.
 (pdftex.def)             Requested size: 141.60512pt x 167.12566pt.
-<images/./chapter4/javaCodesGeneration/Selection_002.png, id=145, 597.23125pt x
+<images/./chapter4/javaCodesGeneration/Selection_002.png, id=154, 597.23125pt x
  400.49625pt>
 File: images/./chapter4/javaCodesGeneration/Selection_002.png Graphic file (typ
 e png)
 <use images/./chapter4/javaCodesGeneration/Selection_002.png>
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_002.pn
-g  used on input line 91.
+g  used on input line 101.
 (pdftex.def)             Requested size: 179.17075pt x 120.1498pt.
-<images/./chapter4/javaCodesGeneration/Selection_003.png, id=146, 597.23125pt x
+<images/./chapter4/javaCodesGeneration/Selection_003.png, id=155, 597.23125pt x
  396.48125pt>
 File: images/./chapter4/javaCodesGeneration/Selection_003.png Graphic file (typ
 e png)
 <use images/./chapter4/javaCodesGeneration/Selection_003.png>
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_003.pn
-g  used on input line 98.
+g  used on input line 108.
 (pdftex.def)             Requested size: 179.17075pt x 118.94528pt.
-<images/./chapter4/javaCodesGeneration/Selection_004.png, id=147, 602.25pt x 43
+<images/./chapter4/javaCodesGeneration/Selection_004.png, id=156, 602.25pt x 43
 5.12563pt>
 File: images/./chapter4/javaCodesGeneration/Selection_004.png Graphic file (typ
 e png)
 <use images/./chapter4/javaCodesGeneration/Selection_004.png>
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_004.pn
-g  used on input line 107.
+g  used on input line 117.
 (pdftex.def)             Requested size: 180.67639pt x 130.53868pt.
-<images/./chapter4/javaCodesGeneration/Selection_005.png, id=148, 347.79938pt x
+<images/./chapter4/javaCodesGeneration/Selection_005.png, id=157, 347.79938pt x
  402.00188pt>
 File: images/./chapter4/javaCodesGeneration/Selection_005.png Graphic file (typ
 e png)
 <use images/./chapter4/javaCodesGeneration/Selection_005.png>
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_005.pn
-g  used on input line 116.
+g  used on input line 126.
 (pdftex.def)             Requested size: 104.3406pt x 120.60149pt.
-<images/./chapter4/javaCodesGeneration/Selection_006.png, id=149, 603.0028pt x 
+ [40] [41 <./images/./chapter4/javaCodesGeneration/Selection_001.png> <./images
+/./chapter4/javaCodesGeneration/Selection_002.png> <./images/./chapter4/javaCod
+esGeneration/Selection_003.png> <./images/./chapter4/javaCodesGeneration/Select
+ion_004.png>]
+<images/./chapter4/javaCodesGeneration/Selection_006.png, id=166, 603.0028pt x 
 435.87843pt>
 File: images/./chapter4/javaCodesGeneration/Selection_006.png Graphic file (typ
 e png)
 <use images/./chapter4/javaCodesGeneration/Selection_006.png>
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_006.pn
-g  used on input line 123.
+g  used on input line 133.
 (pdftex.def)             Requested size: 180.90224pt x 130.76453pt.
- [38 <./images/./chapter4/javaCodesGeneration/Selection_001.png> <./images/./ch
-apter4/javaCodesGeneration/Selection_002.png>] [39 <./images/./chapter4/javaCod
-esGeneration/Selection_003.png> <./images/./chapter4/javaCodesGeneration/Select
-ion_004.png> <./images/./chapter4/javaCodesGeneration/Selection_005.png> <./ima
-ges/./chapter4/javaCodesGeneration/Selection_006.png>]
-<images/./chapter4/javaCodesGeneration/Selection_007.png, id=160, 596.2275pt x 
+<images/./chapter4/javaCodesGeneration/Selection_007.png, id=167, 596.2275pt x 
 395.4775pt>
 File: images/./chapter4/javaCodesGeneration/Selection_007.png Graphic file (typ
 e png)
 <use images/./chapter4/javaCodesGeneration/Selection_007.png>
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_007.pn
-g  used on input line 132.
+g  used on input line 142.
 (pdftex.def)             Requested size: 178.86963pt x 118.64417pt.
-<images/./chapter4/javaCodesGeneration/Selection_008.png, id=161, 456.95718pt x
+<images/./chapter4/javaCodesGeneration/Selection_008.png, id=168, 456.95718pt x
  400.49625pt>
 File: images/./chapter4/javaCodesGeneration/Selection_008.png Graphic file (typ
 e png)
 <use images/./chapter4/javaCodesGeneration/Selection_008.png>
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_008.pn
-g  used on input line 139.
+g  used on input line 149.
 (pdftex.def)             Requested size: 137.0882pt x 120.1498pt.
-<images/./chapter4/javaCodesGeneration/Selection_009.png, id=162, 621.32124pt x
+<images/./chapter4/javaCodesGeneration/Selection_009.png, id=169, 621.32124pt x
  413.545pt>
 File: images/./chapter4/javaCodesGeneration/Selection_009.png Graphic file (typ
 e png)
 <use images/./chapter4/javaCodesGeneration/Selection_009.png>
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_009.pn
-g  used on input line 146.
+g  used on input line 156.
 (pdftex.def)             Requested size: 186.39781pt x 124.06445pt.
-<images/./chapter4/javaCodesGeneration/Selection_010.png, id=163, 764.10469pt x
+<images/./chapter4/javaCodesGeneration/Selection_010.png, id=170, 764.10469pt x
  484.05844pt>
 File: images/./chapter4/javaCodesGeneration/Selection_010.png Graphic file (typ
 e png)
 <use images/./chapter4/javaCodesGeneration/Selection_010.png>
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_010.pn
-g  used on input line 155.
+g  used on input line 165.
 (pdftex.def)             Requested size: 229.23317pt x 145.21864pt.
-) [40 <./images/./chapter4/javaCodesGeneration/Selection_007.png> <./images/./c
-hapter4/javaCodesGeneration/Selection_008.png> <./images/./chapter4/javaCodesGe
-neration/Selection_009.png>] [41 <./images/./chapter4/javaCodesGeneration/Selec
-tion_010.png>] [42
+)
+[42 <./images/./chapter4/javaCodesGeneration/Selection_005.png> <./images/./cha
+pter4/javaCodesGeneration/Selection_006.png> <./images/./chapter4/javaCodesGene
+ration/Selection_007.png>] [43 <./images/./chapter4/javaCodesGeneration/Selecti
+on_008.png> <./images/./chapter4/javaCodesGeneration/Selection_009.png> <./imag
+es/./chapter4/javaCodesGeneration/Selection_010.png>] [44
 
 ]
 Chapter 5.
-(./chapters/chapter5.tex) [43] [44
+(./chapters/chapter5.tex) [45] [46
 
 ]
 Chapter 6.
-(./chapters/conclusions.tex) (./chapters/references.tex [45] [46
+(./chapters/conclusions.tex) (./chapters/references.tex [47] [48
 
 ]
 Overfull \hbox (11.38646pt too wide) in paragraph at lines 21--23
@@ -768,15 +784,15 @@ Overfull \hbox (85.4865pt too wide) in paragraph at lines 25--27
 guage/what-is-uml/ 
  []
 
-) [47] (./main.aux) ) 
+) [49] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2551 strings out of 492982
- 37559 string characters out of 6134897
- 101424 words of memory out of 5000000
- 6040 multiletter control sequences out of 15000+600000
- 10282 words of font info for 36 fonts, out of 8000000 for 9000
+ 2623 strings out of 492982
+ 38710 string characters out of 6134897
+ 106773 words of memory out of 5000000
+ 6104 multiletter control sequences out of 15000+600000
+ 10399 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,43p,1753b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,10n,43p,1752b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 mi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
@@ -785,11 +801,12 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (47 pages, 1109976 bytes).
+fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/eurosym/feymr10.pfb>
+Output written on main.pdf (49 pages, 1135757 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
+ 239 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

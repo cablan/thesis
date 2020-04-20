@@ -30,7 +30,7 @@ public class greatSeller {
                .getExecutionEnvironment();
        
        //uncomment the below if you want to set the default parallelism for the project.
-       //env.setParallelism(1);
+       		env.setParallelism(1);
        
        		DataStream<String> rawTuples = env.readTextFile("/home/cablan/Desktop/thesisFiles/tuples10File.txt");
        		;

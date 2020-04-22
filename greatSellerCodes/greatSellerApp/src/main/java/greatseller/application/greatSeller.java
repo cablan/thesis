@@ -30,9 +30,9 @@ public class greatSeller {
                .getExecutionEnvironment();
        
        //uncomment the below if you want to set the default parallelism for the project.
-       //env.setParallelism(1);
+       		env.setParallelism(1);
        
-       		DataStream<String> rawTuples = env.readTextFile("/home/cablan/Desktop/thesisFiles/tuples10File.txt");
+       		DataStream<String> rawTuples = env.readTextFile("/home/cablan/Desktop/thesisFiles/tuples1000File.txt");
        			;
 
 			DataStream<InputTransaction> streamS1 = rawTuples
@@ -41,28 +41,28 @@ public class greatSeller {
 			
 			DataStream<IssuedTransactions> streamS2 = streamS1
 			      	.keyBy("dataSubject")
-			        .timeWindow(Time.minutes(10))
+			        .timeWindow(Time.seconds(1))
 			        .apply(new OP1())
 					;
-		
+
 			DataStream<String> resultS2Tuple = streamS2
-			      	.keyBy("dataSubject")
-					.map(new TupleS2Generator())
-					;
-		
+		      	.keyBy("dataSubject")
+				.map(new TupleS2Generator())
+				;
+			
 			resultS2Tuple
-				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS2.csv")
-				.setParallelism(1);
+			.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS2.csv")
+			.setParallelism(1);
 		
 			DataStream<SpentAmount> streamS3 = streamS1
 		      	.keyBy("dataSubject")
-		        .timeWindow(Time.minutes(10))
+		        .timeWindow(Time.seconds(1))
 		        .apply(new OP2())
 				;
 		
 			DataStream<NumberUsers> streamS4 = streamS3
 		      	.keyBy("dataSubject")
-		        .timeWindow(Time.hours(1))
+		        .timeWindow(Time.seconds(1))
 		        .apply(new OP3())
 				;
 		

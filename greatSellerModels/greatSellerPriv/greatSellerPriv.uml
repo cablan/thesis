@@ -70,8 +70,8 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_kPtOcHdMEeqEm_3mTdKlkw" name="OP1"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_sCP9sHdMEeqEm_3mTdKlkw" name="OP2"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_vAFn0HdMEeqEm_3mTdKlkw" name="OP3"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_sSQ6MHdNEeqEm_3mTdKlkw" name="streamS1OP1" conveyed="_O8Hy4HKoEeqor8468tpfFw" informationSource="_IeeEUHcZEeqjf7nG_fBsrg" informationTarget="_kPtOcHdMEeqEm_3mTdKlkw"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_vXTYgHdNEeqEm_3mTdKlkw" name="streamS1OP2" conveyed="_O8Hy4HKoEeqor8468tpfFw" informationSource="_IeeEUHcZEeqjf7nG_fBsrg" informationTarget="_sCP9sHdMEeqEm_3mTdKlkw"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_sSQ6MHdNEeqEm_3mTdKlkw" name="streamS1" conveyed="_O8Hy4HKoEeqor8468tpfFw" informationSource="_IeeEUHcZEeqjf7nG_fBsrg" informationTarget="_kPtOcHdMEeqEm_3mTdKlkw"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_vXTYgHdNEeqEm_3mTdKlkw" name="streamS1" conveyed="_O8Hy4HKoEeqor8468tpfFw" informationSource="_IeeEUHcZEeqjf7nG_fBsrg" informationTarget="_sCP9sHdMEeqEm_3mTdKlkw"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_KH2C0HdOEeqEm_3mTdKlkw" name="streamS4" visibility="public" conveyed="_H2DdMHKqEeqor8468tpfFw" informationSource="_vAFn0HdMEeqEm_3mTdKlkw" informationTarget="_3lk3wHccEeqjf7nG_fBsrg"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WJJ4kHdOEeqEm_3mTdKlkw" name="streamS2" conveyed="_SI5bcHKpEeqor8468tpfFw" informationSource="_kPtOcHdMEeqEm_3mTdKlkw" informationTarget="_465hYHcbEeqjf7nG_fBsrg"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_ro_-wH50EeqlmLNKapV4lA" name="SCFile"/>
@@ -81,19 +81,20 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_GsGGwH53EeqlmLNKapV4lA" name="DataSubjectEvictor"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_qBixYH53EeqlmLNKapV4lA" name="streamS''3" visibility="private" conveyed="_zXWkYHKpEeqor8468tpfFw" informationSource="_GsGGwH53EeqlmLNKapV4lA" informationTarget="_vAFn0HdMEeqEm_3mTdKlkw"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Z12JYH54EeqlmLNKapV4lA" name="streamS3DSE" visibility="private" conveyed="_zXWkYHKpEeqor8468tpfFw" informationSource="_sCP9sHdMEeqEm_3mTdKlkw" informationTarget="_GsGGwH53EeqlmLNKapV4lA"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_p7TxEH54EeqlmLNKapV4lA" name="OBSDSE" conveyed="_9siHkH5yEeqlmLNKapV4lA" informationSource="_Ivo9wH51EeqlmLNKapV4lA" informationTarget="_GsGGwH53EeqlmLNKapV4lA"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Z12JYH54EeqlmLNKapV4lA" name="streamS3" visibility="private" conveyed="_zXWkYHKpEeqor8468tpfFw" informationSource="_sCP9sHdMEeqEm_3mTdKlkw" informationTarget="_GsGGwH53EeqlmLNKapV4lA"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_p7TxEH54EeqlmLNKapV4lA" name="OBS" conveyed="_9siHkH5yEeqlmLNKapV4lA" informationSource="_Ivo9wH51EeqlmLNKapV4lA" informationTarget="_GsGGwH53EeqlmLNKapV4lA"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_8okmYH8FEeqfKe16nTK7Jg" name="PastConditionChecker"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_IvO2MH8GEeqfKe16nTK7Jg" name="streamS2PCC" conveyed="_SI5bcHKpEeqor8468tpfFw" informationSource="_kPtOcHdMEeqEm_3mTdKlkw" informationTarget="_8okmYH8FEeqfKe16nTK7Jg"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_IvO2MH8GEeqfKe16nTK7Jg" name="streamS2" conveyed="_SI5bcHKpEeqor8468tpfFw" informationSource="_kPtOcHdMEeqEm_3mTdKlkw" informationTarget="_8okmYH8FEeqfKe16nTK7Jg"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_cef2IH8GEeqfKe16nTK7Jg" name="ViewBuilder"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_H9HnUH8HEeqfKe16nTK7Jg" name="OBSVB" conveyed="_9siHkH5yEeqlmLNKapV4lA" informationSource="_Ivo9wH51EeqlmLNKapV4lA" informationTarget="_cef2IH8GEeqfKe16nTK7Jg"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_H9HnUH8HEeqfKe16nTK7Jg" name="OBS" conveyed="_9siHkH5yEeqlmLNKapV4lA" informationSource="_Ivo9wH51EeqlmLNKapV4lA" informationTarget="_cef2IH8GEeqfKe16nTK7Jg"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_K3BXMH8IEeqfKe16nTK7Jg" name="TupleS'3Generator"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_PyUzkH8IEeqfKe16nTK7Jg" name="TupleS'3Sink"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_X4CWcH8IEeqfKe16nTK7Jg" name="streamS'3" conveyed="_zXWkYHKpEeqor8468tpfFw" informationSource="_cef2IH8GEeqfKe16nTK7Jg" informationTarget="_K3BXMH8IEeqfKe16nTK7Jg"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_7LWTEH8IEeqfKe16nTK7Jg" name="resultsS'3Tuple" informationSource="_K3BXMH8IEeqfKe16nTK7Jg" informationTarget="_PyUzkH8IEeqfKe16nTK7Jg">
         <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_W6bpQH8JEeqfKe16nTK7Jg" name="streamS3VB" conveyed="_zXWkYHKpEeqor8468tpfFw" informationSource="_sCP9sHdMEeqEm_3mTdKlkw" informationTarget="_cef2IH8GEeqfKe16nTK7Jg"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_W6bpQH8JEeqfKe16nTK7Jg" name="streamS3" conveyed="_zXWkYHKpEeqor8468tpfFw" informationSource="_sCP9sHdMEeqEm_3mTdKlkw" informationTarget="_cef2IH8GEeqfKe16nTK7Jg _8okmYH8FEeqfKe16nTK7Jg"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_ktIsQIR8Eeqvms-tsswBgA" informationSource="_8okmYH8FEeqfKe16nTK7Jg" informationTarget="_cef2IH8GEeqfKe16nTK7Jg"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zgPDUHKYEeqlctBysCk6rQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zh4pIHKYEeqlctBysCk6rQ" source="PapyrusVersion">
@@ -111,16 +112,16 @@
   </uml:Model>
   <StreamUML:FlinkApplication xmi:id="_ZbdjwHKhEeqor8468tpfFw" base_Model="_VgGW4HKgEeqor8468tpfFw"/>
   <StreamUML:StreamDatatypes xmi:id="_BaL0sHKkEeqor8468tpfFw" base_Package="_UMFC4HKjEeqor8468tpfFw"/>
-  <StreamUML:MapTransformation xmi:id="_NQEyIHcZEeqjf7nG_fBsrg" base_Class="_IeeEUHcZEeqjf7nG_fBsrg" mapFunction="String[] fields = tuple.split(&quot;,&quot;); return new InputTransaction( fields[0],Long.parseLong(fields[1]));"/>
+  <StreamUML:MapTransformation xmi:id="_NQEyIHcZEeqjf7nG_fBsrg" base_Class="_IeeEUHcZEeqjf7nG_fBsrg" mapFunction="String[] fields = tuple.split(&quot;,&quot;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;return new InputTransaction(Integer.parseInt(fields[0]),fields[1],Integer.parseInt(fields[2]),fields[3]);"/>
   <StreamUML:NonParallelStream xmi:id="_K-Ed0HcaEeqjf7nG_fBsrg" base_InformationFlow="_HB3G8HcaEeqjf7nG_fBsrg"/>
   <StreamUML:TextFileSink xmi:id="_WB9MkHcbEeqjf7nG_fBsrg" base_Class="_OMfFIHcbEeqjf7nG_fBsrg" filepath="/home/cablan/Desktop/thesisFiles/resultsS2.txt"/>
-  <StreamUML:MapTransformation xmi:id="_FhFl0HccEeqjf7nG_fBsrg" base_Class="_465hYHcbEeqjf7nG_fBsrg" mapFunction="String joinTuple=String.join(&quot;,&quot;,dataSubject,nTransactions);"/>
+  <StreamUML:MapTransformation xmi:id="_FhFl0HccEeqjf7nG_fBsrg" base_Class="_465hYHcbEeqjf7nG_fBsrg" mapFunction="String joinTuple;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;return joinTuple = String.join(&quot;,&quot;, tuple.getDataSubject(), tuple.getNTransactions().toString());"/>
   <StreamUML:NonParallelStream xmi:id="_NmYcgHcdEeqjf7nG_fBsrg" base_InformationFlow="_FFbvIHcdEeqjf7nG_fBsrg"/>
   <StreamUML:NonParallelStream xmi:id="_SF570HcdEeqjf7nG_fBsrg" base_InformationFlow="_Q6bcoHccEeqjf7nG_fBsrg"/>
   <StreamUML:TextFileSink xmi:id="_04cGoHcdEeqjf7nG_fBsrg" base_Class="_3lk3wHccEeqjf7nG_fBsrg" filepath="/home/cablan/Desktop/thesisFiles/resultsS4.txt"/>
-  <StreamUML:WindowTransformation xmi:id="_Mv9a4HgaEeqTV5Y4B0bIkg" base_Class="_kPtOcHdMEeqEm_3mTdKlkw" windowFunction="out.collect(new TransactionsCount(key, new Integer(input.size), window.getEnd))"/>
-  <StreamUML:WindowTransformation xmi:id="_TqUk8HgaEeqTV5Y4B0bIkg" base_Class="_vAFn0HdMEeqEm_3mTdKlkw" windowFunction="var cont = 0&#xA;    var lastTransactionIndex = -1&#xA;    var partialSums: mutable.Map[String,Int] = mutable.Map()&#xA;&#xA;    for (t &lt;- input) {&#xA;      if(partialSums.keySet.contains(t.dataSubject)){&#xA;        partialSums += (t.dataSubject -> (partialSums(t.dataSubject) + t.amount))&#xA;      } else{&#xA;        partialSums.put(t.dataSubject, t.amount)&#xA;      }&#xA;&#xA;      if(t.transactionId.substring(1, t.transactionId.length).toInt > lastTransactionIndex){&#xA;        lastTransactionIndex = t.transactionId.substring(1, t.transactionId.length).toInt&#xA;      }&#xA;    }&#xA;&#xA;    for (k &lt;- partialSums){&#xA;      if(k._2 > 1000){&#xA;        cont = cont + 1&#xA;      }&#xA;    }&#xA;    &#xA;    out.collect(new TopConsumers(cont, window.getEnd))"/>
-  <StreamUML:WindowTransformation xmi:id="_gnyhsHiuEeq954KYVFDGKw" base_Class="_sCP9sHdMEeqEm_3mTdKlkw" windowFunction="var sum = 0&#xA;    var lastTransactionIndex = -1&#xA;&#xA;    for (t &lt;- input) {&#xA;      sum += t.amount&#xA;      if(t.transactionId.substring(1, t.transactionId.length).toInt > lastTransactionIndex){&#xA;        lastTransactionIndex = t.transactionId.substring(1, t.transactionId.length).toInt&#xA;      }"/>
+  <StreamUML:WindowTransformation xmi:id="_Mv9a4HgaEeqTV5Y4B0bIkg" base_Class="_kPtOcHdMEeqEm_3mTdKlkw" windowFunction="int sum = 0;&#xA;&#xA;&#x9;&#x9;for(InputTransaction trans: windowContent){&#xA;&#x9;&#x9;&#x9;sum += trans.getAmount();&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;out.collect(new IssuedTransactions( key, new Integer(sum)));"/>
+  <StreamUML:WindowTransformation xmi:id="_TqUk8HgaEeqTV5Y4B0bIkg" base_Class="_vAFn0HdMEeqEm_3mTdKlkw" windowFunction="int cont = 0;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;int sum = 0;&#xA;&#xA;&#x9;&#x9;for(SpentAmount am: windowContent){&#xA;&#x9;&#x9;&#x9;sum += am.getTotalAmount();&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;if(sum > 1000) {&#xA;&#x9;&#x9;&#x9;cont += cont + 1;&#xA;&#x9;&#x9;}&#xA;    &#xA;&#x9;&#x9;out.collect(new NumberUsers(cont));"/>
+  <StreamUML:WindowTransformation xmi:id="_gnyhsHiuEeq954KYVFDGKw" base_Class="_sCP9sHdMEeqEm_3mTdKlkw" windowFunction="out.collect(new SpentAmount(key, new Integer(windowContent.size())));"/>
   <StreamUML:KeyedStream xmi:id="_C5vSgHiwEeq954KYVFDGKw" base_InformationFlow="_sSQ6MHdNEeqEm_3mTdKlkw" key="_8R-ygHKoEeqor8468tpfFw"/>
   <StreamUML:WindowedStream xmi:id="_DBm1EHiwEeq954KYVFDGKw" base_InformationFlow="_sSQ6MHdNEeqEm_3mTdKlkw">
     <window xmi:type="StreamUML:Window" xmi:id="_Tz6UoHiwEeq954KYVFDGKw">
@@ -176,6 +177,6 @@
     </window>
   </StreamUML:WindowedStream>
   <StreamUML:TextFileSink xmi:id="_YdOlsICeEeqdDOMliWUj-Q" base_Class="_PyUzkH8IEeqfKe16nTK7Jg" filepath="/home/cablan/Desktop/thesisFiles/resultsS3.txt"/>
-  <StreamUML:MapTransformation xmi:id="_v6hWkICeEeqdDOMliWUj-Q" base_Class="_K3BXMH8IEeqfKe16nTK7Jg"/>
+  <StreamUML:MapTransformation xmi:id="_v6hWkICeEeqdDOMliWUj-Q" base_Class="_K3BXMH8IEeqfKe16nTK7Jg" mapFunction="String joinTuple;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;return joinTuple = String.join(&quot;,&quot;, tuple.getDataSubject(), tuple.getTotalAmount().toString());"/>
   <StreamUML:NFlatmapTransformation xmi:id="_zjuR4ICeEeqdDOMliWUj-Q" base_Class="_8okmYH8FEeqfKe16nTK7Jg"/>
 </xmi:XMI>

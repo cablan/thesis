@@ -30,28 +30,28 @@ public class greatSeller {
                .getExecutionEnvironment();
        
        //uncomment the below if you want to set the default parallelism for the project.
-       		env.setParallelism(1);
-       			
+       //env.setParallelism(1);
+       
        		DataStream<String> rawTuples = env.readTextFile("/home/cablan/Desktop/thesisFiles/tuples10File.txt");
-				;
+       			;
 
-       		DataStream<InputTransaction> streamS1 = rawTuples
+			DataStream<InputTransaction> streamS1 = rawTuples
 				.map(new TupleParser())
 				;
-       			
-       		DataStream<IssuedTransactions> streamS2 = streamS1
-       			      	.keyBy("dataSubject")
-       			        .timeWindow(Time.minutes(10))
-       			        .apply(new OP1())
-       					;
-       			
-       		DataStream<String> resultS2Tuple = streamS2
-       			      	.keyBy("dataSubject")
-       					.map(new TupleS2Generator())
-       					;
+			
+			DataStream<IssuedTransactions> streamS2 = streamS1
+			      	.keyBy("dataSubject")
+			        .timeWindow(Time.minutes(10))
+			        .apply(new OP1())
+					;
 		
-       		resultS2Tuple
-				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS2.txt")
+			DataStream<String> resultS2Tuple = streamS2
+			      	.keyBy("dataSubject")
+					.map(new TupleS2Generator())
+					;
+		
+			resultS2Tuple
+				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS2.csv")
 				.setParallelism(1);
 		
 			DataStream<SpentAmount> streamS3 = streamS1
@@ -72,10 +72,10 @@ public class greatSeller {
 				;
 		
 			streamS3Tuple
-				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS3.txt")
+				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS3.csv")
 				.setParallelism(1);
 			streamS4
-				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS4.txt")
+				.writeAsText("/home/cablan/Desktop/thesisFiles/resultsS4.csv")
 				.setParallelism(1);
 
        JobExecutionResult result = env.execute();

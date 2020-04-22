@@ -89,8 +89,8 @@
   <StreamUML:StreamDatatypes xmi:id="_BaL0sHKkEeqor8468tpfFw" base_Package="_UMFC4HKjEeqor8468tpfFw"/>
   <StreamUML:MapTransformation xmi:id="_NQEyIHcZEeqjf7nG_fBsrg" base_Class="_IeeEUHcZEeqjf7nG_fBsrg" mapFunction="String[] fields = tuple.split(&quot;,&quot;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;return new InputTransaction(Integer.parseInt(fields[0]),fields[1],Integer.parseInt(fields[2]),fields[3]);"/>
   <StreamUML:NonParallelStream xmi:id="_K-Ed0HcaEeqjf7nG_fBsrg" base_InformationFlow="_HB3G8HcaEeqjf7nG_fBsrg"/>
-  <StreamUML:TextFileSink xmi:id="_WB9MkHcbEeqjf7nG_fBsrg" base_Class="_OMfFIHcbEeqjf7nG_fBsrg" filepath="/home/cablan/Desktop/thesisFiles/resultsS2.txt"/>
-  <StreamUML:MapTransformation xmi:id="_FhFl0HccEeqjf7nG_fBsrg" base_Class="_465hYHcbEeqjf7nG_fBsrg" mapFunction="return joinTuple = String.join(&quot;,&quot;, tuple.getDataSubject(), tuple.getNTransactions().toString());"/>
+  <StreamUML:TextFileSink xmi:id="_WB9MkHcbEeqjf7nG_fBsrg" base_Class="_OMfFIHcbEeqjf7nG_fBsrg" filepath="/home/cablan/Desktop/thesisFiles/resultsS2.csv"/>
+  <StreamUML:MapTransformation xmi:id="_FhFl0HccEeqjf7nG_fBsrg" base_Class="_465hYHcbEeqjf7nG_fBsrg" mapFunction="String joinTuple;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;return joinTuple = String.join(&quot;,&quot;, tuple.getDataSubject(), tuple.getNTransactions().toString());"/>
   <StreamUML:NonParallelStream xmi:id="_NmYcgHcdEeqjf7nG_fBsrg" base_InformationFlow="_FFbvIHcdEeqjf7nG_fBsrg"/>
   <StreamUML:NonParallelStream xmi:id="_SF570HcdEeqjf7nG_fBsrg" base_InformationFlow="_Q6bcoHccEeqjf7nG_fBsrg"/>
   <StreamUML:WindowTransformation xmi:id="_Mv9a4HgaEeqTV5Y4B0bIkg" base_Class="_kPtOcHdMEeqEm_3mTdKlkw" windowFunction="int sum = 0;&#xA;&#xA;&#x9;&#x9;for(InputTransaction trans: windowContent){&#xA;&#x9;&#x9;&#x9;sum += trans.getAmount();&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;out.collect(new IssuedTransactions( key, new Integer(sum)));"/>
@@ -116,8 +116,8 @@
     </window>
   </StreamUML:WindowedStream>
   <StreamUML:TextFileSource xmi:id="_injRUH8BEeqfKe16nTK7Jg" base_Class="_ay8hQHcZEeqjf7nG_fBsrg" pathToFile="/home/cablan/Desktop/thesisFiles/tuples10File.txt"/>
-  <StreamUML:MapTransformation xmi:id="_xFSXIH8KEeqfKe16nTK7Jg" base_Class="_hCqBAH8KEeqfKe16nTK7Jg" mapFunction="return joinTuple = String.join(&quot;,&quot;, tuple.getDataSubject(), tuple.getTotalAmount().toString());"/>
-  <StreamUML:TextFileSink xmi:id="_0hc8AH8KEeqfKe16nTK7Jg" base_Class="_p_eLAH8KEeqfKe16nTK7Jg" filepath="/home/cablan/Desktop/thesisFiles/resultsS3.txt"/>
+  <StreamUML:MapTransformation xmi:id="_xFSXIH8KEeqfKe16nTK7Jg" base_Class="_hCqBAH8KEeqfKe16nTK7Jg" mapFunction="String joinTuple;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;return joinTuple = String.join(&quot;,&quot;, tuple.getDataSubject(), tuple.getTotalAmount().toString());"/>
+  <StreamUML:TextFileSink xmi:id="_0hc8AH8KEeqfKe16nTK7Jg" base_Class="_p_eLAH8KEeqfKe16nTK7Jg" filepath="/home/cablan/Desktop/thesisFiles/resultsS3.csv"/>
   <StreamUML:NonParallelStream xmi:id="_46VAwH8KEeqfKe16nTK7Jg" base_InformationFlow="_23DhcH8KEeqfKe16nTK7Jg"/>
   <StreamUML:KeyedStream xmi:id="_LhOqcH8LEeqfKe16nTK7Jg" base_InformationFlow="_AnoDoH8LEeqfKe16nTK7Jg" key="_6d7lgHKpEeqor8468tpfFw"/>
   <StreamUML:WindowedStream xmi:id="_Ll5IAH8LEeqfKe16nTK7Jg" base_InformationFlow="_AnoDoH8LEeqfKe16nTK7Jg">
@@ -125,6 +125,6 @@
       <size xmi:type="StreamUML:TimeAmount" xmi:id="_PbW9sH8LEeqfKe16nTK7Jg" timeUnit="Hours" size="1"/>
     </window>
   </StreamUML:WindowedStream>
-  <StreamUML:TextFileSink xmi:id="_J79_8H_TEeqVLc-wM0YcBA" base_Class="_FIcmkH_TEeqVLc-wM0YcBA" filepath="/home/cablan/Desktop/thesisFiles/resultsS4.txt"/>
+  <StreamUML:TextFileSink xmi:id="_J79_8H_TEeqVLc-wM0YcBA" base_Class="_FIcmkH_TEeqVLc-wM0YcBA" filepath="/home/cablan/Desktop/thesisFiles/resultsS4.csv"/>
   <StreamUML:RandomlyPartitionedStream xmi:id="_YkQfAH_TEeqVLc-wM0YcBA" base_InformationFlow="_VoRPAH_TEeqVLc-wM0YcBA"/>
 </xmi:XMI>

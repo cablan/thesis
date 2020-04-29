@@ -1,0 +1,142 @@
+[comment encoding = UTF-8 /]
+[module generateFlinkApplication('http://www.eclipse.org/emf/2002/Ecore', 'http://www.eclipse.org/uml2/5.0.0/UML')]
+
+[import streamgen::main::queryUtils/]
+[import streamgen::flink::generateFlinkSources/]
+[import streamgen::flink::generateFlinkTransformations/]
+[import streamgen::flink::generateFlinkSinks/]
+
+[template public generateFlinkApplication(aModel : Model)]
+
+[file (aModel.name.toLower().concat('/application/').concat(aModel.name.concat('.java')), false, 'UTF-8')]
+package [aModel.name.toLower().concat('.application')/];
+
+[for (p:Package | aModel.eContents(Package)) ]
+  [if hasStereotype(p, 'StreamDatatypes')]
+     [for (subc:DataType | p.eContents(DataType)) ]
+import [aModel.name.toLower()/].datatypes.[subc.name/];
+    [/for]
+  [/if]
+[/for]
+
+[for (c:Class | aModel.eContents(Class)) ]
+  [if c.getAppliedStereotypes()->asSequence()->exists(s | s.name.strstr('Transformation') and not (s.name = 'FilterTransformation') and not (s.name = 'SumTransformation'))]
+import [aModel.name.toLower()/].functions.[c.name/];
+  [/if]
+[/for]
+
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+import org.apache.flink.api.common.JobExecutionResult;
+import org.apache.flink.streaming.api.datastream.DataStream;
+import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.apache.flink.streaming.api.windowing.time.Time;
+
+[if (aModel.eAllContents(Class) -> exists(c | hasStereotype(c, 'KafkaSource') or hasStereotype(c, 'KafkaSink')))]
+import org.apache.flink.streaming.connectors.kafka.*;
+import org.apache.flink.api.common.serialization.SimpleStringSchema;
+[/if]
+
+[if (aModel.eAllContents(Class) -> exists(c | hasStereotype(c, 'CassandraSink')))]
+import org.apache.flink.streaming.connectors.cassandra.CassandraSink;
+import com.datastax.driver.mapping.Mapper;
+[/if]
+
+[if (isPrivPolAware(aModel))]
+import org.apache.commons.io.FileUtils; [comment ASK SOMEONE ABOUT THIS IMPORT/]
+
+import org.yaml.snakeyaml.Yaml; [comment ASK SOMEONE ABOUT THIS IMPORT/]
+import it.deib.polimi.diaprivacy.library.GeneralizationFunction;
+import it.deib.polimi.diaprivacy.library.PrivacyContextFixedSource;
+import it.deib.polimi.diaprivacy.library.ProtectedStream;
+import it.deib.polimi.diaprivacy.model.ApplicationDataStream;
+import it.deib.polimi.diaprivacy.model.ApplicationPrivacy;
+import it.deib.polimi.diaprivacy.model.DSEP;
+import it.deib.polimi.diaprivacy.model.PrivacyContext;
+import it.deib.polimi.diaprivacy.model.VCP;
+[/if]
+
+
+public class [aModel.name/] {
+
+    public static void main(String['['/][']'/] args) throws Exception {
+		
+		[comment Streamgen Environment Configuration/]
+		final StreamExecutionEnvironment env = StreamExecutionEnvironment
+               .getExecutionEnvironment();
+       
+       //uncomment the below if you want to set the default parallelism for the project.
+       //env.setParallelism(1);
+
+[comment StreamGen Privacy Policies Initialization/]
+[if (isPrivPolAware(aModel))]
+			/// privacy init
+			Yaml yaml = new Yaml();
+
+			String content = FileUtils.readFileToString(
+					new File("[getStereotypeProperty(aModel, 'FlinkApplication', 'pathPrivConfig')/]"),
+					"UTF-8");
+
+			ApplicationPrivacy app = yaml.loadAs(content, ApplicationPrivacy.class);
+
+			/// finish privacy init		
+[/if]
+
+[comment StreamGen Sources creation/]
+[for (c:Class | aModel.eContents(Class)) ]
+	[if hasStereotype(c, 'SocketSource')]
+		[generateFlinkSocketSource(c)/]
+	[elseif (hasStereotype(c, 'TextFileSource'))]
+		[generateFlinkTextFileSource(c)/]
+	[elseif (hasStereotype(c, 'KafkaSource'))]
+		[generateFlinkKafkaSource(c)/]
+	[/if]
+[/for]
+
+[comment StreamGen Transformations creation/]
+[for (c:Class | aModel.eContents(Class)) ]
+	[if (hasStereotype(c, 'MapTransformation'))]
+		[generateFlinkMapTransformation(c)/]
+	[elseif (hasStereotype(c, 'FlatmapTransformation'))]
+		[generateFlinkFlatmapTransformation(c)/]
+	[elseif (hasStereotype(c, 'NFlatmapTransformation'))]
+		[generateFlinkCoFlatmapTransformation(c)/]
+	[elseif (hasStereotype(c, 'SumTransformation'))]
+		[generateFlinkSumTransformation(c)/]
+	[elseif (hasStereotype(c, 'FilterTransformation'))]
+		[generateFlinkFilterTransformation(c)/]
+	[elseif (hasStereotype(c, 'WindowTransformation'))]
+		[generateFlinkWindowTransformation(c)/]
+	[/if]
+[/for]
+
+[comment StreamGen Privacy Policies creation/]
+[if (isPrivPolAware(aModel))]
+	[for (stream:DirectedRelationship | aModel.eContents(DirectedRelationship)) ]
+		[if hasStereotype(stream, 'SecureStream')]
+			[generateFlinkPrivPolicies(stream)/]
+		[/if]
+	[/for]
+[/if]
+
+[comment StreamGen Sinks creation/]
+[for (c:Class | aModel.eContents(Class)) ]
+	[if (hasStereotype(c, 'KafkaSink'))]
+		[generateFlinkKafkaSink(c)/]
+	[elseif (hasStereotype(c, 'CassandraSink'))]
+		[generateFlinkCassandraSink(c)/]
+	[elseif (hasStereotype(c, 'CsvFileSink'))]
+		[generateFlinkCsvFileSink(c)/]
+	[elseif (hasStereotype(c, 'TextFileSink'))]
+		[generateFlinkTextFileSink(c)/]
+	[/if]
+[/for]
+
+
+       JobExecutionResult result = env.execute();
+       System.out.println("EXECUTION TIME: " + result.getNetRuntime(TimeUnit.SECONDS));
+
+    }
+}
+[/file]
+[/template]

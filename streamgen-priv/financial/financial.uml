@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_9OZ_8NWKEeiCJq80tjZ76w/110" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_9OZ_8NWKEeiCJq80tjZ76w/110 ../profile/StreamUML.profile.uml#_9OgGkNWKEeiCJq80tjZ76w">
+  <uml:Model xmi:id="_QyCSYNPwEeiKApHy-8EDqg" name="financial">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_Rm2xsNWJEeiCJq80tjZ76w" annotatedElement="_T2PqQNPwEeiKApHy-8EDqg">
+      <body>NumberOfTransactions res = new NumberOfTransactions();
+res.setDataSubject(key);
+res.setNTransactions(windowContent.size());
+out.collect(res);</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_QfzqENWJEeiCJq80tjZ76w" annotatedElement="_UKjGUNPwEeiKApHy-8EDqg">
+      <body>Long tot = 0L;
+for(Transaction t: windowContent){
+	tot = tot + t.getAmount();
+}
+TotalAmount res = new TotalAmount();
+res.setDataSubject(key);
+res.setTotalAmount(tot);
+out.collect(res);</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_TTGRENWJEeiCJq80tjZ76w" annotatedElement="_diyfkNWGEeiCJq80tjZ76w">
+      <body>Long tot = 0L;
+for(TotalAmount t: windowContent){
+	tot = tot + t.getTotalAmount();
+}
+TotalAmount res = new TotalAmount();
+res.setDataSubject(key);
+res.setTotalAmount(tot);
+out.collect(res);</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_UDPUkNWJEeiCJq80tjZ76w" annotatedElement="_rUps8NWGEeiCJq80tjZ76w">
+      <body>tuple.getTotalAmount() >= 1000</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Model" xmi:id="_cnegQNP5EeiKApHy-8EDqg" name="FinancialAppExample">
+      <packagedElement xmi:type="uml:Class" xmi:id="_THyo0NPwEeiKApHy-8EDqg" name="TRXSRC"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_T2PqQNPwEeiKApHy-8EDqg" name="OP1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_UKjGUNPwEeiKApHy-8EDqg" name="OP2"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sKc1ANPwEeiKApHy-8EDqg" name="S2_Dashboard"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_0x5ZkNV9EeigtIAIGQUObw" name="S3_Dashboard"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_diyfkNWGEeiCJq80tjZ76w" name="OP3_1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_rUps8NWGEeiCJq80tjZ76w" name="OP3_2"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ysgrUNWGEeiCJq80tjZ76w" name="OP3_3"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_2aqYENWGEeiCJq80tjZ76w" name="S4_Dashboard"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="__0_TsNP1EeiKApHy-8EDqg" name="AppDatatype">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_NZLRcNP2EeiKApHy-8EDqg" name="TopConsumers">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_37v_MNP4EeiKApHy-8EDqg" name="nTopUsers">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_OwlJQNP2EeiKApHy-8EDqg" name="TotalAmount">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_S9-2cNP5EeiKApHy-8EDqg" name="dataSubject">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_UBzD4NP5EeiKApHy-8EDqg" name="totalAmount">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+          </ownedAttribute>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_P2nkQNP2EeiKApHy-8EDqg" name="NumberOfTransactions">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_NyUC0NP5EeiKApHy-8EDqg" name="dataSubject">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Pn0y8NP5EeiKApHy-8EDqg" name="nTransactions">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_bHqasNP2EeiKApHy-8EDqg" name="Transaction">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_8CPTcNP4EeiKApHy-8EDqg" name="transactionId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_EGuuUNP5EeiKApHy-8EDqg" name="sender">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_GViIMNP5EeiKApHy-8EDqg" name="recipient">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_I3nqcNP5EeiKApHy-8EDqg" name="amount">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+          </ownedAttribute>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_XkJfYNPwEeiKApHy-8EDqg" name="S1" conveyed="_bHqasNP2EeiKApHy-8EDqg" informationSource="_THyo0NPwEeiKApHy-8EDqg" informationTarget="_UKjGUNPwEeiKApHy-8EDqg"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_56UE4NV9EeigtIAIGQUObw" name="S3" conveyed="_OwlJQNP2EeiKApHy-8EDqg" informationSource="_UKjGUNPwEeiKApHy-8EDqg" informationTarget="_0x5ZkNV9EeigtIAIGQUObw"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_YOv7kNPwEeiKApHy-8EDqg" name="S1" conveyed="_bHqasNP2EeiKApHy-8EDqg" informationSource="_THyo0NPwEeiKApHy-8EDqg" informationTarget="_T2PqQNPwEeiKApHy-8EDqg"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_ZRkDcNPwEeiKApHy-8EDqg" name="S3" conveyed="_OwlJQNP2EeiKApHy-8EDqg" informationSource="_UKjGUNPwEeiKApHy-8EDqg" informationTarget="_diyfkNWGEeiCJq80tjZ76w"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_uIYhUNPwEeiKApHy-8EDqg" name="S2" conveyed="_P2nkQNP2EeiKApHy-8EDqg" informationSource="_T2PqQNPwEeiKApHy-8EDqg" informationTarget="_sKc1ANPwEeiKApHy-8EDqg"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_xzlfQNWGEeiCJq80tjZ76w" name="S3_1" conveyed="_OwlJQNP2EeiKApHy-8EDqg" informationSource="_diyfkNWGEeiCJq80tjZ76w" informationTarget="_rUps8NWGEeiCJq80tjZ76w"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_0ABhoNWGEeiCJq80tjZ76w" name="S3_2" conveyed="_OwlJQNP2EeiKApHy-8EDqg" informationSource="_rUps8NWGEeiCJq80tjZ76w" informationTarget="_ysgrUNWGEeiCJq80tjZ76w"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_xqbGwNWHEeiCJq80tjZ76w" name="S4" informationSource="_ysgrUNWGEeiCJq80tjZ76w" informationTarget="_2aqYENWGEeiCJq80tjZ76w">
+        <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_nD11oNPyEeiKApHy-8EDqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GxanQNWLEeiCJq80tjZ76w" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GxanQdWLEeiCJq80tjZ76w" key="Version" value="0.0.111"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GxanQtWLEeiCJq80tjZ76w" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GxanQ9WLEeiCJq80tjZ76w" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GxanRNWLEeiCJq80tjZ76w" key="Date" value="2018-10-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GxanRdWLEeiCJq80tjZ76w" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nD-YgNPyEeiKApHy-8EDqg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_9OgGkNWKEeiCJq80tjZ76w"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
+    </profileApplication>
+  </uml:Model>
+  <StreamUML:SocketSource xmi:id="_sKe_UNPyEeiKApHy-8EDqg" base_Class="_THyo0NPwEeiKApHy-8EDqg" host="localhost" port="9999"/>
+  <StreamUML:WindowTransformation xmi:id="_B1cP4NPzEeiKApHy-8EDqg" base_Class="_T2PqQNPwEeiKApHy-8EDqg" windowFunction="NumberOfTransactions res = new NumberOfTransactions();&#xA;res.setDataSubject(key);&#xA;res.setNTransactions(windowContent.size());&#xA;out.collect(res);"/>
+  <StreamUML:WindowTransformation xmi:id="_DUm8kNPzEeiKApHy-8EDqg" base_Class="_UKjGUNPwEeiKApHy-8EDqg" windowFunction="Long tot = 0L;&#xA;for(Transaction t: windowContent){&#xA;&#x9;tot = tot + t.getAmount();&#xA;}&#xA;TotalAmount res = new TotalAmount();&#xA;res.setDataSubject(key);&#xA;res.setTotalAmount(tot);&#xA;out.collect(res);"/>
+  <StreamUML:WindowedStream xmi:id="_Jwk6cNPzEeiKApHy-8EDqg" base_InformationFlow="_ZRkDcNPwEeiKApHy-8EDqg">
+    <window xmi:type="StreamUML:Window" xmi:id="_DFFZMNP7EeiKApHy-8EDqg">
+      <size xmi:type="StreamUML:TimeAmount" xmi:id="_DWGQsNP7EeiKApHy-8EDqg" timeUnit="Hours" size="1"/>
+    </window>
+  </StreamUML:WindowedStream>
+  <StreamUML:NonParallelStream xmi:id="_MwdzANPzEeiKApHy-8EDqg" base_InformationFlow="_uIYhUNPwEeiKApHy-8EDqg"/>
+  <StreamUML:WindowedStream xmi:id="_T3694NPzEeiKApHy-8EDqg" base_InformationFlow="_YOv7kNPwEeiKApHy-8EDqg">
+    <window xmi:type="StreamUML:Window" xmi:id="_9twvMNP6EeiKApHy-8EDqg">
+      <size xmi:type="StreamUML:TimeAmount" xmi:id="__3YHENP6EeiKApHy-8EDqg" timeUnit="Minutes" size="10"/>
+    </window>
+  </StreamUML:WindowedStream>
+  <StreamUML:KeyedStream xmi:id="_VOOCcNPzEeiKApHy-8EDqg" base_InformationFlow="_YOv7kNPwEeiKApHy-8EDqg" key="_EGuuUNP5EeiKApHy-8EDqg"/>
+  <StreamUML:WindowedStream xmi:id="_XA7WMNPzEeiKApHy-8EDqg" base_InformationFlow="_XkJfYNPwEeiKApHy-8EDqg">
+    <window xmi:type="StreamUML:Window" xmi:id="_1VigANP6EeiKApHy-8EDqg">
+      <size xmi:type="StreamUML:TimeAmount" xmi:id="_2asxQNP6EeiKApHy-8EDqg" timeUnit="Minutes" size="10"/>
+    </window>
+  </StreamUML:WindowedStream>
+  <StreamUML:KeyedStream xmi:id="_XDBA4NPzEeiKApHy-8EDqg" base_InformationFlow="_XkJfYNPwEeiKApHy-8EDqg" key="_EGuuUNP5EeiKApHy-8EDqg"/>
+  <StreamUML:FlinkApplication xmi:id="_6oFiQNP7EeiKApHy-8EDqg" base_Model="_cnegQNP5EeiKApHy-8EDqg"/>
+  <StreamUML:StreamDatatype xmi:id="_-pxPANP7EeiKApHy-8EDqg" base_Class="__0_TsNP1EeiKApHy-8EDqg"/>
+  <StreamUML:NonParallelStream xmi:id="__SRoENV9EeigtIAIGQUObw" base_InformationFlow="_56UE4NV9EeigtIAIGQUObw"/>
+  <StreamUML:KeyedStream xmi:id="_mc564NWGEeiCJq80tjZ76w" base_InformationFlow="_ZRkDcNPwEeiKApHy-8EDqg" key="_UBzD4NP5EeiKApHy-8EDqg"/>
+  <StreamUML:FilterTransformation xmi:id="_tdMGwNWGEeiCJq80tjZ76w" base_Class="_rUps8NWGEeiCJq80tjZ76w" filteringCondition="tuple.getTotalAmount() >= 1000"/>
+  <StreamUML:RandomlyPartitionedStream xmi:id="_B320INWHEeiCJq80tjZ76w" base_InformationFlow="_xzlfQNWGEeiCJq80tjZ76w"/>
+  <StreamUML:NonParallelStream xmi:id="_JlRy0NWHEeiCJq80tjZ76w" base_InformationFlow="_0ABhoNWGEeiCJq80tjZ76w"/>
+  <StreamUML:NonParallelStream xmi:id="_ywn50NWHEeiCJq80tjZ76w" base_InformationFlow="_xqbGwNWHEeiCJq80tjZ76w"/>
+  <StreamUML:WindowTransformation xmi:id="_-5iMYNWHEeiCJq80tjZ76w" base_Class="_diyfkNWGEeiCJq80tjZ76w" windowFunction="Long tot = 0L;&#xA;for(TotalAmount t: windowContent){&#xA;&#x9;tot = tot + t.getTotalAmount();&#xA;}&#xA;TotalAmount res = new TotalAmount();&#xA;res.setDataSubject(key);&#xA;res.setTotalAmount(tot);&#xA;out.collect(res);"/>
+  <StreamUML:SocketSInk xmi:id="_G3nAwNWJEeiCJq80tjZ76w" base_Class="_2aqYENWGEeiCJq80tjZ76w"/>
+  <StreamUML:SocketSInk xmi:id="_InMvENWJEeiCJq80tjZ76w" base_Class="_sKc1ANPwEeiKApHy-8EDqg"/>
+  <StreamUML:SocketSInk xmi:id="_KQzKINWJEeiCJq80tjZ76w" base_Class="_0x5ZkNV9EeigtIAIGQUObw"/>
+  <StreamUML:CountTransformation xmi:id="_JtaeUNWLEeiCJq80tjZ76w" base_Class="_ysgrUNWGEeiCJq80tjZ76w"/>
+</xmi:XMI>

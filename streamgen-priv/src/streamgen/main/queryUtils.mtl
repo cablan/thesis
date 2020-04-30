@@ -58,3 +58,7 @@ getStereotypeProperty(aClass, 'SecureStream', 'protectedByVCP').toString().toBoo
 [query public isDSEPprotected (aClass : Element) : Boolean = 
 getStereotypeProperty(aClass, 'SecureStream', 'protectedByDSEP').toString().toBoolean()
 /]
+
+[query public isMainCopy (aClass : Element) : Boolean = 
+getStereotypeProperty(aClass, 'SecureStream', 'isMainCopy').toString().toBoolean()
+/]

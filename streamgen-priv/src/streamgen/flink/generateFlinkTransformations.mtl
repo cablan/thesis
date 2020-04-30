@@ -4,11 +4,15 @@
 [import streamgen::main::queryUtils/]
 
 [template public generateFlinkMapTransformation(aClass : Class) 
-	{input : DirectedRelationship = getInputs(aClass)->first();
-	 output : DirectedRelationship = getOutputs(aClass)->first();}]
+	{input : DirectedRelationship = getInputs(aClass)->first();}]
 
 	// begin stream definition
-	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] = [input.eGet('name')/]
+	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] = 
+		[if input.hasStereotype('SecureStream')]
+		[input.eGet('name')/]_f
+		[else]
+		[input.eGet('name')/]
+		[/if]
 		[if input.hasStereotype('KeyedStream') ]
       	.keyBy("[getStereotypeProperty(input, 'KeyedStream', 'key').eGet('name')/]")
       	[/if]
@@ -19,18 +23,22 @@
 		;
 		[/if]
 
-	[if (isPrivPolAware(aClass.getModel()))]
+	[if not(input.hasStereotype('SecureStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
 [/template]
 
 [template public generateFlinkFlatmapTransformation(aClass : Class)
-	{input : DirectedRelationship = getInputs(aClass)->first();
-	 output : DirectedRelationship = getOutputs(aClass)->first();}]
+	{input : DirectedRelationship = getInputs(aClass)->first();}]
 
 	// begin stream definition
-	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] = [input.eGet('name')/]
+	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] =
+		[if input.hasStereotype('SecureStream')]
+		[input.eGet('name')/]_f
+		[else]
+		[input.eGet('name')/]
+		[/if]
 		[if input.hasStereotype('KeyedStream') ]
       	.keyBy("[getStereotypeProperty(input, 'KeyedStream', 'key').eGet('name')/]")
       	[/if]
@@ -41,7 +49,7 @@
 		;
 		[/if]
 
-	[if (isPrivPolAware(aClass.getModel()))]
+	[if not(input.hasStereotype('SecureStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -49,8 +57,7 @@
 
 [template public generateFlinkCoFlatmapTransformation(aClass : Class)
 	{first : DirectedRelationship = getInputs(aClass)->at(1);
-	 second : DirectedRelationship = getInputs(aClass)->at(2);
-	 output : DirectedRelationship = getOutputs(aClass)->first();}]
+	 second : DirectedRelationship = getInputs(aClass)->at(2);}]
 
 	// begin stream definition
 	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] = [first.eGet('name')/]
@@ -74,7 +81,7 @@
 		;
 		[/if]
 
-	[if (isPrivPolAware(aClass.getModel()))]
+	[if not(first.hasStereotype('SecureStream')) and not(second.hasStereotype('SecureStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -84,11 +91,15 @@
 [/template]
 
 [template public generateFlinkFilterTransformation(aClass : Class)
-	{input : DirectedRelationship = getInputs(aClass)->first();
-	 output : DirectedRelationship = getOutputs(aClass)->first();}]
+	{input : DirectedRelationship = getInputs(aClass)->first();}]
 
 	// begin stream definition
-	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] = [input.eGet('name')/]
+	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] =
+		[if input.hasStereotype('SecureStream')]
+		[input.eGet('name')/]_f
+		[else]
+		[input.eGet('name')/]
+		[/if]
 		[if input.hasStereotype('KeyedStream') ]
       	.keyBy("[getStereotypeProperty(input, 'KeyedStream', 'key').eGet('name')/]")
       	[/if]
@@ -99,7 +110,7 @@
 		;
 		[/if]
 
-	[if (isPrivPolAware(aClass.getModel()))]
+	[if not(input.hasStereotype('SecureStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -109,11 +120,15 @@
 [/template]
 
 [template public generateFlinkWindowTransformation(aClass : Class)
-	{input : DirectedRelationship = getInputs(aClass)->first();
-	 output : DirectedRelationship = getOutputs(aClass)->first();}]
+	{input : DirectedRelationship = getInputs(aClass)->first();}]
 
 	// begin stream definition
-	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] = [input.eGet('name')/]
+	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] =
+		[if input.hasStereotype('SecureStream')]
+		[input.eGet('name')/]_f
+		[else]
+		[input.eGet('name')/]
+		[/if]
 		[if input.hasStereotype('KeyedStream') ]
       	.keyBy("[getStereotypeProperty(input, 'KeyedStream', 'key').eGet('name')/]")
       	[/if] 
@@ -137,18 +152,22 @@
 		;
 		[/if]
 
-	[if (isPrivPolAware(aClass.getModel()))]
+	[if not(input.hasStereotype('SecureStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
 [/template]
 
 [template public generateFlinkSumTransformation(aClass : Class)
-	{input : DirectedRelationship = getInputs(aClass)->first();
-	 output : DirectedRelationship = getOutputs(aClass)->first();}]
+	{input : DirectedRelationship = getInputs(aClass)->first();}]
 
 	// begin stream definition
-	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] = [input.eGet('name')/]
+	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] =
+		[if input.hasStereotype('SecureStream')]
+		[input.eGet('name')/]_f
+		[else]
+		[input.eGet('name')/]
+		[/if]
 		[if input.hasStereotype('KeyedStream') ]
       	.keyBy("[getStereotypeProperty(input, 'KeyedStream', 'key').eGet('name')/]")
       	[/if] 
@@ -172,7 +191,7 @@
 		;
 		[/if]
 
-	[if (isPrivPolAware(aClass.getModel()))]
+	[if not(input.hasStereotype('SecureStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition

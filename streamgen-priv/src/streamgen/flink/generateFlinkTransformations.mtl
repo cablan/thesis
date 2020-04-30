@@ -203,7 +203,7 @@
 ApplicationDataStream app_[stream.eGet('name')/] = app.getStreamByID("[stream.eGet('name')/]");
 
 [comment THIS NEXT LINE ASK TO MICHELE ABOUT THE PARENTHESIS /]			
-ProtectedStream<[stream.eGet('conveyed').name/]> [stream.eGet('name')/]_p = new ProtectedStream<[stream.eGet('conveyed').name/]>;
+ProtectedStream<[stream.eGet('conveyed').name/]> [stream.eGet('name')/]_p = new ProtectedStream<[stream.eGet('conveyed').name/]>();
 
 [stream.eGet('name')/]_p.setStreamToProtect((DataStream<[stream.eGet('conveyed').name/]>) app_[stream.eGet('name')/].getConcreteStream());
 [if isVCPprotected(stream)]

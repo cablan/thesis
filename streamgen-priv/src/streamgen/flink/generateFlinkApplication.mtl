@@ -42,7 +42,7 @@ import org.apache.flink.streaming.connectors.cassandra.CassandraSink;
 import com.datastax.driver.mapping.Mapper;
 [/if]
 
-[if (isPrivPolAware(aModel))]
+[if (aModel.eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'SecureStream')))]
 import org.apache.commons.io.FileUtils; [comment ASK SOMEONE ABOUT THIS IMPORT/]
 
 import org.yaml.snakeyaml.Yaml; [comment ASK SOMEONE ABOUT THIS IMPORT/]
@@ -69,8 +69,8 @@ public class [aModel.name/] {
        //env.setParallelism(1);
 
 [comment StreamGen Privacy Policies Initialization/]
-[if (isPrivPolAware(aModel))]
-			/// privacy init
+[if (aModel.eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'SecureStream')))]
+			// privacy init
 			Yaml yaml = new Yaml();
 
 			String content = FileUtils.readFileToString(
@@ -79,8 +79,10 @@ public class [aModel.name/] {
 
 			ApplicationPrivacy app = yaml.loadAs(content, ApplicationPrivacy.class);
 
-			/// finish privacy init		
+			// finish privacy init		
 [/if]
+
+///////////////////////////////////////////////////////////////Streams From Sources///////////////////////////////////////////////////////////////////
 
 [comment StreamGen Sources creation/]
 [for (c:Class | aModel.eContents(Class)) ]
@@ -92,6 +94,8 @@ public class [aModel.name/] {
 		[generateFlinkKafkaSource(c)/]
 	[/if]
 [/for]
+
+////////////////////////////////////////////////Streams From Transformations Before Privacy Policies////////////////////////////////////////////////////
 
 [comment StreamGen Transformations creation before Privacy Policies/]
 [for (c:Class | aModel.eContents(Class)) ]
@@ -122,6 +126,8 @@ public class [aModel.name/] {
 	[/if]
 [/for]
 
+///////////////////////////////////////////////////////Streams From Privacy Policies///////////////////////////////////////////////////////////////////
+
 [comment StreamGen Privacy Policies creation/]
 [if (isPrivPolAware(aModel))]
 	[for (stream:DirectedRelationship | aModel.eContents(DirectedRelationship))]
@@ -130,6 +136,8 @@ public class [aModel.name/] {
 		[/if]
 	[/for]
 [/if]
+
+////////////////////////////////////////////////Streams From Transformations After Privacy Policies////////////////////////////////////////////////////
 
 [comment StreamGen Transformations creation after Privacy Policies/]
 [for (c:Class | aModel.eContents(Class)) ]
@@ -159,6 +167,8 @@ public class [aModel.name/] {
 		[/if]
 	[/if]
 [/for]
+
+///////////////////////////////////////////////////////////Streams To Sinks//////////////////////////////////////////////////////////////////////////////
 
 [comment StreamGen Sinks creation/]
 [for (c:Class | aModel.eContents(Class)) ]

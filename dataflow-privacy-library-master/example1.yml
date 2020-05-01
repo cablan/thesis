@@ -1,0 +1,94 @@
+!!it.deib.polim.i.diaprivacy.model.ApplicationPrivacy
+policiesPerStream:
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s1
+    isSubjectSpecific: true
+    sourceId: null
+  : []
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s2
+    isSubjectSpecific: true
+    sourceId: null
+  : []
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s3
+    isSubjectSpecific: true
+    sourceId: null
+  : []
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s4
+    isSubjectSpecific: false
+    sourceId: null
+  : []
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s5
+    isSubjectSpecific: false
+    sourceId: null
+  : []
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s6
+    isSubjectSpecific: false
+    sourceId: 's2'
+  : - !!it.deib.polimi.diaprivacy.model.DSEP
+      dataSubject: ds1
+      pastConditions: 
+      - {operator: GREATER, type: INTEGER, value: 100, variable: content, containerStreamId: s4, lowerTemporalBound: 0, upperTemporalBound: 300}
+      privacyContext: {purpose: marketing, role: employee, timestamp: -1, userId: u1}
+      segPolicy: null
+      simpleConditions: 
+      - {operator: GREATER, type: INTEGER, value: 100, variable: content, containerStreamId: s3}
+      - {operator: GREATER, type: INTEGER, value: 100, variable: content, containerStreamId: s5}
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s7
+    isSubjectSpecific: true
+    sourceId: null
+  : []
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s8
+    isSubjectSpecific: true
+    sourceId: null
+  : []
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s9
+    isSubjectSpecific: true
+    sourceId: null
+  : []
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s10
+    isSubjectSpecific: false
+    sourceId: null
+  : []
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s11
+    isSubjectSpecific: false
+    sourceId: null
+  : []
+  ? concreteStream: null
+    fields:
+    - {name: content}
+    id: s12
+    isSubjectSpecific: false
+    sourceId: null
+  : []

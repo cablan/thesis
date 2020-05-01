@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_O_2FAIsBEeqKKOreTIETJg/122" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_O_2FAIsBEeqKKOreTIETJg/122 ../profile/StreamUML.profile.uml#_PAAdEIsBEeqKKOreTIETJg">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_DRbxIIuFEeqww8Qwn-dkCA/125" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_DRbxIIuFEeqww8Qwn-dkCA/125 ../profile/StreamUML.profile.uml#_DR0ysIuFEeqww8Qwn-dkCA">
   <uml:Model xmi:id="_p5Zr8HKYEeqlctBysCk6rQ" name="greatSellerApp">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_zixZ8HKYEeqlctBysCk6rQ">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -67,20 +67,20 @@
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_VoRPAH_TEeqVLc-wM0YcBA" name="streamS4" visibility="private" conveyed="_H2DdMHKqEeqor8468tpfFw" informationSource="_vAFn0HdMEeqEm_3mTdKlkw" informationTarget="_FIcmkH_TEeqVLc-wM0YcBA"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zgPDUHKYEeqlctBysCk6rQ">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_amJZwIsBEeqKKOreTIETJg" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_amJZwYsBEeqKKOreTIETJg" key="Version" value="0.0.123"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_amJZwosBEeqKKOreTIETJg" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_amJZw4sBEeqKKOreTIETJg" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_amJZxIsBEeqKKOreTIETJg" key="Date" value="2020-04-30"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_amJZxYsBEeqKKOreTIETJg" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rMCsMIuJEeqww8Qwn-dkCA" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rMCsMYuJEeqww8Qwn-dkCA" key="Version" value="0.0.126"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rMCsMouJEeqww8Qwn-dkCA" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rMCsM4uJEeqww8Qwn-dkCA" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rMCsNIuJEeqww8Qwn-dkCA" key="Date" value="2020-05-01"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rMCsNYuJEeqww8Qwn-dkCA" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zgb3oHKYEeqlctBysCk6rQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_PAAdEIsBEeqKKOreTIETJg"/>
+        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_DR0ysIuFEeqww8Qwn-dkCA"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
     </profileApplication>
   </uml:Model>
-  <StreamUML:FlinkApplication xmi:id="_ZbdjwHKhEeqor8468tpfFw" base_Model="_VgGW4HKgEeqor8468tpfFw" privPolAware="true" pathPrivConfig="/home/cablan/Desktop/thesisFiles/config/"/>
+  <StreamUML:FlinkApplication xmi:id="_ZbdjwHKhEeqor8468tpfFw" base_Model="_VgGW4HKgEeqor8468tpfFw" pathPrivConfigFile="/home/cablan/Desktop/thesisFiles/config/"/>
   <StreamUML:StreamDatatypes xmi:id="_BaL0sHKkEeqor8468tpfFw" base_Package="_UMFC4HKjEeqor8468tpfFw"/>
   <StreamUML:MapTransformation xmi:id="_NQEyIHcZEeqjf7nG_fBsrg" base_Class="_IeeEUHcZEeqjf7nG_fBsrg" mapFunction="String[] fields = tuple.split(&quot;,&quot;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;return new InputTransaction(Integer.parseInt(fields[0]),fields[1],Integer.parseInt(fields[2]),fields[3]);"/>
   <StreamUML:NonParallelStream xmi:id="_K-Ed0HcaEeqjf7nG_fBsrg" base_InformationFlow="_HB3G8HcaEeqjf7nG_fBsrg"/>
@@ -113,13 +113,13 @@
   <StreamUML:TextFileSink xmi:id="_J79_8H_TEeqVLc-wM0YcBA" base_Class="_FIcmkH_TEeqVLc-wM0YcBA" filepath="/home/cablan/Desktop/thesisFiles/outputs/resultsS4.txt"/>
   <StreamUML:SocketSource xmi:id="_UIg9MIcKEeqDOIyYouFn4g" base_Class="_ay8hQHcZEeqjf7nG_fBsrg" host="localhost" port="9999"/>
   <StreamUML:RandomlyPartitionedStream xmi:id="_fvy3EIkzEeqrzbCtyqqSKw" base_InformationFlow="_VoRPAH_TEeqVLc-wM0YcBA"/>
-  <StreamUML:SecureStream xmi:id="_lgrucIlxEeqKv8tBRN26-A" base_InformationFlow="_WJJ4kHdOEeqEm_3mTdKlkw" protectedByVCP="true" isMainCopy="true"/>
-  <StreamUML:SecureStream xmi:id="_bqs7AIolEeqBPIDBrHXGkg" base_InformationFlow="_AnoDoH8LEeqfKe16nTK7Jg" protectedByDSEP="true"/>
+  <StreamUML:PrivacyProtectingStream xmi:id="_lgrucIlxEeqKv8tBRN26-A" base_InformationFlow="_WJJ4kHdOEeqEm_3mTdKlkw" protectedByVCP="true" isMainCopy="true"/>
+  <StreamUML:PrivacyProtectingStream xmi:id="_bqs7AIolEeqBPIDBrHXGkg" base_InformationFlow="_AnoDoH8LEeqfKe16nTK7Jg" protectedByDSEP="true"/>
   <StreamUML:KeyedStream xmi:id="_lXDoIIrAEeqM4_MSyrviIQ" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw" isObservable="true" key="_6d7lgHKpEeqor8468tpfFw"/>
   <StreamUML:WindowedStream xmi:id="_A4hzQHixEeq954KYVFDGKw" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw" isObservable="true">
     <window xmi:type="StreamUML:Window" xmi:id="_Jdfk8YcKEeqDOIyYouFn4g">
       <size xmi:type="StreamUML:TimeAmount" xmi:id="_Jdfk8ocKEeqDOIyYouFn4g" timeUnit="Minutes" size="1"/>
     </window>
   </StreamUML:WindowedStream>
-  <StreamUML:SecureStream xmi:id="_NSA5EIlzEeqpEsX6P4rdwQ" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw" protectedByDSEP="true" isMainCopy="true"/>
+  <StreamUML:PrivacyProtectingStream xmi:id="_NSA5EIlzEeqpEsX6P4rdwQ" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw" protectedByDSEP="true" isMainCopy="true"/>
 </xmi:XMI>

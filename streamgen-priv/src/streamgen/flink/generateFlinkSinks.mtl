@@ -8,7 +8,7 @@
 	
 	// begin sink definition
 	CassandraSink.addSink(
-		[if input.hasStereotype('SecureStream')]
+		[if input.hasStereotype('PrivacyProtectingStream')]
 		[input.eGet('name')/]_f
 		[else]
 		[input.eGet('name')/]
@@ -27,7 +27,7 @@
 	        "[getStereotypeProperty(aClass, 'KafkaSink', 'kafkaBrokerIp')/]:[getStereotypeProperty(aClass, 'KafkaSink', 'kafkaBrokerPort')/]",            
 	        "[aClass.name.toString()/]",                 
 	        new SimpleStringSchema()); 
-	[if input.hasStereotype('SecureStream')]
+	[if input.hasStereotype('PrivacyProtectingStream')]
 	[input.eGet('name')/]_f
 	[else]
 	[input.eGet('name')/]
@@ -39,7 +39,7 @@
 	{input : DirectedRelationship = getInputs(aClass)->first();}]
 
 	// begin sink definition
-[if input.hasStereotype('SecureStream')]
+[if input.hasStereotype('PrivacyProtectingStream')]
 	[input.eGet('name')/]_f
 [else]
 	[input.eGet('name')/]
@@ -57,7 +57,7 @@
 	{input : DirectedRelationship = getInputs(aClass)->first();}]
 
 	// begin sink definition
-[if input.hasStereotype('SecureStream')]
+[if input.hasStereotype('PrivacyProtectingStream')]
 	[input.eGet('name')/]_f
 [else]
 	[input.eGet('name')/]

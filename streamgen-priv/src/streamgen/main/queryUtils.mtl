@@ -47,18 +47,14 @@ getStereotypeProperty(aClass.getModel(), 'SparkApplication', 'applicationParalle
 getStereotypeProperty(aClass.getModel(), 'FlinkApplication', 'applicationParallelism').toString().toInteger()
 /]
 
-[query public isPrivPolAware (aModel : Element) : Boolean = 
-getStereotypeProperty(aModel, 'FlinkApplication', 'privPolAware').toString().toBoolean()
-/]
-
 [query public isVCPprotected (aClass : Element) : Boolean = 
-getStereotypeProperty(aClass, 'SecureStream', 'protectedByVCP').toString().toBoolean()
+getStereotypeProperty(aClass, 'PrivacyProtectingStream', 'protectedByVCP').toString().toBoolean()
 /]
 
 [query public isDSEPprotected (aClass : Element) : Boolean = 
-getStereotypeProperty(aClass, 'SecureStream', 'protectedByDSEP').toString().toBoolean()
+getStereotypeProperty(aClass, 'PrivacyProtectingStream', 'protectedByDSEP').toString().toBoolean()
 /]
 
 [query public isMainCopy (aClass : Element) : Boolean = 
-getStereotypeProperty(aClass, 'SecureStream', 'isMainCopy').toString().toBoolean()
+getStereotypeProperty(aClass, 'PrivacyProtectingStream', 'isMainCopy').toString().toBoolean()
 /]

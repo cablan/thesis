@@ -8,7 +8,7 @@
 
 	// begin stream definition
 	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] = 
-		[if input.hasStereotype('SecureStream')]
+		[if input.hasStereotype('PrivacyProtectingStream')]
 		[input.eGet('name')/]_f
 		[else]
 		[input.eGet('name')/]
@@ -23,7 +23,7 @@
 		;
 		[/if]
 
-	[if not(input.hasStereotype('SecureStream'))]
+	[if not(input.hasStereotype('PrivacyProtectingStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -34,7 +34,7 @@
 
 	// begin stream definition
 	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] =
-		[if input.hasStereotype('SecureStream')]
+		[if input.hasStereotype('PrivacyProtectingStream')]
 		[input.eGet('name')/]_f
 		[else]
 		[input.eGet('name')/]
@@ -49,7 +49,7 @@
 		;
 		[/if]
 
-	[if not(input.hasStereotype('SecureStream'))]
+	[if not(input.hasStereotype('PrivacyProtectingStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -81,7 +81,7 @@
 		;
 		[/if]
 
-	[if not(first.hasStereotype('SecureStream')) and not(second.hasStereotype('SecureStream'))]
+	[if not(first.hasStereotype('PrivacyProtectingStream')) and not(second.hasStereotype('PrivacyProtectingStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -95,7 +95,7 @@
 
 	// begin stream definition
 	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] =
-		[if input.hasStereotype('SecureStream')]
+		[if input.hasStereotype('PrivacyProtectingStream')]
 		[input.eGet('name')/]_f
 		[else]
 		[input.eGet('name')/]
@@ -110,7 +110,7 @@
 		;
 		[/if]
 
-	[if not(input.hasStereotype('SecureStream'))]
+	[if not(input.hasStereotype('PrivacyProtectingStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -124,7 +124,7 @@
 
 	// begin stream definition
 	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] =
-		[if input.hasStereotype('SecureStream')]
+		[if input.hasStereotype('PrivacyProtectingStream')]
 		[input.eGet('name')/]_f
 		[else]
 		[input.eGet('name')/]
@@ -152,7 +152,7 @@
 		;
 		[/if]
 
-	[if not(input.hasStereotype('SecureStream'))]
+	[if not(input.hasStereotype('PrivacyProtectingStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -191,7 +191,7 @@
 		;
 		[/if]
 
-	[if not(input.hasStereotype('SecureStream'))]
+	[if not(input.hasStereotype('PrivacyProtectingStream'))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition

@@ -42,10 +42,10 @@ import org.apache.flink.streaming.connectors.cassandra.CassandraSink;
 import com.datastax.driver.mapping.Mapper;
 [/if]
 
-[if (aModel.eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'SecureStream')))]
-import org.apache.commons.io.FileUtils; [comment ASK SOMEONE ABOUT THIS IMPORT/]
-
-import org.yaml.snakeyaml.Yaml; [comment ASK SOMEONE ABOUT THIS IMPORT/]
+[if (aModel.eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
+import org.apache.commons.io.FileUtils;
+import java.io.File;
+import org.yaml.snakeyaml.Yaml;
 import it.deib.polimi.diaprivacy.library.GeneralizationFunction;
 import it.deib.polimi.diaprivacy.library.PrivacyContextFixedSource;
 import it.deib.polimi.diaprivacy.library.ProtectedStream;
@@ -69,13 +69,11 @@ public class [aModel.name/] {
        //env.setParallelism(1);
 
 [comment StreamGen Privacy Policies Initialization/]
-[if (aModel.eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'SecureStream')))]
+[if (aModel.eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
 			// privacy init
 			Yaml yaml = new Yaml();
 
-			String content = FileUtils.readFileToString(
-					new File("[getStereotypeProperty(aModel, 'FlinkApplication', 'pathPrivConfig')/]"),
-					"UTF-8");
+			String content = FileUtils.readFileToString(new File("[getStereotypeProperty(aModel, 'FlinkApplication', 'pathPrivConfigFile')/]"), "UTF-8");
 
 			ApplicationPrivacy app = yaml.loadAs(content, ApplicationPrivacy.class);
 
@@ -100,27 +98,27 @@ public class [aModel.name/] {
 [comment StreamGen Transformations creation before Privacy Policies/]
 [for (c:Class | aModel.eContents(Class)) ]
 	[if (hasStereotype(c, 'MapTransformation'))]
-		[if  not(hasStereotype(getInputs(c)->first(), 'SecureStream'))]
+		[if  not(hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream'))]
 		[generateFlinkMapTransformation(c)/]
 		[/if]
 	[elseif (hasStereotype(c, 'FlatmapTransformation'))]
-		[if  not(hasStereotype(getInputs(c)->first(), 'SecureStream'))]
+		[if  not(hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream'))]
 		[generateFlinkFlatmapTransformation(c)/]
 		[/if]
 	[elseif (hasStereotype(c, 'NFlatmapTransformation'))]
-		[if  not(hasStereotype(getInputs(c)->first(), 'SecureStream'))]
+		[if  not(hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream'))]
 		[generateFlinkCoFlatmapTransformation(c)/]
 		[/if]
 	[elseif (hasStereotype(c, 'SumTransformation'))]
-		[if  not(hasStereotype(getInputs(c)->first(), 'SecureStream'))]
+		[if  not(hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream'))]
 		[generateFlinkSumTransformation(c)/]
 		[/if]
 	[elseif (hasStereotype(c, 'FilterTransformation'))]
-		[if  not(hasStereotype(getInputs(c)->first(), 'SecureStream'))]
+		[if  not(hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream'))]
 		[generateFlinkFilterTransformation(c)/]
 		[/if]
 	[elseif (hasStereotype(c, 'WindowTransformation'))]
-		[if  not(hasStereotype(getInputs(c)->first(), 'SecureStream'))]
+		[if  not(hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream'))]
 		[generateFlinkWindowTransformation(c)/]
 		[/if]
 	[/if]
@@ -129,9 +127,9 @@ public class [aModel.name/] {
 ///////////////////////////////////////////////////////Streams From Privacy Policies///////////////////////////////////////////////////////////////////
 
 [comment StreamGen Privacy Policies creation/]
-[if (isPrivPolAware(aModel))]
+[if (aModel.eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
 	[for (stream:DirectedRelationship | aModel.eContents(DirectedRelationship))]
-		[if hasStereotype(stream, 'SecureStream') and isMainCopy(stream)]
+		[if hasStereotype(stream, 'PrivacyProtectingStream') and isMainCopy(stream)]
 			[generateFlinkPrivPolicies(stream)/]
 		[/if]
 	[/for]
@@ -142,27 +140,27 @@ public class [aModel.name/] {
 [comment StreamGen Transformations creation after Privacy Policies/]
 [for (c:Class | aModel.eContents(Class)) ]
 	[if (hasStereotype(c, 'MapTransformation'))]
-		[if hasStereotype(getInputs(c)->first(), 'SecureStream')]
+		[if hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream')]
 		[generateFlinkMapTransformation(c)/]
 		[/if]
 	[elseif (hasStereotype(c, 'FlatmapTransformation'))]
-		[if hasStereotype(getInputs(c)->first(), 'SecureStream')]
+		[if hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream')]
 		[generateFlinkFlatmapTransformation(c)/]
 		[/if]
 	[elseif (hasStereotype(c, 'NFlatmapTransformation'))]
-		[if hasStereotype(getInputs(c)->first(), 'SecureStream')]
+		[if hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream')]
 		[generateFlinkCoFlatmapTransformation(c)/]
 		[/if]
 	[elseif (hasStereotype(c, 'SumTransformation'))]
-		[if hasStereotype(getInputs(c)->first(), 'SecureStream')]
+		[if hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream')]
 		[generateFlinkSumTransformation(c)/]
 		[/if]
 	[elseif (hasStereotype(c, 'FilterTransformation'))]
-		[if hasStereotype(getInputs(c)->first(), 'SecureStream')]
+		[if hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream')]
 		[generateFlinkFilterTransformation(c)/]
 		[/if]
 	[elseif (hasStereotype(c, 'WindowTransformation'))]
-		[if hasStereotype(getInputs(c)->first(), 'SecureStream')]
+		[if hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream')]
 		[generateFlinkWindowTransformation(c)/]
 		[/if]
 	[/if]

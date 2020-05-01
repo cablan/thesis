@@ -92,6 +92,13 @@
 		  <version>1.4.2</version>
 		</dependency>
 		[/if]
+		[if (aModel.eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
+		<dependency>
+   		  <groupId>org.yaml</groupId>
+   		  <artifactId>snakeyaml</artifactId>
+   		  <version>1.7</version>
+		</dependency>
+		[/if]
 	</dependencies>
 
 	<profiles>

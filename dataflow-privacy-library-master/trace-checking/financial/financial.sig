@@ -1,5 +1,0 @@
-s1(data_subject:string, amount:int, recipient:string)
-s2(data_subject:string, nTransactions:int)
-s3(data_subject:string, totalAmount:int, totalAmountOrg:int)
-s4(count:int)
-context(user:string)

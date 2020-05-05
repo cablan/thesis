@@ -1,0 +1,81 @@
+[comment encoding = UTF-8 /]
+[module generateFlinkSources('http://www.eclipse.org/emf/2002/Ecore', 'http://www.eclipse.org/uml2/5.0.0/UML')]
+
+[import streamgen::main::queryUtils/]
+
+[template public generateFlinkSocketSource(aClass : Class)]
+	// begin input stream definition
+	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass) ->first()/] = env.socketTextStream("[getStereotypeProperty(aClass, 'SocketSource', 'host')/]", [getStereotypeProperty(aClass, 'SocketSource', 'port')/]);
+	// finish input stream definition
+[/template]
+
+[template public generateFlinkTextFileSource(aClass : Class)]
+	// begin input stream definition
+	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass) ->first()/] = env.readTextFile("[getStereotypeProperty(aClass, 'TextFileSource', 'pathToFile')/]");
+		[if getParallelism(aClass, 'TextFileSource').toString().toInteger() > 1 ]
+		.setParallelism([getParallelism(aClass, 'TextFileSource')/]);
+		[else]
+		;
+		[/if]
+	// finish input stream definition
+[/template]
+
+[template public generateFlinkKafkaSource(aClass : Class)]
+	// begin input stream definition
+	Properties [aClass.name.toString().concat('_kafkaParams')/] = new Properties();
+	[aClass.name.toString().concat('_kafkaParams')/].setProperty("bootstrap.servers", "[getStereotypeProperty(aClass, 'KafkaSource', 'kafkaBrokerIp')/]:[getStereotypeProperty(aClass, 'KafkaSource', 'kafkaBrokerPort')/]");
+	[aClass.name.toString().concat('_kafkaParams')/].setProperty("group.id", "[aClass.name.toString().concat('_groupId')/]");
+	DataStream<[getOutputsConveyed(aClass)->first()/]> [getOutputNames()->first()/] = env
+		.addSource(new FlinkKafkaConsumer010<>("[aClass.name.toString()/]", new SimpleStringSchema(), [aClass.name.toString().concat('_kafkaParams')/]));
+	// finish input stream definition
+[/template]
+
+[template public generateFlinkPrivacyContextSocketSource(aClass : Class)]
+	// begin privacy source definition
+	DataStream<String> contextString = env.socketTextStream("[getStereotypeProperty(aClass, 'PrivContSocketSource', 'host')/]", [getStereotypeProperty(aClass, 'PrivContSocketSource', 'port')/]);
+	
+	DataStream<PrivacyContext> contextStream = contextString.map(new PrivacyContextParser());
+	
+	// finish privacy source definition
+
+[/template]
+
+[template public generateFlinkPrivacyContextTextFileSource(aClass : Class)]
+	// begin privacy source definition
+	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass) ->first()/] = env.readTextFile("[getStereotypeProperty(aClass, 'PrivContTextFileSource', 'pathToFile')/]");
+		[if getParallelism(aClass, 'TextFileSource').toString().toInteger() > 1 ]
+		.setParallelism([getParallelism(aClass, 'PrivContTextFileSource')/]);
+		[else]
+		;
+		[/if]
+	// finish privacy source definition
+[/template]
+
+[template public generateFlinkPrivacyContextKafkaSource(aClass : Class)]
+	// begin privacy source definition
+	Properties [aClass.name.toString().concat('_kafkaParams')/] = new Properties();
+	[aClass.name.toString().concat('_kafkaParams')/].setProperty("bootstrap.servers", "[getStereotypeProperty(aClass, 'PrivContKafkaSource', 'kafkaBrokerIp')/]:[getStereotypeProperty(aClass, 'PrivContKafkaSource', 'kafkaBrokerPort')/]");
+	[aClass.name.toString().concat('_kafkaParams')/].setProperty("group.id", "[aClass.name.toString().concat('_groupId')/]");
+	DataStream<[getOutputsConveyed(aClass)->first()/]> [getOutputNames()->first()/] = env
+		.addSource(new FlinkKafkaConsumer010<>("[aClass.name.toString()/]", new SimpleStringSchema(), [aClass.name.toString().concat('_kafkaParams')/]));
+	// finish privacy source definition
+[/template]
+
+[template public generateFlinkPrivacyContextFixedSource(aClass : Class)]
+
+	// begin privacy source definition
+	DataStream<PrivacyContext> contextStream = env
+				.addSource(new PrivacyContextFixedSource(0, 2000, "[getStereotypeProperty(aClass, 'PrivContFixedSource', 'fixedUser')/]", "[getStereotypeProperty(aClass, 'PrivContFixedSource', 'fixedRole')/]", "[getStereotypeProperty(aClass, 'PrivContFixedSource', 'fixesPurpose')/]"));
+	// finish privacy source definition
+
+[/template]
+
+[template public generateFlinkPrivacyPolicyYamlFileSource(aClass : Class)]
+
+	Yaml yaml = new Yaml();
+	
+	String content = FileUtils.readFileToString(new File("[getStereotypeProperty(aClass, 'PrivPolYamlFileSource', 'pathToFile')/]"), "UTF-8");
+	
+	ApplicationPrivacy app = yaml.loadAs(content, ApplicationPrivacy.class);
+
+[/template]

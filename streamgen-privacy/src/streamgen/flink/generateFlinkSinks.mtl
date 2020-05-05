@@ -1,0 +1,72 @@
+[comment encoding = UTF-8 /]
+[module generateFlinkSinks('http://www.eclipse.org/emf/2002/Ecore', 'http://www.eclipse.org/uml2/5.0.0/UML')]
+
+[import streamgen::main::queryUtils/]
+ 
+[template public generateFlinkCassandraSink(aClass : Class)
+	{input : DirectedRelationship = getInputs(aClass)->first();}]
+	
+	// begin sink definition
+	CassandraSink.addSink(
+		[if input.hasStereotype('PrivacyProtectingStream')]
+		[input.eGet('name')/]_f
+		[else]
+		[input.eGet('name')/]
+		[/if])
+    	.setHost("[getStereotypeProperty(aClass, 'CassandraSink', 'cassandraHost')/]")
+    	.setMapperOptions(() -> new Mapper.Option['['/]]{Mapper.Option.saveNullFields(true)})
+    	.build();
+	// finish sink definition
+[/template]
+
+[template public generateFlinkKafkaSink(aClass : Class)
+	{input : DirectedRelationship = getInputs(aClass)->first();}]
+
+	// begin sink definition
+	FlinkKafkaProducer010<String> [aClass.name.toString().concat('_producer')/] = new FlinkKafkaProducer010<String>(
+	        "[getStereotypeProperty(aClass, 'KafkaSink', 'kafkaBrokerIp')/]:[getStereotypeProperty(aClass, 'KafkaSink', 'kafkaBrokerPort')/]",            
+	        "[aClass.name.toString()/]",                 
+	        new SimpleStringSchema()); 
+	[if input.hasStereotype('PrivacyProtectingStream')]
+	[input.eGet('name')/]_f
+	[else]
+	[input.eGet('name')/]
+	[/if].map(([input.eGet('conveyed').eGet('name')/] x) -> x.toString()).addSink([aClass.name.toString().concat('_producer')/]);
+	// finish sink definition
+[/template]
+
+[template public generateFlinkTextFileSink(aClass : Class)
+	{input : DirectedRelationship = getInputs(aClass)->first();}]
+
+	// begin sink definition
+[if input.hasStereotype('PrivacyProtectingStream')]
+	[input.eGet('name')/]_f
+[else]
+	[input.eGet('name')/]
+[/if]
+	[if input.hasStereotype('KeyedStream') ]
+	.keyBy("[getStereotypeProperty(input, 'KeyedStream', 'key').eGet('name')/]")
+	[/if]
+	.writeAsText("[getStereotypeProperty(aClass, 'TextFileSink', 'filepath')/]", WriteMode.OVERWRITE)
+	[comment: the parallelism should be set only if it differes from the topology level parallelism. This applies to every operation./]
+	.setParallelism([getParallelism(aClass, 'TextFileSink')/]);
+	// finish sink definition
+[/template]
+
+[template public generateFlinkCsvFileSink(aClass : Class)
+	{input : DirectedRelationship = getInputs(aClass)->first();}]
+
+	// begin sink definition
+[if input.hasStereotype('PrivacyProtectingStream')]
+	[input.eGet('name')/]_f
+[else]
+	[input.eGet('name')/]
+[/if]
+	[if input.hasStereotype('KeyedStream') ]
+	.keyBy("[getStereotypeProperty(input, 'KeyedStream', 'key').eGet('name')/]")
+	[/if]
+	.writeAsText("[getStereotypeProperty(aClass, 'CsvFileSink', 'filepath')/]", WriteMode.OVERWRITE)
+	[comment: the parallelism should be set only if it differes from the topology level parallelism. This applies to every operation./]
+	.setParallelism([getParallelism(aClass, 'CsvFileSink')/]);
+	// finish sink definition
+[/template]

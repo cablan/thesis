@@ -18,6 +18,9 @@
 % Image path definition
 \graphicspath{ {images/} }
 
+% Bibliography style
+\bibliographystyle{ieeetr}
+
 % This is how our cover is gonna look like
 \title{
 {Thesis Title}\\
@@ -33,7 +36,27 @@
 \maketitle
 
 \chapter*{Abstract}
-Abstract goes here
+Handling Big Data appears as a new problem for our society that aims at extracting useful information from them.
+
+To this purpose, complex platforms have been conceived that support the development of so-called Data Intensive Applications (DIAs). Creating a DIA, though, still requires a complex design process that, besides the problems related to ensuring high performance and availability, includes also the need to provide guarantees in terms of data privacy and to allow the users to define and update privacy policies based on their own preferences.
+
+Thus, StreamGen is a model-driven approach to support the design of DIAs and the automated code generation for two target platforms, Flink and Spark. Moreover, StreamGen is designed with the goal to be easy to handle by users with few knowledge about DIA.
+
+The purpose of this thesis is to extend StreamGen to make it privacy policies-aware. In order to reach such purpose:
+a) the definition of a language, as part of a UML profile, will be required in order to allow users to define for a DIA two types of privacy policies: View Creation Policies (VCP) and Data Subject Eviction Policies (DSEP). VCPs modify the incoming data taking into account the data subject and some predefined conditions which have to be specified. DSEPs remove the data from the stream when the data comes from a data subject and it satisfies some predefined conditions. Such language is defined taking into account the dataflow model of DIAs and its sources, transformations and sinks approach, making the definition sufficiently simple to be handled by users who are not familiar with DIAs.
+b) from the defined language and by means of Acceleo, an implementation of a model-to-code transformation will be developed allowing users to automate the generation of the privacy-enhanced DIA code, targeting Flink as final platform.
+c) the evaluation of the approach will be done by exploiting two case studies. In the first case, a DIA will be developed in order to preserve the privacy of the users who make different transactions among a fixed shop stock. Secondly, a DIA will be modified. This DIA takes the temperatures from two rooms and it computes two statistics, the maximum and the average temperatures, and the prediction of the temperature of the rooms in a given time. This application will be modified in order to avoid the computation of the prediction when the temperatures come from the second room.
+
+El manejo de Big Data aparece como un nuevo problema para nuestra sociedad que tiene como objetivo extraer información útil de ellos. 
+
+Para este propósito, se han concebido plataformas complejas que soportan el desarrollo de las llamadas Aplicaciones Intensivas en Datos (AID). Sin embargo, crear un AID todavía requiere un proceso de diseño complejo que, además de los problemas relacionados con garantizar un alto rendimiento y disponibilidad, también incluye la necesidad de proporcionar garantías en términos de privacidad de datos y permitir a los usuarios definir y actualizar políticas de privacidad basadas en sus propias preferencias.
+
+En este sentido, StreamGen es un enfoque basado en modelos para soportar el diseño de AID y la generación automática de código para dos plataformas de destino, Flink y Spark. Además, StreamGen está diseñado con el objetivo de que sea fácil de manejar por usuarios con pocos conocimientos sobre AID.
+
+El propósito general de la presente propuesta de Trabajo de Final de Máster (TFM) es extender StreamGen para que tenga en cuenta las políticas de privacidad. Para alcanzar tal propósito:
+a)  se va a requirir la definición de un idioma, como parte de un perfil UML, para permitir a los usuarios definir para un AID dos tipos de políticas de privacidad: políticas de visión del creador (View Creation Policies, VCP) y políticas de eviccón del sujeto del dato (Data Subject Eviction Policies, DSEP). Las VCPs modifican los datos teniendo en cuenta quien es el propietario del dato y algunas condiciones predefinidas que se deben satisfacer sobre el mismo. Las DSEPs extraen los datos de un flujo dado cuando el dato es propiedad de un cierto sujeto y, además, satisface unas condiciones predefinidas. Dicho lenguaje se define teniendo en cuenta el modelo de flujo de datos de las AID y su enfoque en fuentes, transformaciones y sumideros, lo que hace que la definición sea lo suficientemente simple como para ser manejada por usuarios que no están familiarizados con las AID.
+b) A partir del lenguaje definido y por medio de Acceleo, se desarrollá una implementación de una transformación de modelo a código que permitirá a los usuarios automatizar la generación del código AID con privacidad mejorada, apuntando a Flink como plataforma final.
+c) Se va a realizar la evaluación del enfoque mediante la explotación de dos casos de estudio. En el primer caso, se desarrollará una AID para preservar la privacidad de los usuarios que realizan diferentes transacciones sobre un stock fijo de una tienda.  En segundo lugar, se modificará una AID que toma las temperaturas de dos habitaciones y que calcula un estudio estadístico de las temperaturas máximas y medias, y la predicción de la temperatura de las habitaciones para un tiempo dado y se añadirán políticas de privacidad para que no se calcule la predicción de la temperatura de la segunda habitación.
 
 \chapter*{Dedication}
 To mum and dad

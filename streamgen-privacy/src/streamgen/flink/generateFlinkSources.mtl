@@ -11,7 +11,7 @@
 
 [template public generateFlinkTextFileSource(aClass : Class)]
 	// begin input stream definition
-	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass) ->first()/] = env.readTextFile("[getStereotypeProperty(aClass, 'TextFileSource', 'pathToFile')/]");
+	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass) ->first()/] = env.readTextFile("[getStereotypeProperty(aClass, 'TextFileSource', 'pathToFile')/]")
 		[if getParallelism(aClass, 'TextFileSource').toString().toInteger() > 1 ]
 		.setParallelism([getParallelism(aClass, 'TextFileSource')/]);
 		[else]
@@ -42,12 +42,14 @@
 
 [template public generateFlinkPrivacyContextTextFileSource(aClass : Class)]
 	// begin privacy source definition
-	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass) ->first()/] = env.readTextFile("[getStereotypeProperty(aClass, 'PrivContTextFileSource', 'pathToFile')/]");
-		[if getParallelism(aClass, 'TextFileSource').toString().toInteger() > 1 ]
+	DataStream<String> contextString = env.readTextFile("[getStereotypeProperty(aClass, 'PrivContTextFileSource', 'pathToFile')/]")
+		[if getParallelism(aClass, 'PrivContTextFileSource').toString().toInteger() > 1 ]
 		.setParallelism([getParallelism(aClass, 'PrivContTextFileSource')/]);
 		[else]
 		;
 		[/if]
+
+	DataStream<PrivacyContext> contextStream = contextString.map(new PrivacyContextParser());
 	// finish privacy source definition
 [/template]
 

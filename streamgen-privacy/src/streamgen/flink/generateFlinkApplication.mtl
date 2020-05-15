@@ -122,6 +122,8 @@ public class [aModel.name/] {
 		[if  not(hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream'))]
 		[generateFlinkCoFlatmapTransformation(c)/]
 		[/if]
+	[elseif (hasStereotype(c, 'NMapTransformation'))]
+		[generateFlinkCoMapTransformation(c)/]
 	[elseif (hasStereotype(c, 'SumTransformation'))]
 		[if  not(hasStereotype(getInputs(c)->first(), 'PrivacyProtectingStream'))]
 		[generateFlinkSumTransformation(c)/]

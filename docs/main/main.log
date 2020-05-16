@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  13 MAY 2020 18:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  16 MAY 2020 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -651,51 +651,84 @@ Underfull \vbox (badness 1102) has occurred while \output is active []
 
  [37]
 [38 <./images/./chapter3/greatSellerApp.png> <./images/./chapter3/greatSellerSt
-reamGen.png>]) [39] [40
+reamGen.png>]
+<images/./chapter3/room1TempModel.png, id=141, 462.528pt x 346.896pt>
+File: images/./chapter3/room1TempModel.png Graphic file (type png)
+<use images/./chapter3/room1TempModel.png>
+Package pdftex.def Info: images/./chapter3/room1TempModel.png  used on input li
+ne 234.
+(pdftex.def)             Requested size: 138.75946pt x 104.0696pt.
+<images/./chapter3/room2TempModel.png, id=142, 462.528pt x 346.896pt>
+File: images/./chapter3/room2TempModel.png Graphic file (type png)
+<use images/./chapter3/room2TempModel.png>
+Package pdftex.def Info: images/./chapter3/room2TempModel.png  used on input li
+ne 241.
+(pdftex.def)             Requested size: 138.75946pt x 104.0696pt.
+ [39]
+Underfull \vbox (badness 2057) has occurred while \output is active []
+
+ [40 <./images/./chapter3/room1TempModel.png> <./images/./chapter3/room2TempMod
+el.png>]
+<images/./chapter3/coolAnalystApp.png, id=151, 568.1225pt x 181.67876pt>
+File: images/./chapter3/coolAnalystApp.png Graphic file (type png)
+<use images/./chapter3/coolAnalystApp.png>
+Package pdftex.def Info: images/./chapter3/coolAnalystApp.png  used on input li
+ne 264.
+(pdftex.def)             Requested size: 284.06055pt x 90.83914pt.
+<images/./chapter3/coolAnalystStreamGen.png, id=152, 1110.1475pt x 470.75874pt>
+
+File: images/./chapter3/coolAnalystStreamGen.png Graphic file (type png)
+<use images/./chapter3/coolAnalystStreamGen.png>
+Package pdftex.def Info: images/./chapter3/coolAnalystStreamGen.png  used on in
+put line 271.
+(pdftex.def)             Requested size: 333.04681pt x 141.22871pt.
+)
+[41 <./images/./chapter3/coolAnalystApp.png> <./images/./chapter3/coolAnalystSt
+reamGen.png>] [42
 
 ]
 Chapter 4.
 (./chapters/chapter4.tex
-<images/./chapter4/projPapyrus/Selection_001.png, id=147, 458.46281pt x 377.911
+<images/./chapter4/projPapyrus/Selection_001.png, id=160, 458.46281pt x 377.911
 88pt>
 File: images/./chapter4/projPapyrus/Selection_001.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_001.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_001.png  used 
 on input line 5.
 (pdftex.def)             Requested size: 137.5399pt x 113.37444pt.
-<images/./chapter4/projPapyrus/Selection_002.png, id=148, 496.10344pt x 554.822
+<images/./chapter4/projPapyrus/Selection_002.png, id=161, 496.10344pt x 554.822
 81pt>
 File: images/./chapter4/projPapyrus/Selection_002.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_002.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_002.png  used 
 on input line 14.
 (pdftex.def)             Requested size: 148.83217pt x 166.44812pt.
-<images/./chapter4/projPapyrus/Selection_003.png, id=149, 500.62032pt x 554.07p
+<images/./chapter4/projPapyrus/Selection_003.png, id=162, 500.62032pt x 554.07p
 t>
 File: images/./chapter4/projPapyrus/Selection_003.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_003.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_003.png  used 
 on input line 23.
 (pdftex.def)             Requested size: 150.18726pt x 166.22227pt.
-<images/./chapter4/projPapyrus/Selection_004.png, id=150, 694.7556pt x 384.9582
+<images/./chapter4/projPapyrus/Selection_004.png, id=163, 694.7556pt x 384.9582
 pt>
 File: images/./chapter4/projPapyrus/Selection_004.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_004.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_004.png  used 
 on input line 32.
 (pdftex.def)             Requested size: 208.42828pt x 115.48834pt.
-<images/./chapter4/projPapyrus/Selection_005.png, id=151, 497.60907pt x 555.575
+<images/./chapter4/projPapyrus/Selection_005.png, id=164, 497.60907pt x 555.575
 62pt>
 File: images/./chapter4/projPapyrus/Selection_005.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_005.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_005.png  used 
 on input line 41.
 (pdftex.def)             Requested size: 149.28386pt x 166.67397pt.
- [41 <./images/./chapter4/projPapyrus/Selection_001.png>] [42 <./images/./chapt
+ [43 <./images/./chapter4/projPapyrus/Selection_001.png>] [44 <./images/./chapt
 er4/projPapyrus/Selection_002.png> <./images/./chapter4/projPapyrus/Selection_0
-03.png> <./images/./chapter4/projPapyrus/Selection_004.png>] [43 <./images/./ch
+03.png> <./images/./chapter4/projPapyrus/Selection_004.png>] [45 <./images/./ch
 apter4/projPapyrus/Selection_005.png>]
-<images/./chapter4/javaCodesGeneration/Selection_001.png, id=167, 472.01344pt x
+<images/./chapter4/javaCodesGeneration/Selection_001.png, id=180, 472.01344pt x
  557.08125pt>
 File: images/./chapter4/javaCodesGeneration/Selection_001.png Graphic file (typ
 e png)
@@ -703,7 +736,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_001.pn
 g  used on input line 92.
 (pdftex.def)             Requested size: 141.60512pt x 167.12566pt.
-<images/./chapter4/javaCodesGeneration/Selection_002.png, id=168, 597.23125pt x
+<images/./chapter4/javaCodesGeneration/Selection_002.png, id=181, 597.23125pt x
  400.49625pt>
 File: images/./chapter4/javaCodesGeneration/Selection_002.png Graphic file (typ
 e png)
@@ -711,7 +744,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_002.pn
 g  used on input line 101.
 (pdftex.def)             Requested size: 179.17075pt x 120.1498pt.
-<images/./chapter4/javaCodesGeneration/Selection_003.png, id=169, 597.23125pt x
+<images/./chapter4/javaCodesGeneration/Selection_003.png, id=182, 597.23125pt x
  396.48125pt>
 File: images/./chapter4/javaCodesGeneration/Selection_003.png Graphic file (typ
 e png)
@@ -719,7 +752,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_003.pn
 g  used on input line 108.
 (pdftex.def)             Requested size: 179.17075pt x 118.94528pt.
-<images/./chapter4/javaCodesGeneration/Selection_004.png, id=170, 602.25pt x 43
+<images/./chapter4/javaCodesGeneration/Selection_004.png, id=183, 602.25pt x 43
 5.12563pt>
 File: images/./chapter4/javaCodesGeneration/Selection_004.png Graphic file (typ
 e png)
@@ -727,7 +760,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_004.pn
 g  used on input line 117.
 (pdftex.def)             Requested size: 180.67639pt x 130.53868pt.
-<images/./chapter4/javaCodesGeneration/Selection_005.png, id=171, 347.79938pt x
+<images/./chapter4/javaCodesGeneration/Selection_005.png, id=184, 347.79938pt x
  402.00188pt>
 File: images/./chapter4/javaCodesGeneration/Selection_005.png Graphic file (typ
 e png)
@@ -735,11 +768,11 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_005.pn
 g  used on input line 126.
 (pdftex.def)             Requested size: 104.3406pt x 120.60149pt.
- [44] [45 <./images/./chapter4/javaCodesGeneration/Selection_001.png> <./images
+ [46] [47 <./images/./chapter4/javaCodesGeneration/Selection_001.png> <./images
 /./chapter4/javaCodesGeneration/Selection_002.png> <./images/./chapter4/javaCod
 esGeneration/Selection_003.png> <./images/./chapter4/javaCodesGeneration/Select
 ion_004.png>]
-<images/./chapter4/javaCodesGeneration/Selection_006.png, id=180, 603.0028pt x 
+<images/./chapter4/javaCodesGeneration/Selection_006.png, id=193, 603.0028pt x 
 435.87843pt>
 File: images/./chapter4/javaCodesGeneration/Selection_006.png Graphic file (typ
 e png)
@@ -747,7 +780,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_006.pn
 g  used on input line 133.
 (pdftex.def)             Requested size: 180.90224pt x 130.76453pt.
-<images/./chapter4/javaCodesGeneration/Selection_007.png, id=181, 596.2275pt x 
+<images/./chapter4/javaCodesGeneration/Selection_007.png, id=194, 596.2275pt x 
 395.4775pt>
 File: images/./chapter4/javaCodesGeneration/Selection_007.png Graphic file (typ
 e png)
@@ -755,7 +788,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_007.pn
 g  used on input line 142.
 (pdftex.def)             Requested size: 178.86963pt x 118.64417pt.
-<images/./chapter4/javaCodesGeneration/Selection_008.png, id=182, 456.95718pt x
+<images/./chapter4/javaCodesGeneration/Selection_008.png, id=195, 456.95718pt x
  400.49625pt>
 File: images/./chapter4/javaCodesGeneration/Selection_008.png Graphic file (typ
 e png)
@@ -763,7 +796,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_008.pn
 g  used on input line 149.
 (pdftex.def)             Requested size: 137.0882pt x 120.1498pt.
-<images/./chapter4/javaCodesGeneration/Selection_009.png, id=183, 621.32124pt x
+<images/./chapter4/javaCodesGeneration/Selection_009.png, id=196, 621.32124pt x
  413.545pt>
 File: images/./chapter4/javaCodesGeneration/Selection_009.png Graphic file (typ
 e png)
@@ -771,7 +804,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_009.pn
 g  used on input line 156.
 (pdftex.def)             Requested size: 186.39781pt x 124.06445pt.
-<images/./chapter4/javaCodesGeneration/Selection_010.png, id=184, 764.10469pt x
+<images/./chapter4/javaCodesGeneration/Selection_010.png, id=197, 764.10469pt x
  484.05844pt>
 File: images/./chapter4/javaCodesGeneration/Selection_010.png Graphic file (typ
 e png)
@@ -782,9 +815,9 @@ g  used on input line 165.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46 <./images/./chapter4/javaCodesGeneration/Selection_005.png> <./images/./ch
+ [48 <./images/./chapter4/javaCodesGeneration/Selection_005.png> <./images/./ch
 apter4/javaCodesGeneration/Selection_006.png> <./images/./chapter4/javaCodesGen
-eration/Selection_007.png>] [47 <./images/./chapter4/javaCodesGeneration/Select
+eration/Selection_007.png>] [49 <./images/./chapter4/javaCodesGeneration/Select
 ion_008.png> <./images/./chapter4/javaCodesGeneration/Selection_009.png> <./ima
 ges/./chapter4/javaCodesGeneration/Selection_010.png>]
 Overfull \hbox (37.02052pt too wide) in paragraph at lines 177--178
@@ -792,15 +825,15 @@ Overfull \hbox (37.02052pt too wide) in paragraph at lines 177--178
  com-po-nents) 1.11.0.20190220-
  []
 
-) [48]
+) [50]
 Chapter 5.
-(./chapters/chapter5.tex) [49
+(./chapters/chapter5.tex) [51
 
-] [50
+] [52
 
 ]
 Chapter 6.
-(./chapters/conclusions.tex) (./chapters/references.tex [51] [52
+(./chapters/conclusions.tex) (./chapters/references.tex [53] [54
 
 ]
 Overfull \hbox (11.38646pt too wide) in paragraph at lines 29--31
@@ -814,12 +847,12 @@ Overfull \hbox (85.4865pt too wide) in paragraph at lines 33--35
 guage/what-is-uml/ 
  []
 
-) [53] (./main.aux) ) 
+) [55] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2636 strings out of 492982
- 39055 string characters out of 6134897
- 107818 words of memory out of 5000000
- 6116 multiletter control sequences out of 15000+600000
+ 2662 strings out of 492982
+ 39977 string characters out of 6134897
+ 107866 words of memory out of 5000000
+ 6138 multiletter control sequences out of 15000+600000
  10399 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,43p,1752b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -833,10 +866,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive
 -dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/eurosym/feymr10.pfb>
-Output written on main.pdf (53 pages, 1232641 bytes).
+Output written on main.pdf (55 pages, 1362168 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
+ 266 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

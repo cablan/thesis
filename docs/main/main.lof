@@ -5,21 +5,25 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Great Seller Dataflow model}}{38}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Great Seller StreamGen DIA}}{38}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Temperature Chamber 1 Model}}{40}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Temperature Chamber 2 Model}}{40}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Cool Analyst Dataflow model}}{41}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Cool Analyst StreamGen DIA}}{41}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces New Papyrus Project}}{41}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture Context}}{42}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Project Name Definition}}{42}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Representation Kind}}{42}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Papyrus Project Definition}}{43}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Java Project Creation}}{45}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Java Project Initial Structure}}{45}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Java Project Final Structure}}{45}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Maven Project Structure Creation}}{45}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Maven Project Source Folder Creation}}{46}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Maven Project Properties}}{46}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Maven Project Structure}}{46}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces POM File Creation}}{47}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Final Maven Project}}{47}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Run Configuration}}{47}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces New Papyrus Project}}{43}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture Context}}{44}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Project Name Definition}}{44}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Representation Kind}}{44}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Papyrus Project Definition}}{45}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Java Project Creation}}{47}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Java Project Initial Structure}}{47}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Java Project Final Structure}}{47}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Maven Project Structure Creation}}{47}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Maven Project Source Folder Creation}}{48}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Maven Project Properties}}{48}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Maven Project Structure}}{48}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces POM File Creation}}{49}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Final Maven Project}}{49}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Run Configuration}}{49}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -202,6 +202,14 @@ In the figure \ref{fig:Great Seller Dataflow model} the dataflow model of the Gr
 \label{fig:Great Seller StreamGen DIA}
 \end{figure}
 
+\subsubsection*{Great Seller DIA Limitations}
+
+After developing this DIA, some limitations are identified relative to the current development of StreamGen. The first limitation is the number of server that can be connected directly to a Map Transformation. In this example, it is supposed that the users send the transactions by means of a server to the target DIA. This server is the same for all the users who are using Great Seller DIA. At this point, a casuistry is proposed. This is the case of a DIA involved in an industry 4.0 application where the owner of the factory cannot afford to invest in a server for the DIA and all the machines generating datasets must be connected directly to the DIA by means of the factory net.
+
+The second limitation that is extracted is that StreamGen does not allow to generate float or double data types. In this example, Great Seller is working with a stock where all the products have integer prices but should be necessary a DIA which allows, among the language, to declare float or double values.
+
+The last extracted limitation is that StreamGen is not able to handle the privacy of the users who are using the DIA. In this case, neither the language for such purpose nor the translation by means of Acceleo are available. After the development of both things, this model should be reused in order to make the application privacy aware.
+
 \subsubsection{Cool Analyst DIA}
 
 In addition to Great Seller, another DIA is developed with StreamGen. This is the case of Cool Analyst, a DIA which is able to compute some statistics from the temperatures measured in two different refrigeration chambers of a panettone factory called Panettone 4.0. These measurements are going to be stored in a CSV file in order to be accessible by the manager of the industrial plant to see if any problem has been produced in the yeast fermentation. This application is going to compute four statistics in two different operators:
@@ -213,12 +221,60 @@ In addition to Great Seller, another DIA is developed with StreamGen. This is th
 
 Cool Analyst DIA is going to require two socket sources, one for each of the industrial chambers, two transformations in order to compute each of the operators specified before and two sinks where the CSV files with each of the results of the operators can be stored. For the development of the prediction operator, as its development is out of this document, it is taken from an already working transformation for such purpose.
 
-\subsubsection*{Refrigeration Chambers Sources}
+\subsubsection*{Cool Analyst Sources}
 
-Panettone 4.0 is using temperature and humidity digital sensors in each of its two chambers where yeasts are fermented. These sensors are connected to the net of the factory and are sending the measured values to the Cool Analyst DIA with a 1 second sample frequency. This is why Cool Analyst requires two socket sources connected to the port and to the host of each of the chambers.
+Panettone 4.0 is using temperature digital sensors in each of its two chambers where yeasts are fermented. These sensors are connected to the net of the factory and are sending the measured values directly to the Cool Analyst DIA with a 1 second sample frequency.
 
-In order to simulate the behavior of a 
+This two chambers need to control the temperature of the room in order to allow the correct fermentation of the yeasts. The role of the first chamber is to make the primary fermentation in the production process of the Panettone 4.0 factory. This fermentation is also known as bulk fermentation. On the other hand, the role of the second camera is to make the secondary fermentation which is also known as proofing. More information can be read about the fermentation of the years and how to control the temperature during its production in \cite{yeastfermentation}. The conclusions that are extracted from \cite{yeastfermentation}, and that are useful for our purpose, are that the bulk fermentation must have the temperatures of the room in the range [20, 24] Celsius whilst the secondary fermentation must have an environment with temperatures in the range [22, 29] Celsius. This is why Cool Analyst requires two socket sources connected to the port and to the host of each of the chambers.
 
-\subsubsection*{Refrigeration Chambers Transformations}
+Also it is important to remark how the temperatures of the chambers are simulated. For such purpose a python code has been developed. This model takes as target temperature, the average temperature of each of the ranges. This temperature is supposed to be maintained during thirty seconds. Then, randomly, the program generates a sine function with a frequency of 1/16 Hz for the lower range and with a frequency of 1/28 Hz for the upper range. The lower range is considerate from the lower boundary of each of the ranges of temperature that the chambers can admit until the average temperature and the upper range from the average temperature until the upper boundary of the ranges. In the figures \ref{fig:Temperature Chamber 1 Model} and \ref{fig:Temperature Chamber 2 Model} can be seen both models.
 
-\subsubsection*{Refrigeration Chambers Sinks}
+\begin{figure}
+\centering
+{\includegraphics[scale=0.3]{./chapter3/room1TempModel.png}}
+\caption{Temperature Chamber 1 Model}
+\label{fig:Temperature Chamber 1 Model}
+\end{figure}
+
+\begin{figure}
+\centering
+{\includegraphics[scale=0.3]{./chapter3/room2TempModel.png}}
+\caption{Temperature Chamber 2 Model}
+\label{fig:Temperature Chamber 2 Model}
+\end{figure}
+
+Finally, these two models have been generated and saved in a TXT file which is going to be read from the Python servers that have been developed in order to simulate the chambers. These servers are going to read one value each second. This will generate that the socket sending the values from the chamber 1 stops earlier than the other socket. This model design will allow to proof the right behavior of the whole application. Allowing to see what would happen if, suddenly, the sensors are disconnected.
+
+\subsubsection*{Cool Analyst Transformations}
+
+The values read from the TXT file are sent in a string which has to be parsed in order to generate the Data Types that are used in the DIA. The strings contain the roomId followed by the temperature and both values are separated by means of a comma. This is why, first of all a NMap Transformation has been developed, this will be explained in the following chapter. This NMap transformation inputs the two streams with the strings sent by the room servers and the string is parsed into a roomTemp data type which is composed of two properties: roomId (string) and roomTemp(double). In order to introduce double values from the Papyrus model by means of StreamGen, in chapter 4 is explained how StreamGen was modified.
+
+Once the roomTemp data type is generated, a stream is sent to a window transformation called RoomStatistics. In this transformation all the computations explain in the operator 1 are calculated (maximum temperature, minimum temperature and average temperature). This transformation generates a new data type called roomStatistics which is composed of four properties: roomId (string), maxTemp (double), minTemp (double) and avgTemp (double).
+
+Then, the stream with the roomStatistics data types is sent to the TemperaturePredictor transformation. This window transformation computes the operations described in the operator 2 and generates the tempPred data type. This data type is composed of two properties: roomId (string) and predTemp (double).
+
+\subsubsection*{Cool Analyst Sinks}
+
+Finally, the data types generates in the RoomStatistics and in the TemperaturePredictor are stored each one in its sink. Cool Analyst uses CSV sinks as this kind of files are commonly used by engineers who work in the factories. In order to do this, the output stream from the RoomStatistics transformation is sent to StatisticsSink where is specified the path of the generated file and the output stream from the TemperaturePredictor transformation is sent to PredictorSink where the path of the second output file is specified.
+
+In the figures \ref{fig:Cool Analyst Dataflow model} and \ref{fig:Cool Analyst StreamGen DIA} can be seen the Cool Analyst Dataflow Model and the Cool Analyst StreamGen DIA explained above.
+
+\begin{figure}
+\centering
+{\includegraphics[scale=0.5]{./chapter3/coolAnalystApp.png}}
+\caption{Cool Analyst Dataflow model}
+\label{fig:Cool Analyst Dataflow model}
+\end{figure}
+
+\begin{figure}
+\centering
+{\includegraphics[scale=0.3]{./chapter3/coolAnalystStreamGen.png}}
+\caption{Cool Analyst StreamGen DIA}
+\label{fig:Cool Analyst StreamGen DIA}
+\end{figure}
+
+\subsubsection*{Great Seller DIA Limitations}
+
+At this example two of the limitations identified with the previous DIA are already solved. This is the case of the NMap Transformation and the possibility to generate double values by means of Papyrus. This will be seen in the following chapter.
+
+However, StreamGen is still not able to handle the privacy of the users who are using the DIA. This is why this DIA will be reused, as Great Seller, after the development of the language and the Acceleo code to test StreamGen for privacy purposes.

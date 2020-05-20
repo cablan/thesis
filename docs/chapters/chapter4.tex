@@ -178,7 +178,45 @@ The first requirements that are needed in order to develop the big data applicat
 \item Apache Flink 1.4.0.
 \end{itemize}
 
+\section{Privacy Policy Language}
 
+StreamGen uses its own language in order to develop DIA. In this document, StreamGen language has been expanded in order to allow users to protect the streams with privacy policies. This expansion consists of a new data stream stereotype in order to specify which streams are protected and with which privacy policy type. Moreover, the sources that generate the Static Context Variables (SCV) and the rules written by the users are also added to the StreamGen language. SCV are going to be possibly supplied by different sources whilst privacy policies will be supplied only by one data source type. This sources are going to be inserted in a package which represents the external sources of the DIA.
+
+\subsection{PrivacyProtectingStream}
+
+StreamGen represents the flows of data flowing in DIA by means of UML metaclass Information Flow. This flows are known as streams and StreamGen allow to generate some different types as Keyed Stream or Windowed Stream. Each of these types have different characteristics and allow the users to generate different behaviors. Moreover, these different streams can be applied all together generating a stream which can be, as in this case, windowed and keyed.
+
+Following this approach, a new stereotype has been added to the UML profile. This stereotype has been called PrivacyProtectingStream and it is a generalization of the DataStream stereotype, which in turn is an extension of the InformationFlow metaclass. This new stereotype is going to have some properties in addition to the property of the DataStream stereotype, isObservable. These properties are:
+
+\begin{itemize}
+\item ProtectedByVCP.
+\item ProtectedByDSEP.
+\item IsMainCopy.
+\item ProtectedStreamConf.
+\end{itemize}
+
+ProtectedByVCP and protectedByDSEP properties are added in order to specify how the DataStream is protected; if it is protected with a DSEP, with a VCP or if it is protected with both privacy policies.This is why these two properties are going to be boolean values. Moreover, the configuration of the generated protected stream, which is imported from the library, has to be specified. In order to define such configuration, a new DataType has been added to the UML profile. This DataType is called ProtectedStreamConfiguration and it is composed of seven properties: monitoringActive (Boolean), timestampServerIp(String), timeStampServerPort (Integer), topologyParallelism (Integer), simulateRealisticScenario (Boolean), allowedLateness (Integer) and logDir (String). Finally, due to StreamGen is working with duplicated streams, a property to specify which is the main property of all the copies (InformationFlows) that exist in the model is the main one. This property is called isMainCopy and it is a boolean value.
+
+\subsection{PrivacyPolicySources} % What about call this 'ExternalSources', this name is weird taking into account the PrivacyPolicySource
+
+StreamGen uses a package called StreamDatatypes in order to collect all the DataTypes that are flowing through the streams. The DataTypes that are specified inside the package allow the users to specify the different values that are conveyed in a stream but inside the same tuple. Following these approach, a new package called PrivacyPolicySources has been added to the UML profile in order to collect all the sources involved in the privacy policies applications, SCV sources and user privacy policies.
+
+These sources are not going to be connected directly to the streams or to the transformations of the DIA but they are going to allow the users to specify from where the different variables required to protected the streams are taken. As they are not going to be connected, a package to put all of them together is added to the language.
+
+\subsubsection{PrivacyContextSource}
+
+Static Context Variables are required in order to know when an user specified privacy policy can be apply. These SCVs can be just an agent or many of them. This is why a wide variety of possibilities has been developed in order to allow the users to choose the most appropriate SCV source. Such possibilities are:
+
+\begin{itemize}
+\item PrivContTextFileSource.
+\item PrivContSocketSource.
+\item PrivContKafkaSource.
+\item PrivContFixedSource.
+\end{itemize}
+
+
+
+\subsubsection{PrivacyPolicySource}
 
 
 

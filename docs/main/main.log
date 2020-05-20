@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  16 MAY 2020 18:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  20 MAY 2020 19:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -825,15 +825,21 @@ Overfull \hbox (37.02052pt too wide) in paragraph at lines 177--178
  com-po-nents) 1.11.0.20190220-
  []
 
-) [50]
-Chapter 5.
-(./chapters/chapter5.tex) [51
+[50]
+Overfull \hbox (11.88191pt too wide) in paragraph at lines 202--203
+\OT1/cmr/m/n/12 StreamGen uses a pack-age called Stream-Datatypes in or-der to 
+col-lect all the DataTypes
+ []
 
-] [52
+) [51] [52
+
+]
+Chapter 5.
+(./chapters/chapter5.tex) [53] [54
 
 ]
 Chapter 6.
-(./chapters/conclusions.tex) (./chapters/references.tex [53] [54
+(./chapters/conclusions.tex) (./chapters/references.tex [55] [56
 
 ]
 Overfull \hbox (11.38646pt too wide) in paragraph at lines 29--31
@@ -847,7 +853,7 @@ Overfull \hbox (85.4865pt too wide) in paragraph at lines 33--35
 guage/what-is-uml/ 
  []
 
-) [55] (./main.aux) ) 
+) [57] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  2662 strings out of 492982
  39977 string characters out of 6134897
@@ -866,10 +872,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive
 -dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/eurosym/feymr10.pfb>
-Output written on main.pdf (55 pages, 1362168 bytes).
+Output written on main.pdf (57 pages, 1366137 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
+ 272 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

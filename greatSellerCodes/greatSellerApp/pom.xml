@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.streamgen.flink.generated</groupId>
-	<artifactId>greatseller</artifactId>
+	<artifactId>coolanalyst</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
@@ -155,7 +155,7 @@
 
                              		<transformers>
                              			<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                             			<mainClass>greatseller.application.greatSeller</mainClass>
+                             			<mainClass>coolanalyst.application.coolAnalyst</mainClass>
                              			</transformer>
                             		</transformers>
 								</configuration>

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  20 MAY 2020 19:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  21 MAY 2020 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -560,18 +560,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
-)
+ [11])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [11] [12
-
-] (./main.lot)
+ [12] (./main.lot)
 \tf@lot=\write4
 \openout4 = `main.lot'.
 
 
-[13] [14
+[13
+
+] [14
 
 ] (./main.lof)
 \tf@lof=\write5
@@ -826,20 +826,48 @@ Overfull \hbox (37.02052pt too wide) in paragraph at lines 177--178
  []
 
 [50]
-Overfull \hbox (11.88191pt too wide) in paragraph at lines 202--203
+<images/./chapter4/umlProfile/PrivacyProtectingStreamUMLProfile.png, id=213, 15
+1.56625pt x 342.27875pt>
+File: images/./chapter4/umlProfile/PrivacyProtectingStreamUMLProfile.png Graphi
+c file (type png)
+<use images/./chapter4/umlProfile/PrivacyProtectingStreamUMLProfile.png>
+Package pdftex.def Info: images/./chapter4/umlProfile/PrivacyProtectingStreamUM
+LProfile.png  used on input line 204.
+(pdftex.def)             Requested size: 45.47021pt x 102.6844pt.
+
+Overfull \hbox (11.88191pt too wide) in paragraph at lines 211--212
 \OT1/cmr/m/n/12 StreamGen uses a pack-age called Stream-Datatypes in or-der to 
 col-lect all the DataTypes
  []
 
-) [51] [52
+<images/./chapter4/umlProfile/PrivacyPolicySourcesUMLProfile.png, id=214, 126.4
+725pt x 201.75375pt>
+File: images/./chapter4/umlProfile/PrivacyPolicySourcesUMLProfile.png Graphic f
+ile (type png)
+<use images/./chapter4/umlProfile/PrivacyPolicySourcesUMLProfile.png>
+Package pdftex.def Info: images/./chapter4/umlProfile/PrivacyPolicySourcesUMLPr
+ofile.png  used on input line 219.
+(pdftex.def)             Requested size: 37.94203pt x 60.52658pt.
+[51 <./images/./chapter4/umlProfile/PrivacyProtectingStreamUMLProfile.png> <./i
+mages/./chapter4/umlProfile/PrivacyPolicySourcesUMLProfile.png>] [52]
+<images/./chapter4/umlProfile/PrivacyPolicyDataSourceUMLProfile.png, id=223, 56
+6.115pt x 502.87875pt>
+File: images/./chapter4/umlProfile/PrivacyPolicyDataSourceUMLProfile.png Graphi
+c file (type png)
+<use images/./chapter4/umlProfile/PrivacyPolicyDataSourceUMLProfile.png>
+Package pdftex.def Info: images/./chapter4/umlProfile/PrivacyPolicyDataSourceUM
+LProfile.png  used on input line 262.
+(pdftex.def)             Requested size: 169.8358pt x 150.86478pt.
+) [53 <./images/./chapter4/umlProfile/PrivacyPolicyDataSourceUMLProfile.png>] [
+54
 
 ]
 Chapter 5.
-(./chapters/chapter5.tex) [53] [54
+(./chapters/chapter5.tex) [55] [56
 
 ]
 Chapter 6.
-(./chapters/conclusions.tex) (./chapters/references.tex [55] [56
+(./chapters/conclusions.tex) (./chapters/references.tex [57] [58
 
 ]
 Overfull \hbox (11.38646pt too wide) in paragraph at lines 29--31
@@ -853,12 +881,12 @@ Overfull \hbox (85.4865pt too wide) in paragraph at lines 33--35
 guage/what-is-uml/ 
  []
 
-) [57] (./main.aux) ) 
+) [59] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2662 strings out of 492982
- 39977 string characters out of 6134897
- 107866 words of memory out of 5000000
- 6138 multiletter control sequences out of 15000+600000
+ 2682 strings out of 492982
+ 41106 string characters out of 6134897
+ 107902 words of memory out of 5000000
+ 6153 multiletter control sequences out of 15000+600000
  10399 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,43p,1752b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -872,10 +900,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive
 -dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/eurosym/feymr10.pfb>
-Output written on main.pdf (57 pages, 1366137 bytes).
+Output written on main.pdf (59 pages, 1411796 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
+ 284 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 

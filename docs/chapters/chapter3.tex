@@ -217,6 +217,7 @@ In addition to Great Seller, another DIA is developed with StreamGen. This is th
 \begin{itemize}
 \item Operator 1: the maximum, the minimum and the average temperature of each chamber during the last 5 minutes.
 \item Operator 2: the prediction of the temperature for the next 10 minutes.
+\item Operator 3: the filtered data between a range which have no null value and no null id.
 \end{itemize}
 
 Cool Analyst DIA is going to require two socket sources, one for each of the industrial chambers, two transformations in order to compute each of the operators specified before and two sinks where the CSV files with each of the results of the operators can be stored. For the development of the prediction operator, as its development is out of this document, it is taken from an already working transformation for such purpose.
@@ -253,9 +254,11 @@ Once the roomTemp data type is generated, a stream is sent to a window transform
 
 Then, the stream with the roomStatistics data types is sent to the TemperaturePredictor transformation. This window transformation computes the operations described in the operator 2 and generates the tempPred data type. This data type is composed of two properties: roomId (string) and predTemp (double).
 
+The last operator takes the stream with the roomTemp data type and, by means of a filter transformation called CleanRawData, checks that there is no temperature with a value below -9999 neither 9999. Moreover, this transformation checks that the temperature has a value and that value is referenced to a room identifier.
+
 \subsubsection*{Cool Analyst Sinks}
 
-Finally, the data types generates in the RoomStatistics and in the TemperaturePredictor are stored each one in its sink. Cool Analyst uses CSV sinks as this kind of files are commonly used by engineers who work in the factories. In order to do this, the output stream from the RoomStatistics transformation is sent to StatisticsSink where is specified the path of the generated file and the output stream from the TemperaturePredictor transformation is sent to PredictorSink where the path of the second output file is specified.
+Finally, the data types generates in the RoomStatistics, in the TemperaturePredictor and in the CleanRawData transformations are stored each one in its sink. Cool Analyst uses CSV sinks as this kind of files are commonly used by engineers who work in the factories. In order to do this, the output stream from the RoomStatistics transformation is sent to StatisticsSink where is specified the path of the generated file, the output stream from the TemperaturePredictor transformation is sent to PredictorSink where the path of the second output file is specified and the same proceadure is done with the third operator CleanRawData and its sink CleanDataSink.
 
 In the figures \ref{fig:Cool Analyst Dataflow model} and \ref{fig:Cool Analyst StreamGen DIA} can be seen the Cool Analyst Dataflow Model and the Cool Analyst StreamGen DIA explained above.
 

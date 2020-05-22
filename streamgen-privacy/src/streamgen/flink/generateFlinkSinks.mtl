@@ -13,7 +13,7 @@
 		[else]
 		[input.eGet('name')/]
 		[/if])
-    	.setHost("[getStereotypeProperty(aClass, 'CassandraSink', 'cassandraHost')/]")
+    	.setHost("[getStereotypeProperty(aClass, aClass.getAppliedStereotypes() -> asSequence() -> first().name, 'cassandraHost')/]")
     	.setMapperOptions(() -> new Mapper.Option['['/]]{Mapper.Option.saveNullFields(true)})
     	.build();
 	// finish sink definition
@@ -24,7 +24,7 @@
 
 	// begin sink definition
 	FlinkKafkaProducer010<String> [aClass.name.toString().concat('_producer')/] = new FlinkKafkaProducer010<String>(
-	        "[getStereotypeProperty(aClass, 'KafkaSink', 'kafkaBrokerIp')/]:[getStereotypeProperty(aClass, 'KafkaSink', 'kafkaBrokerPort')/]",            
+	        "[getStereotypeProperty(aClass, aClass.getAppliedStereotypes() -> asSequence() -> first().name, 'kafkaBrokerIp')/]:[getStereotypeProperty(aClass, aClass.getAppliedStereotypes() -> asSequence() -> first().name, 'kafkaBrokerPort')/]",            
 	        "[aClass.name.toString()/]",                 
 	        new SimpleStringSchema()); 
 	[if input.hasStereotype('PrivacyProtectingStream')]
@@ -47,9 +47,9 @@
 	[if input.hasStereotype('KeyedStream') ]
 	.keyBy("[getStereotypeProperty(input, 'KeyedStream', 'key').eGet('name')/]")
 	[/if]
-	.writeAsText("[getStereotypeProperty(aClass, 'TextFileSink', 'filepath')/]", WriteMode.OVERWRITE)
+	.writeAsText("[getStereotypeProperty(aClass, aClass.getAppliedStereotypes() -> asSequence() -> first().name, 'filepath')/]", WriteMode.OVERWRITE)
 	[comment: the parallelism should be set only if it differes from the topology level parallelism. This applies to every operation./]
-	.setParallelism([getParallelism(aClass, 'TextFileSink')/]);
+	.setParallelism([getParallelism(aClass, aClass.getAppliedStereotypes() -> asSequence() -> first().name)/]);
 	// finish sink definition
 [/template]
 
@@ -65,8 +65,8 @@
 	[if input.hasStereotype('KeyedStream') ]
 	.keyBy("[getStereotypeProperty(input, 'KeyedStream', 'key').eGet('name')/]")
 	[/if]
-	.writeAsText("[getStereotypeProperty(aClass, 'CsvFileSink', 'filepath')/]", WriteMode.OVERWRITE)
+	.writeAsText("[getStereotypeProperty(aClass, aClass.getAppliedStereotypes() -> asSequence() -> first().name, 'filepath')/]", WriteMode.OVERWRITE)
 	[comment: the parallelism should be set only if it differes from the topology level parallelism. This applies to every operation./]
-	.setParallelism([getParallelism(aClass, 'CsvFileSink')/]);
+	.setParallelism([getParallelism(aClass, aClass.getAppliedStereotypes() -> asSequence() -> first().name)/]);
 	// finish sink definition
 [/template]

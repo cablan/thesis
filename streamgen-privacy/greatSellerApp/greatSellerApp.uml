@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_AxBUkJBAEeqDpN-TmvxlIA/142" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_AxBUkJBAEeqDpN-TmvxlIA/142 ../profile/StreamUML.profile.uml#_AxP-EJBAEeqDpN-TmvxlIA">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_9vApoJwHEeqtYeWRPe0-4Q/143" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_9vApoJwHEeqtYeWRPe0-4Q/143 ../profile/StreamUML.profile.uml#_9vSWcJwHEeqtYeWRPe0-4Q">
   <uml:Model xmi:id="_p5Zr8HKYEeqlctBysCk6rQ" name="greatSellerApp">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_zixZ8HKYEeqlctBysCk6rQ">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -42,12 +42,11 @@
           </ownedAttribute>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_IeeEUHcZEeqjf7nG_fBsrg" name="TupleParser"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_ay8hQHcZEeqjf7nG_fBsrg" name="TupleSource"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_IeeEUHcZEeqjf7nG_fBsrg" name="TupleParser"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_HB3G8HcaEeqjf7nG_fBsrg" name="rawTuples" informationSource="_ay8hQHcZEeqjf7nG_fBsrg" informationTarget="_IeeEUHcZEeqjf7nG_fBsrg">
         <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_OMfFIHcbEeqjf7nG_fBsrg" name="TupleS2Sink"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_FFbvIHcdEeqjf7nG_fBsrg" name="resultS4Tuple">
         <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </packagedElement>
@@ -58,34 +57,32 @@
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_vXTYgHdNEeqEm_3mTdKlkw" name="streamS1" conveyed="_O8Hy4HKoEeqor8468tpfFw" informationSource="_IeeEUHcZEeqjf7nG_fBsrg" informationTarget="_sCP9sHdMEeqEm_3mTdKlkw"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_BO8IcHdOEeqEm_3mTdKlkw" name="streamS3" visibility="public" conveyed="_zXWkYHKpEeqor8468tpfFw" informationSource="_sCP9sHdMEeqEm_3mTdKlkw" informationTarget="_vAFn0HdMEeqEm_3mTdKlkw"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WJJ4kHdOEeqEm_3mTdKlkw" name="streamS2" conveyed="_SI5bcHKpEeqor8468tpfFw" informationSource="_kPtOcHdMEeqEm_3mTdKlkw" informationTarget="_OMfFIHcbEeqjf7nG_fBsrg"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_p_eLAH8KEeqfKe16nTK7Jg" name="TupleS3Sink"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_23DhcH8KEeqfKe16nTK7Jg" name="streamS3Tuple" informationTarget="_p_eLAH8KEeqfKe16nTK7Jg">
         <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </packagedElement>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_AnoDoH8LEeqfKe16nTK7Jg" name="streamS3" conveyed="_zXWkYHKpEeqor8468tpfFw" informationSource="_sCP9sHdMEeqEm_3mTdKlkw" informationTarget="_p_eLAH8KEeqfKe16nTK7Jg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_OMfFIHcbEeqjf7nG_fBsrg" name="TupleS2Sink"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_p_eLAH8KEeqfKe16nTK7Jg" name="TupleS3Sink"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_FIcmkH_TEeqVLc-wM0YcBA" name="TupleS4Sink"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_VoRPAH_TEeqVLc-wM0YcBA" name="streamS4" visibility="private" conveyed="_H2DdMHKqEeqor8468tpfFw" informationSource="_vAFn0HdMEeqEm_3mTdKlkw" informationTarget="_FIcmkH_TEeqVLc-wM0YcBA"/>
-      <packagedElement xmi:type="uml:Package" xmi:id="_p2L00I6wEeqJhohJvnJHhg" name="PrivacyPolicyInputs">
-        <packagedElement xmi:type="uml:Class" xmi:id="_1qbe8I6wEeqJhohJvnJHhg" name="StaticContextVariablesSource"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_7edTEI6wEeqJhohJvnJHhg" name="PrivacyPolicySource"/>
-      </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zgPDUHKYEeqlctBysCk6rQ">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_N0d8wJBAEeqDpN-TmvxlIA" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_N0d8wZBAEeqDpN-TmvxlIA" key="Version" value="0.0.143"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_N0d8wpBAEeqDpN-TmvxlIA" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_N0d8w5BAEeqDpN-TmvxlIA" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_N0d8xJBAEeqDpN-TmvxlIA" key="Date" value="2020-05-07"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_N0d8xZBAEeqDpN-TmvxlIA" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ut8DgJwIEeqtYeWRPe0-4Q" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ut8DgZwIEeqtYeWRPe0-4Q" key="Version" value="0.0.144"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ut8DgpwIEeqtYeWRPe0-4Q" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ut8Dg5wIEeqtYeWRPe0-4Q" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ut8DhJwIEeqtYeWRPe0-4Q" key="Date" value="2020-05-22"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ut8DhZwIEeqtYeWRPe0-4Q" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zgb3oHKYEeqlctBysCk6rQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_AxP-EJBAEeqDpN-TmvxlIA"/>
+        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_9vSWcJwHEeqtYeWRPe0-4Q"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
     </profileApplication>
   </uml:Model>
   <StreamUML:FlinkApplication xmi:id="_ZbdjwHKhEeqor8468tpfFw" base_Model="_VgGW4HKgEeqor8468tpfFw"/>
   <StreamUML:StreamDatatypes xmi:id="_BaL0sHKkEeqor8468tpfFw" base_Package="_UMFC4HKjEeqor8468tpfFw"/>
+  <StreamUML:SocketSource xmi:id="_UIg9MIcKEeqDOIyYouFn4g" base_Class="_ay8hQHcZEeqjf7nG_fBsrg" host="localhost" port="9999"/>
   <StreamUML:MapTransformation xmi:id="_NQEyIHcZEeqjf7nG_fBsrg" base_Class="_IeeEUHcZEeqjf7nG_fBsrg" mapFunction="String[] fields = tuple.split(&quot;,&quot;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;return new InputTransaction(Integer.parseInt(fields[0]),fields[1],Integer.parseInt(fields[2]),fields[3]);"/>
   <StreamUML:NonParallelStream xmi:id="_K-Ed0HcaEeqjf7nG_fBsrg" base_InformationFlow="_HB3G8HcaEeqjf7nG_fBsrg"/>
   <StreamUML:TextFileSink xmi:id="_WB9MkHcbEeqjf7nG_fBsrg" base_Class="_OMfFIHcbEeqjf7nG_fBsrg" filepath="/home/cablan/Desktop/thesisFiles/outputs/resultsS2priv.txt"/>
@@ -111,7 +108,6 @@
       <size xmi:type="StreamUML:TimeAmount" xmi:id="_Jdfk8ocKEeqDOIyYouFn4g" timeUnit="Minutes" size="1"/>
     </window>
   </StreamUML:WindowedStream>
-  <StreamUML:TextFileSink xmi:id="_0hc8AH8KEeqfKe16nTK7Jg" base_Class="_p_eLAH8KEeqfKe16nTK7Jg" filepath="/home/cablan/Desktop/thesisFiles/outputs/resultsS3priv.txt"/>
   <StreamUML:NonParallelStream xmi:id="_46VAwH8KEeqfKe16nTK7Jg" base_InformationFlow="_23DhcH8KEeqfKe16nTK7Jg"/>
   <StreamUML:KeyedStream xmi:id="_LhOqcH8LEeqfKe16nTK7Jg" base_InformationFlow="_AnoDoH8LEeqfKe16nTK7Jg" key="_6d7lgHKpEeqor8468tpfFw"/>
   <StreamUML:WindowedStream xmi:id="_Ll5IAH8LEeqfKe16nTK7Jg" base_InformationFlow="_AnoDoH8LEeqfKe16nTK7Jg">
@@ -120,19 +116,7 @@
     </window>
   </StreamUML:WindowedStream>
   <StreamUML:TextFileSink xmi:id="_J79_8H_TEeqVLc-wM0YcBA" base_Class="_FIcmkH_TEeqVLc-wM0YcBA" filepath="/home/cablan/Desktop/thesisFiles/outputs/resultsS4priv.txt"/>
-  <StreamUML:SocketSource xmi:id="_UIg9MIcKEeqDOIyYouFn4g" base_Class="_ay8hQHcZEeqjf7nG_fBsrg" host="localhost" port="9999"/>
   <StreamUML:RandomlyPartitionedStream xmi:id="_fvy3EIkzEeqrzbCtyqqSKw" base_InformationFlow="_VoRPAH_TEeqVLc-wM0YcBA"/>
   <StreamUML:KeyedStream xmi:id="_pN7I8Ik0EeqrzbCtyqqSKw" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw" key="_6d7lgHKpEeqor8468tpfFw"/>
-  <StreamUML:PrivacyProtectingStream xmi:id="_ArrcwI4rEeqn8L6Ndt0qzw" base_InformationFlow="_WJJ4kHdOEeqEm_3mTdKlkw" protectedByVCP="true" isMainCopy="true">
-    <protectedStreamConf xmi:type="StreamUML:ProtectedStreamConfiguration" xmi:id="_JVcewI62EeqJhohJvnJHhg" timestampServerPort="-1" topologyParallelism="1" logDir="/home/cablan/Desktop/thesisFiles/log/greatSeller"/>
-  </StreamUML:PrivacyProtectingStream>
-  <StreamUML:PrivacyProtectingStream xmi:id="_Ep17cI4rEeqn8L6Ndt0qzw" base_InformationFlow="_AnoDoH8LEeqfKe16nTK7Jg" protectedByDSEP="true">
-    <protectedStreamConf xmi:type="StreamUML:ProtectedStreamConfiguration" xmi:id="_WKKHYI62EeqJhohJvnJHhg" timestampServerPort="-1" topologyParallelism="1" logDir="/home/cablan/Desktop/thesisFiles/log/greatSeller"/>
-  </StreamUML:PrivacyProtectingStream>
-  <StreamUML:PrivacyProtectingStream xmi:id="_HShN4I4rEeqn8L6Ndt0qzw" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw" protectedByDSEP="true" isMainCopy="true">
-    <protectedStreamConf xmi:type="StreamUML:ProtectedStreamConfiguration" xmi:id="_agICEI62EeqJhohJvnJHhg" timestampServerPort="-1" topologyParallelism="1" logDir="/home/cablan/Desktop/thesisFiles/log/greatSeller"/>
-  </StreamUML:PrivacyProtectingStream>
-  <StreamUML:PrivacyPolicySources xmi:id="_s_JJ0I6wEeqJhohJvnJHhg" base_Package="_p2L00I6wEeqJhohJvnJHhg"/>
-  <StreamUML:PrivPolYamlFileSource xmi:id="_D9c4oI6xEeqJhohJvnJHhg" base_Class="_7edTEI6wEeqJhohJvnJHhg" pathToFile="/home/cablan/Desktop/thesisFiles/config/privacy-config.yml"/>
-  <StreamUML:PrivContTextFileSource xmi:id="_R5mLII74EeqAfJhZuCVunA" base_Class="_1qbe8I6wEeqJhohJvnJHhg" pathToFile="/home/cablan/Desktop/thesisFiles/inputs/scvFile.txt"/>
+  <StreamUML:DuplicatedStreamTextFileSink xmi:id="_cEyVQJwIEeqtYeWRPe0-4Q" base_Class="_p_eLAH8KEeqfKe16nTK7Jg" filepath="/home/cablan/Desktop/thesisFiles/outputs/resultsS3priv.txt"/>
 </xmi:XMI>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_9vApoJwHEeqtYeWRPe0-4Q/143" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_9vApoJwHEeqtYeWRPe0-4Q/143 ../profile/StreamUML.profile.uml#_9vSWcJwHEeqtYeWRPe0-4Q">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_dKK5EJ6yEeqAKJ_vxj5tPg/150" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_dKK5EJ6yEeqAKJ_vxj5tPg/150 ../profile/StreamUML.profile.uml#_dKUDAJ6yEeqAKJ_vxj5tPg">
   <uml:Model xmi:id="_p5Zr8HKYEeqlctBysCk6rQ" name="greatSellerApp">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_zixZ8HKYEeqlctBysCk6rQ">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -79,7 +79,7 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ut8DhZwIEeqtYeWRPe0-4Q" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zgb3oHKYEeqlctBysCk6rQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_9vSWcJwHEeqtYeWRPe0-4Q"/>
+        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_dKUDAJ6yEeqAKJ_vxj5tPg"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
     </profileApplication>
@@ -106,8 +106,8 @@
       <size xmi:type="StreamUML:TimeAmount" xmi:id="_Jc9ZcocKEeqDOIyYouFn4g" size="10"/>
     </window>
   </StreamUML:WindowedStream>
-  <StreamUML:KeyedStream xmi:id="_5k5NkHiwEeq954KYVFDGKw" base_InformationFlow="_WJJ4kHdOEeqEm_3mTdKlkw" isObservable="true" key="_8R-ygHKoEeqor8468tpfFw"/>
-  <StreamUML:WindowedStream xmi:id="_A4hzQHixEeq954KYVFDGKw" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw" isObservable="true">
+  <StreamUML:KeyedStream xmi:id="_5k5NkHiwEeq954KYVFDGKw" base_InformationFlow="_WJJ4kHdOEeqEm_3mTdKlkw" key="_8R-ygHKoEeqor8468tpfFw"/>
+  <StreamUML:WindowedStream xmi:id="_A4hzQHixEeq954KYVFDGKw" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw">
     <window xmi:type="StreamUML:Window" xmi:id="_Jdfk8YcKEeqDOIyYouFn4g">
       <size xmi:type="StreamUML:TimeAmount" xmi:id="_Jdfk8ocKEeqDOIyYouFn4g" timeUnit="Minutes" size="1"/>
     </window>
@@ -134,5 +134,5 @@
   <StreamUML:PrivacyPolicySources xmi:id="_s_JJ0I6wEeqJhohJvnJHhg" base_Package="_p2L00I6wEeqJhohJvnJHhg"/>
   <StreamUML:PrivPolYamlFileSource xmi:id="_D9c4oI6xEeqJhohJvnJHhg" base_Class="_7edTEI6wEeqJhohJvnJHhg" pathToFile="/home/cablan/Desktop/thesisFiles/config/privacy-config.yml"/>
   <StreamUML:PrivContTextFileSource xmi:id="_R5mLII74EeqAfJhZuCVunA" base_Class="_1qbe8I6wEeqJhohJvnJHhg" pathToFile="/home/cablan/Desktop/thesisFiles/inputs/scvFile.txt"/>
-  <StreamUML:DuplicatedStreamTextFileSink xmi:id="_cEyVQJwIEeqtYeWRPe0-4Q" base_Class="_p_eLAH8KEeqfKe16nTK7Jg" filepath="/home/cablan/Desktop/thesisFiles/outputs/resultsS3priv.txt"/>
+  <StreamUML:TextFileSink xmi:id="_Ua1_MJ63EeqrI592BvI8_w" base_Class="_p_eLAH8KEeqfKe16nTK7Jg" filepath="/home/cablan/Desktop/thesisFiles/outputs/resultsS3priv.txt"/>
 </xmi:XMI>

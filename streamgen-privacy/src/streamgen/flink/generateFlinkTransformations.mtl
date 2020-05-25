@@ -230,26 +230,26 @@
 
 [template public generateFlinkPrivPolicies(stream : DirectedRelationship)]
 	
-// begin stream privacy conf
-ApplicationDataStream app_[stream.eGet('name')/] = app.getStreamByID("[stream.eGet('name')/]");
-		
-ProtectedStream<[stream.eGet('conveyed').name/]> [stream.eGet('name')/]_p = 
-	new ProtectedStream<[stream.eGet('conveyed').name/]>([getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('monitoringActive').toString().toBoolean()/],"[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('timestampServerIp').toString()/]",[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('timestampServerPort').toString().toInteger()/],[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('topologyParallelism').toString().toInteger()/],[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('simulateRealisticScenario').toString().toBoolean()/],[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('allowedLateness').toString().toInteger()/],"[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('logDir').toString()/]");
-
-[stream.eGet('name')/]_p.setStreamToProtect((DataStream<[stream.eGet('conveyed').name/]>) app_[stream.eGet('name')/].getConcreteStream());
-[if isVCPprotected(stream)]
-
-	for (VCP vcp : app.getVCPs(app_[stream.eGet('name')/].getId())) {
-		[stream.eGet('name')/]_p.addVCP(app_[stream.eGet('name')/], (VCP) vcp, app);
-	}
-[/if]
-[if (isDSEPprotected(stream))]
-
-	for (DSEP dsep : app.getDSEPs(app_[stream.eGet('name')/].getId())) {
-		[stream.eGet('name')/]_p.addDSEP(app_[stream.eGet('name')/], (DSEP) dsep, app);
-	}
-[/if]
-
-DataStream<[stream.eGet('conveyed').name/]> [stream.eGet('name')/]_f = [stream.eGet('name')/]_p.finalize(env, contextStream);
-// finish stream privacy conf
+	// begin stream privacy conf
+	ApplicationDataStream app_[stream.eGet('name')/] = app.getStreamByID("[stream.eGet('name')/]");
+			
+	ProtectedStream<[stream.eGet('conveyed').name/]> [stream.eGet('name')/]_p = 
+		new ProtectedStream<[stream.eGet('conveyed').name/]>([getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('monitoringActive').toString().toBoolean()/],"[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('timestampServerIp').toString()/]",[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('timestampServerPort').toString().toInteger()/],[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('topologyParallelism').toString().toInteger()/],[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('simulateRealisticScenario').toString().toBoolean()/],[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('allowedLateness').toString().toInteger()/],"[getStereotypeProperty(stream, 'PrivacyProtectingStream', 'protectedStreamConf').eGet('logDir').toString()/]");
+	
+	[stream.eGet('name')/]_p.setStreamToProtect((DataStream<[stream.eGet('conveyed').name/]>) app_[stream.eGet('name')/].getConcreteStream());
+	[if isVCPprotected(stream)]
+	
+		for (VCP vcp : app.getVCPs(app_[stream.eGet('name')/].getId())) {
+			[stream.eGet('name')/]_p.addVCP(app_[stream.eGet('name')/], (VCP) vcp, app);
+		}
+	[/if]
+	[if (isDSEPprotected(stream))]
+	
+		for (DSEP dsep : app.getDSEPs(app_[stream.eGet('name')/].getId())) {
+			[stream.eGet('name')/]_p.addDSEP(app_[stream.eGet('name')/], (DSEP) dsep, app);
+		}
+	[/if]
+	
+	DataStream<[stream.eGet('conveyed').name/]> [stream.eGet('name')/]_f = [stream.eGet('name')/]_p.finalize(env, contextStream);
+	// finish stream privacy conf
 [/template]

@@ -17,17 +17,17 @@
 \BOOKMARK [3][-]{subsubsection.2.3.1.1}{UML Diagrams}{subsection.2.3.1}% 17
 \BOOKMARK [3][-]{subsubsection.2.3.1.2}{UML Frameworks}{subsection.2.3.1}% 18
 \BOOKMARK [2][-]{subsection.2.3.2}{Object Constraint Language \(OCL\)}{section.2.3}% 19
-\BOOKMARK [0][-]{chapter.3}{Requirements and Design}{}% 20
-\BOOKMARK [1][-]{section.3.1}{StreamGen}{chapter.3}% 21
-\BOOKMARK [2][-]{subsection.3.1.1}{DIA Generation Process}{section.3.1}% 22
-\BOOKMARK [2][-]{subsection.3.1.2}{DIA Examples}{section.3.1}% 23
-\BOOKMARK [3][-]{subsubsection.3.1.2.1}{Great Seller DIA}{subsection.3.1.2}% 24
-\BOOKMARK [3][-]{subsubsection.3.1.2.2}{Cool Analyst DIA}{subsection.3.1.2}% 25
-\BOOKMARK [0][-]{chapter.4}{Solution}{}% 26
-\BOOKMARK [1][-]{section.4.1}{Files Generation}{chapter.4}% 27
-\BOOKMARK [2][-]{subsection.4.1.1}{Source Files Generation}{section.4.1}% 28
-\BOOKMARK [2][-]{subsection.4.1.2}{Java Codes Generation}{section.4.1}% 29
-\BOOKMARK [1][-]{section.4.2}{Requirements}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.2.3.3}{StreamGen}{section.2.3}% 20
+\BOOKMARK [3][-]{subsubsection.2.3.3.1}{DIA Generation Process}{subsection.2.3.3}% 21
+\BOOKMARK [0][-]{chapter.3}{Requirements and Design}{}% 22
+\BOOKMARK [0][-]{chapter.4}{Solution}{}% 23
+\BOOKMARK [1][-]{section.4.1}{Files Generation}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.1.1}{Source Files Generation}{section.4.1}% 25
+\BOOKMARK [2][-]{subsection.4.1.2}{Java Codes Generation}{section.4.1}% 26
+\BOOKMARK [1][-]{section.4.2}{Requirements}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.2.1}{DIA Examples}{section.4.2}% 28
+\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Great Seller DIA}{subsection.4.2.1}% 29
+\BOOKMARK [3][-]{subsubsection.4.2.1.2}{Cool Analyst DIA}{subsection.4.2.1}% 30
 \BOOKMARK [1][-]{section.4.3}{Privacy Policy Language}{chapter.4}% 31
 \BOOKMARK [2][-]{subsection.4.3.1}{PrivacyProtectingStream}{section.4.3}% 32
 \BOOKMARK [2][-]{subsection.4.3.2}{PrivacyPolicySources}{section.4.3}% 33

@@ -55,6 +55,6 @@ getStereotypeProperty(aClass, 'PrivacyProtectingStream', 'protectedByVCP').toStr
 getStereotypeProperty(aClass, 'PrivacyProtectingStream', 'protectedByDSEP').toString().toBoolean()
 /]
 
-[query public isMainCopy (aClass : Element) : Boolean = 
-getStereotypeProperty(aClass, 'PrivacyProtectingStream', 'isMainCopy').toString().toBoolean()
+[query public isObservable (aClass : Element) : Boolean = 
+not(getStereotypeProperty(aClass, 'PrivacyProtectingStream', 'isObservableBy') = null)
 /]

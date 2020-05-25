@@ -84,6 +84,21 @@ public class greatSeller {
 		
 			app.getStreamByID("streamS2").setConcreteStream(streamS2);
 			// finish stream definition
+			
+			// begin stream privacy conf
+			ApplicationDataStream app_streamS2 = app.getStreamByID("streamS2");
+					
+			ProtectedStream<IssuedTransactions> streamS2_p = 
+				new ProtectedStream<IssuedTransactions>(false,"",-1,1,false,0,"/home/cablan/Desktop/thesisFiles/log/greatSeller");
+			
+			streamS2_p.setStreamToProtect((DataStream<IssuedTransactions>) app_streamS2.getConcreteStream());
+			
+				for (VCP vcp : app.getVCPs(app_streamS2.getId())) {
+					streamS2_p.addVCP(app_streamS2, (VCP) vcp, app);
+				}
+			
+			DataStream<IssuedTransactions> streamS2_f = streamS2_p.finalize(env, contextStream);
+			// finish stream privacy conf
 		
 			// begin stream definition
 			DataStream<SpentAmount> streamS3 =
@@ -96,20 +111,20 @@ public class greatSeller {
 			app.getStreamByID("streamS3").setConcreteStream(streamS3);
 			// finish stream definition
 			
-		// begin stream privacy conf
-		ApplicationDataStream app_streamS3 = app.getStreamByID("streamS3");
-				
-		ProtectedStream<SpentAmount> streamS3_p = 
-			new ProtectedStream<SpentAmount>(false,"",-1,1,false,0,"/home/cablan/Desktop/thesisFiles/log/greatSeller");
-		
-		streamS3_p.setStreamToProtect((DataStream<SpentAmount>) app_streamS3.getConcreteStream());
-		
-			for (DSEP dsep : app.getDSEPs(app_streamS3.getId())) {
-				streamS3_p.addDSEP(app_streamS3, (DSEP) dsep, app);
-			}
-		
-		DataStream<SpentAmount> streamS3_f = streamS3_p.finalize(env, contextStream);
-		// finish stream privacy conf
+			// begin stream privacy conf
+			ApplicationDataStream app_streamS3 = app.getStreamByID("streamS3");
+					
+			ProtectedStream<SpentAmount> streamS3_p = 
+				new ProtectedStream<SpentAmount>(false,"",-1,1,false,0,"/home/cablan/Desktop/thesisFiles/log/greatSeller");
+			
+			streamS3_p.setStreamToProtect((DataStream<SpentAmount>) app_streamS3.getConcreteStream());
+			
+				for (DSEP dsep : app.getDSEPs(app_streamS3.getId())) {
+					streamS3_p.addDSEP(app_streamS3, (DSEP) dsep, app);
+				}
+			
+			DataStream<SpentAmount> streamS3_f = streamS3_p.finalize(env, contextStream);
+			// finish stream privacy conf
 		
 			// begin stream definition
 			DataStream<NumberUsers> streamS4 =
@@ -120,21 +135,6 @@ public class greatSeller {
 				;
 		
 			// finish stream definition
-			
-		// begin stream privacy conf
-		ApplicationDataStream app_streamS2 = app.getStreamByID("streamS2");
-				
-		ProtectedStream<IssuedTransactions> streamS2_p = 
-			new ProtectedStream<IssuedTransactions>(false,"",-1,1,false,0,"/home/cablan/Desktop/thesisFiles/log/greatSeller");
-		
-		streamS2_p.setStreamToProtect((DataStream<IssuedTransactions>) app_streamS2.getConcreteStream());
-		
-			for (VCP vcp : app.getVCPs(app_streamS2.getId())) {
-				streamS2_p.addVCP(app_streamS2, (VCP) vcp, app);
-			}
-		
-		DataStream<IssuedTransactions> streamS2_f = streamS2_p.finalize(env, contextStream);
-		// finish stream privacy conf
 		
 			// begin sink definition
 			streamS2_f

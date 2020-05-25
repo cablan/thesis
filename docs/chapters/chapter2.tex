@@ -1,18 +1,20 @@
-% Make an introduction to the chapter describing what I am gonna speak about.
+Big Data has transformed our society in the last years. The capability to develop efficient applications which were able to handle large amount of data at run time was the first step. In section \nameref{Data-Intensive Applications}, first of all, a classification of these kind of application is made. After that, the characteristics of data-intensive applications are explained. Finally, in this section some frameworks as Hadoop, Spark or Flink are explained giving some characteristics and what makes them different. In section \nameref{Privacy Policies in IT} some concepts relative to computer security and how such concepts impact on data privacy are developed. Some different approaches to generate private data are exposed and, after that, it is emphasized how privacy policies can be applied in the already known data-intensive applications. Finally, in section \nameref{Modeling and Metamodeling}, first of all the main concepts of metamodeling are exposed. After that the Unified Model Language is explained and, at the end of the section, a model-driven approach to support data-intensive application design called StreamGen is introduced.
 
 \section{Data-Intensive Applications}
 
-Data-Intensive Applications (DIAs) are a class of parallel computing applications which handle high amount of datasets and that devote the most of their processing time to I/O and manipulate such datasets. These kind of applications are able to manage datasets of several terabytes and petabytes which are available in a wide variety of formats and that are distributed among several locations. This capability to process large volumes of data is possible due to the fact that DIAs use multi-step analytical pipelines with transformations and fusion stages in order to parallelize the execution of the data.
+\label{Data-Intensive Applications}
 
-Intensive applications can be classified according to the parallel processing approaches commonly known as compute-intensive and data-intensive. On the one hand, compute-intensive is used to describe application programs that are compute bound. Such applications devote most of their execution time to computational requirements and they process small volumes of data. In this kind of applications, processes must be parallelized by means of individual algorithms and then they must be decomposed into separate tasks. Later, such tasks are executed in a pipeline reaching higher performance that in serial processing. Finally, compute-intensive applications are able to perform multiple operations simultaneously as they allow task parallelism.
+Data-Intensive Applications (DIAs), according to \cite{cloudcomputing}, are a class of parallel computing applications which handle high amount of datasets and that devote the most of their processing time to I/O and manipulate such datasets. These kind of applications are able to manage datasets of several terabytes and petabytes which are available in a wide variety of formats and that are distributed among several locations. This capability to process large volumes of data is possible due to the fact that DIAs use multi-step analytical pipelines with transformations and fusion stages in order to parallelize the execution of the data.
 
-On the other hand, data-intensive is used to describe application programs that are I/O bound. Such applications devote most of their execution time to I/O, move and manipulate the datasets. This second parallel processing approach, unlike compute-intensive, processes large volumes of data. Data-intensive applications require the partition or subdivision of the initial dataset in some smaller datasets due to the fact that the large volume of data that they are composed. These partitions must be processed independently by the application allowing the parallelization of the initial dataset. Once the partitions are executed, they must be reassembled in an output dataset.
+Intensive applications can be classified (\cite{parallelcomputing}, \cite{computing21} and \cite{dataintensivecomputing}) according to the parallel processing approaches commonly known as compute-intensive and data-intensive. On the one hand, compute-intensive is used to describe application programs that are compute bound. Such applications devote most of their execution time to computational requirements and they process small volumes of data. In this kind of applications, processes must be parallelized by means of individual algorithms and then they must be decomposed into separate tasks. Later, such tasks are executed in a pipeline reaching higher performance that in serial processing. Finally, compute-intensive applications are able to perform multiple operations simultaneously as they allow task parallelism.
 
-As any type of application which takes advantage of data-parallelism, DIAs need to select an algorithm not only to distribute data among the processing nodes of the cluster but also to execute the data in such processing nodes. Moreover, they need to adopt a strategy to decompose the datasets, find a trade-off in terms of working loads in the processing nodes by means of load balancing systems and to communicate the nodes of the cluster.
+On the other hand, data-intensive is used to describe application programs that are I/O bound (\cite{dataintensivecomputingIEEE}). Such applications devote most of their execution time to I/O, move and manipulate the datasets. This second parallel processing approach, unlike compute-intensive, processes large volumes of data. Data-intensive applications require the partition or subdivision of the initial dataset in some smaller datasets due to the fact that the large volume of data that they are composed. These partitions must be processed independently by the application allowing the parallelization of the initial dataset. Once the partitions are executed, they must be reassembled in an output dataset.
+
+As any type of application which takes advantage of data-parallelism, DIAs need to select an algorithm not only to distribute data among the processing nodes of the cluster but also to execute the data in such processing nodes (\cite{terascalechallenge}). Moreover, they need to adopt a strategy to decompose the datasets, find a trade-off in terms of working loads in the processing nodes by means of load balancing systems and to communicate the nodes of the cluster.
 
 \subsection{Characteristics}
 
-Data-intensive applications are modeled in a different way than any other computing application due to the property of DIAs to be processed in a cluster infrastructure. Moreover, as any other system, DIAs need to reach a high performance in order to make efficient applications; this is possible by means of the minimization of the number of movements of the data. Other important properties required by DIAs are that they must be available when they are called, and that they must be reliable to the number of failures; both properties are accomplished due to data-intensive applications are fault resilient. Last but not least, data-intensive applications must be able to change the number of required nodes taking into account the workload. Then, four characteristics can be defined in order to distinguish data-intensive applications from any other kind of computing system:
+Data-intensive applications are modeled in a different way than any other computing application due to the property of DIAs to be processed in a cluster infrastructure. Moreover, as any other system, DIAs need to reach a high performance in order to make efficient applications; this is possible by means of the minimization of the number of movements of the data. Other important properties required by DIAs are that they must be available when they are called, and that they must be reliable to the number of failures; both properties are accomplished due to data-intensive applications are fault resilient. Last but not least, data-intensive applications must be able to change the number of required nodes taking into account the workload. Then, four characteristics, according to \cite{distributedcomputing} and \cite{scalablecomputing}, can be defined in order to distinguish data-intensive applications from any other kind of computing system:
 
 \subsubsection*{Dataflow Model}
 
@@ -47,7 +49,7 @@ Spark enables users to access repeatedly to datasets in order to perform streami
 
 Moreover, Spark can be integrated with any other data-intensive tool due to its design. Spark is compatible with Hadoop as it is able to access Hadoop data sources and run on Hadoop clusters. This platform extends MapReduce, the engine of Hadoop, by including iterative queries and stream processing.
 
-Some features make Spark more efficient than Hadoop. The following features, that are presented at \cite{sparkwebsite}, make Spark being the 3G of Big Data:
+Some features make Spark more efficient than Hadoop. The following features, that are presented in \cite{sparkwebsite}, make Spark being the 3G of Big Data:
 
 \begin{itemize}
 
@@ -67,7 +69,7 @@ In conclusion, Spark can be differentiated from Hadoop in its cluster management
 
 \subsubsection{Apache Flink}
 
-Apache Flink is an open source platform which allows data streaming computation because of its data flow engine. Moreover, as happens with Spark, Apache Flink is able to execute stream processing and batch processing and it is also compatible with Hadoop.
+Apache Flink is an open source platform which allows data streaming computation because of its data flow engine. According to \cite{streamprocessing}, data stream processing is to compute on data just when it is received or produced. Moreover, as happens with Spark, Apache Flink is able to execute stream processing and batch processing and it is also compatible with Hadoop.
 
 Apache Flink can undertake efficiently some different types of processing, becoming in the most potent open source platform in the market to handle them. Such processing types, according to \cite{flinkwebsite}, are:
 
@@ -82,11 +84,11 @@ Apache Flink can undertake efficiently some different types of processing, becom
 
 \end{itemize}
 
-Apache Flink reduces the complexity that other platforms as Spark faced by means of some improvements. Among such improvements highlight the integration with MapReduce of query optimization, some concepts from database systems and efficient parallel in-memory and out-of-core algorithms. These optimizations are given due to the fact that Flink architecture is designed taking into account the streaming model. Such design improves the micro-batch approach taken in Spark for data streaming processing making Flink faster and with lower latency for such kind of processing.
+Apache Flink reduces the complexity that other platforms as Spark faced by means of some improvements. Such improvements include the integration of query optimization in MapReduce processing layer, some concepts from database systems and efficient parallel in-memory and out-of-core algorithms. These optimizations are given due to the fact that Flink architecture is designed taking into account the streaming model. Such design improves the micro-batch approach taken in Spark for data streaming processing making Flink faster and with lower latency for such kind of processing.
 
 Following the example of Spark, Apache Flink is provided with three APIs (DataStream, DataSet and Table APIs) in order to use its engine. DataStream and DataSet APIs are two regular programs used by Flink in order to perform transformations on data streams (filtering, aggregating, update state...) and data sets (joining, grouping, mapping...) respectively. On the other hand Table API is used for relational operations and it can be integrated into DataStream API for relational stream processing and into DataSet API for relational batch processing.
 
-Finally, it is important to remark the five features that can be found at \cite{flinkwebsite} about Apacha Flink:
+Finally, it is important to remark the five features that can be found in \cite{flinkwebsite} about Apacha Flink:
 
 \begin{enumerate}
 
@@ -102,22 +104,21 @@ All these characteristics are what make Flink the 4G of big data and the most po
 
 \section{Privacy Policies in IT}
 
+\label{Privacy Policies in IT}
+
 The appearance of Big Data and DIA platforms dealing with large amount of datasets has led the society to question about the privacy of those data that are processed. Due to the fact that such data are not visible for the data producers but these data are bought and handled by many companies in order to compute some statistics, data privacy has become in a must for the development and commercialization of new DIA in order to give the option to the user to decide on which data can be seen by other agents.
 
-On the other hand, large amount of data flowing through the net and the existence of black hat hackers forces DIA designers to take into account some concepts about computer security. Computer security, also known as cybersecurity or information technology security (IT security), is the protection of computer systems and networks from people who is interested in stealing or damaging their hardware, software or the data with which they are working. It is at this last point where Big Data applications have to pay attention in order to be designed.
+On the other hand, large amount of data flowing through the net and the existence of black hat hackers forces DIA designers to take into account some concepts about computer security (\cite{computersecurityslides}). Computer security, also known as cybersecurity or information technology security (IT security), is the protection of computer systems and networks from people who is interested in stealing or damaging their hardware, software or the data with which they are working. It is at this last point where Big Data applications have to pay attention in order to be designed.
 
-% I took this information from the slides of the courser "Computer Security"
-% How can I make the reference to there?
+Every computer security system accomplish the well-known CIA paradigm, as it is explained in \cite{computersecurityslides}. "C" stands for Confidentiality, "I" for Integrity and "A" for Availability and they are the three basic requirements that compose such paradigm. Any computer security system has to grant that any piece of data has to be accessed only by those who are authorized, accomplishing such requirement, information is confidential. Moreover, such systems have to be able to allow data modifications only to those how are authorized for it and only in the way that they are entitled to modify them, this requirement makes information to be integrated. Finally, data must be available to everyone who has a right over them within some time constraints, this makes information to be available. These three requirements raise an engineering problem and it is that availability conflicts with confidentiality and integrity due to the fact that if a data is available then it could not be confidential as anybody may modify it and it could not be integrated as anybody could modify then. This is the main problem that has to be faced when designing computer security problems. In order to handle this complex engineering problem, designers can use legal instruments but also technical tools.
 
-Every computer security system accomplish the well-known CIA paradigm. "C" stands for Confidentiality, "I" for Integrity and "A" for Availability and they are the three basic requirements that compose such paradigm. Any computer security system has to grant that any piece of data has to be accessed only by those who are authorized, accomplishing such requirement, information is confidential. Moreover, such systems have to be able to allow data modifications only to those how are authorized for it and only in the way that they are entitled to modify them, this requirement makes information to be integrated. Finally, data must be available to everyone who has a right over them within some time constraints, this makes information to be available. These three requirements raise an engineering problem and it is that availability conflicts with confidentiality and integrity due to the fact that if a data is available then it could not be confidential as anybody may modify it and it could not be integrated as anybody could modify then. This is the main problem that has to be faced when designing computer security problems. In order to handle this complex engineering problem, designers can use legal instruments but also technical tools.
-
-Due to the fact that the information of many entities (persons, companies, etc.) are involve in such complex problem, there are some legal instruments to handle the design of security systems. This is the case of privacy policies. Privacy policies are statements or legal documents that reveal how an entity can collect, use or handle data from another entity. Privacy policies can differ from one country to another this is why there are some agreements in order to handle them. In the European Union (EU) the General Data Protection Regulation (GDPR) is in charge of harmonizing data privacy laws across all member states of the EU. In spite of these regulations, there are many ways in order to apply privacy policies.
+Due to the fact that the information of many entities (persons, companies, etc.) are involve in such complex problem, there are some legal instruments to handle the design of security systems. This is the case of privacy policies. Privacy policies are statements or legal documents that reveal how an entity can collect, use or handle data from another entity. Privacy policies can differ from one country to another this is why there are some agreements in order to handle them. In the European Union (EU) the General Data Protection Regulation (GDPR), according to its web page \cite{gdprwebpage}, is in charge of harmonizing data privacy laws across all member states of the EU. In spite of these regulations, there are many ways in order to apply privacy policies.
 
 Due to the importance of such privacy policies, some researchers haven been studying about the development of formal languages in order to specify them in a logical way. This is the case of some literature \cite{XACMLlanguage} where XACML is used to specify privacy policies by means of some logic rules in order to reach a set of policies. This formal language (XACML) also can be used for other reasons as it is the case of user authentication in distributed systems \cite{XACMLforAuthentication}.
 
-On the other hand, when a computer security system is designed, the designer has to put himself in the place of the cyberthief, or threat agent, in order to achieve a secure system. Such cyberthiefs try to find vulnerabilities and, then, exploit them in order to steal some information. Usually, vulnerabilities are a bug that allows to violate the CIA paradigm but the exploit can be a wide variety of vulnerability uses. Despite this design technique, unfortunately, a great amount of vulnerabilities are found when users accidentally deal with the applications once the applications are in the market.
+On the other hand, when a computer security system is designed, the designer has to put himself in the place of the cyberthief, or threat agent, in order to achieve a secure system. Such cyberthieves try to find vulnerabilities and, then, exploit them in order to steal some information. Usually, vulnerabilities are a bug that allows to violate the CIA paradigm but the exploit can be a wide variety of vulnerability uses. Despite this design technique, unfortunately, a great amount of vulnerabilities are found when users accidentally deal with the applications once the applications are in the market.
 
-Another remarkable point is the importance of threats, that are potential violations of the CIA paradigm, in computer security systems. This means that an information system can be seen its security system broken due to the fact that a circumstance or an event could impact on it adversely by means of the break of any of the three basic requirements of a computer security system. A threat is composed by three layers. The attacker or threat agent that is the person or the information system that performs the attack action, the countermeasure layer that is all the systems that try to identify an attack and stop it and, finally, the target of the attack that is on which resides the vulnerability and on the threat consequences take place when the exploit arrives to the vulnerability.
+Another remarkable point is the importance of threats, that are potential violations of the CIA paradigm in computer security systems. This means that an information system can be seen its security system broken due to the fact that a circumstance or an event could impact on it adversely by means of the break of any of the three basic requirements of a computer security system. A threat is composed by three layers. The attacker or threat agent that is the person or the information system that performs the attack action, the countermeasure layer that is all the systems that try to identify an attack and to stop it and, finally, the target of the attack that is on which resides the vulnerability and on the threat consequences take place when the exploit arrives to the vulnerability. By means  of such vulnerabilities, private data can be stolen by cyberthieves. This is why, system dealing with confidential data must hash them as soon as possible in order to handle private data even during the execution phase of the pipeline.
 
 In conclusion, the concept of computer security involves many fields but when dealing with the design of DIAs, it is very important to take into account not only the CIA paradigm but also the design techniques from the threat agent perspective in order to reach secure DIAs, always under the legal framework of privacy policies. Furthermore, what makes security on DIAs reliable is the balance on its conflicting requirements what is a complex engineering problem. Finally, systems with a high amount of vulnerabilities but with no threats, are secure systems. However, systems with many threats and only a few vulnerabilities become in the most attacked systems and, then, the ones that need more security measures.
 
@@ -162,7 +163,7 @@ Categorical variables are those that correspond to a string in any programming l
 
 Taking into account these three classifications, privacy policies can be defined by means of some rules. These rules have to be defined making a relationship between the contextual variable used by the DIA and some values that the user selects in order to encrypt the original fields of the stream. These relationships are made by means of logical operators. In the case of categorical variables, the operators that can be used are: equal to ($=$) and not equal to ($\neq$). On the other hand, in the case of numerical variables, the relation operators that can be used are: equal to ($=$), not equal to ($\neq$), is greater than ($>$), is less than ($<$), is greater than or equal to ($\geq$) and is less than or equal to ($\leq$)
 
-Finally, due to the fact that privacy policies encourage the anonymity of the entity who owns the data of the tuple, depending on the data stream classification explained above and the rules defined by each user, privacy policies can differ. Then, another classification is made at \cite{privacypoliciesarticle}, in this case about the privacy policies in DIAs:
+Finally, due to the fact that privacy policies encourage the anonymity of the entity who owns the data of the tuple, depending on the data stream classification explained above and the rules defined by each user, privacy policies can differ. Then, another classification is made in \cite{privacypoliciesarticle}, in this case about the privacy policies in DIAs:
 
 \begin{itemize}
 
@@ -177,7 +178,7 @@ View Creation Policies (VCPs) are a type of privacy policies for DIAs which are 
 
 Furthermore, VCPs are defined by means of a set of rules which are relationships between the contextual variables used by the DIA and some values that the user selects in order to encrypt the original fields of the stream. In this kind of privacy policies, the encrypted final values of the stream are defined by means of generalization vectors. A generalization vector defines the value to be used in order to generalize each of the fields that compose a subject-specific stream.
 
-In conclusion, given a tuple belonging to a subject-specific stream, if at any instant such tuple satisfies all the rules defined by means of logical operators relating some contextual variables with a value defined by the user of the DIA, a generalization vector is applied on the tuple in order to generalize each of the fields of the streams and obtaining an encrypted tuple. Then at \cite{privacypoliciesarticle}, a VCP is defined by means of four items:
+In conclusion, given a tuple belonging to a subject-specific stream, if at any instant such tuple satisfies all the rules defined by means of logical operators relating some contextual variables with a value defined by the user of the DIA, a generalization vector is applied on the tuple in order to generalize each of the fields of the streams and obtaining an encrypted tuple. Then in \cite{privacypoliciesarticle}, a VCP is defined by means of four items:
 
 \begin{enumerate}
 
@@ -194,7 +195,7 @@ Data Subject Eviction Policies (DSEPs) are applied when given an operator, which
 
 Unlike what happens with VCPs, DSEPs do not encrypt the fields of a given data stream. In this case, DSEPs prevent the tuples flowing in the subject-specific stream that inputs into a given operator from being processed by such operator. In this case, the output from the operator is computed without taking into account the data of the data subject who defines the DSEP, preserving the anonymity of the owner of the data for the computation of a certain statistic.
 
-In conclusion, in order to define a DSEP, first of all, a set of rules have to be specified by the user relating some contextual variables with some values that such user has to define. Then, given an instant when all the defined rules are satisfied on a subject-generic stream which outputs from a given operator, all the tuples referring to the data subject who defined such rules have to be evicted from the subject-specific stream that inputs into the given operator. Then at \cite{privacypoliciesarticle}, a DSEP is defined by means of three items:
+In conclusion, in order to define a DSEP, first of all, a set of rules have to be specified by the user relating some contextual variables with some values that such user has to define. Then, given an instant when all the defined rules are satisfied on a subject-generic stream which outputs from a given operator, all the tuples referring to the data subject who defined such rules have to be evicted from the subject-specific stream that inputs into the given operator. Then in \cite{privacypoliciesarticle}, a DSEP is defined by means of three items:
 
 \begin{enumerate}
 
@@ -205,6 +206,8 @@ In conclusion, in order to define a DSEP, first of all, a set of rules have to b
 \end{enumerate}
 
 \section{Modeling \& Metamodeling}
+
+\label{Modeling and Metamodeling}
 
 Data Intensive Applications are used when large amount of data have to be handle with high performance. In order to reach such high performance, DIAs require complex designs and a lot of resources to achieve their goal. One of these resources is the number of software developers who are needed to write the application codes. On the other hand, when some specific requirements are added to the DIAs, as it is the case of privacy policies managing the privacy of the users, developing DIAs becomes in a really difficult task which cannot be faced writing codes from scratch. At this point is where other approaches to write application codes take advantage. Such is the case of modeling and metamodeling techniques applied to software development.
 
@@ -323,7 +326,87 @@ This language does not cause side effects, so the verification of a condition, w
 
 In conclusion, OCL associates boolean expressions with the elements of the model and these expressions are evaluated as true every time the program is executed. In addition, they can also be associated with methods. In this case, the Boolean expressions are evaluated as true at the moment before or after the execution of the program.
 
+\subsection{StreamGen}
+StreamGen is a model-driven approach to support the design of DIAs and the automated code generation for two target platforms, Flink and Spark. This approach is developed focusing on two requirements:
 
+\begin{itemize}
+\item To provide a platform-independent and graphical modeling language for streaming applications.
+\item To enable the fast prototyping of distributed streaming applications over different platforms.
+\end{itemize}
+
+The first requirement is needed in order to develop any kind of DIA for different target platforms and, independently for which platform it is targeted, provide a complete language for all of them. This is possible due to the DIA dataflow model characteristic that supports the development of them by means of sources, transformations and sinks. The second requirement is satisfied by using UML class diagrams for such purpose. This kind of diagrams allow to represent sources, transformations and sinks but also the data flows really fast, just introducing the predefined stereotypes.
+
+\subsubsection{DIA Generation Process}
+
+The different steps that have to be followed in order to generate a DIA with StreamGen are the following:
+
+\begin{itemize}
+\item UML model creation.
+\item Application code generation.
+\item Application execution.
+\end{itemize}
+
+\subsubsection*{UML model creation}
+
+First of all, the user must create a UML model by exploiting a predefined language in a UML profile diagram. This language consists of four metaclasses:
+
+\begin{itemize}
+\item Class
+\item InformationFlow
+\item Model
+\item Package
+\end{itemize}
+
+The class metaclass represents the streaming operators stereotypes which are data sources, data sinks and data stream transformation. Moreover, this three stereotypes can be represented by means of several generalization. In the table \ref{StreamGen Classes} can be shown such stereotypes.
+
+\begin{table}[h!]
+\centering
+	\begin{tabular}{||c|c|c||} 
+	\hline\hline
+	Sources & Transformations & Sinks \\ 
+	\hline\hline
+	Text File & Reduce & Text File \\ 
+	\hline
+	Socket & Map & CSV File \\ 
+	\hline
+	Collection & Window & Socket \\ 
+	\hline
+	Kafka & Flatmap & Cassandra \\ 
+	\hline
+	 - & NFlatmap & Kafka \\
+	\hline
+	 - & NMap & - \\
+	\hline
+	 - & Count & - \\
+	\hline
+	 - & Fold & - \\
+	\hline
+	 - & Sum & - \\
+	\hline
+	 - & Filter & - \\
+	\hline
+	 - & Join & - \\
+	\hline
+	 - & CoGroup & - \\
+	\hline\hline
+	\end{tabular}
+\caption{StreamGen Classes}
+\label{StreamGen Classes}
+\end{table}
+
+The InformationFlow metaclass represents the data streams. There are three main data streams stereotypes: non-parallel stream, windowed stream and partitioned stream. Moreover, the partitioned stream stereotype can be generalized to broadcasted stream, keyed stream, randomly partitioned stream and round robin stream.
+
+The model metaclass is extended by a distributed streaming application stereotype which is generalized to Flink application, Spark application and Apex application.
+
+The last metaclass, the package, is extended by the stream data types stereotype which will contain all the data types conveyed by the different information flows.
+
+\subsubsection*{Application code generation}
+
+Once the user has defined the UML model, the java application configuration must be run in order to generate the application codes. This is possible because of the development of an Acceleo code. This Acceleo program is able to take as inputs the generated UML model and, depending on the different stereotypes contained in such model, generate a DIA code for Flink or Spark.
+
+\subsubsection*{Application execution}
+
+Currently, StreamGen allows code generation for Spark and Flink. As can be seen in its model stereotypes, also there is an intention to develop Apex codes in the future.
 
 
 

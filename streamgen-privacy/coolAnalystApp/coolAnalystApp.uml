@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_9vApoJwHEeqtYeWRPe0-4Q/143" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_9vApoJwHEeqtYeWRPe0-4Q/143 ../profile/StreamUML.profile.uml#_9vSWcJwHEeqtYeWRPe0-4Q">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_dKK5EJ6yEeqAKJ_vxj5tPg/150" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_dKK5EJ6yEeqAKJ_vxj5tPg/150 ../profile/StreamUML.profile.uml#_dKUDAJ6yEeqAKJ_vxj5tPg">
   <uml:Model xmi:id="_SYkbMJYAEeqv0v2oWOTJKw" name="coolAnalystApp">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_UFKf4JYAEeqv0v2oWOTJKw">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -74,7 +74,7 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_joIK5ZwIEeqtYeWRPe0-4Q" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UFAu4JYAEeqv0v2oWOTJKw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_9vSWcJwHEeqtYeWRPe0-4Q"/>
+        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_dKUDAJ6yEeqAKJ_vxj5tPg"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
     </profileApplication>
@@ -158,5 +158,5 @@
   <StreamUML:CsvFileSink xmi:id="_7Yw14JwFEeqtYeWRPe0-4Q" base_Class="_2KW3UJwFEeqtYeWRPe0-4Q" filepath="/home/cablan/Desktop/thesisFiles/outputs/cleanData.txt"/>
   <StreamUML:KeyedStream xmi:id="_L_184JwGEeqtYeWRPe0-4Q" base_InformationFlow="_CG4TsJwGEeqtYeWRPe0-4Q" key="_o5NhIJYBEeqv0v2oWOTJKw"/>
   <StreamUML:NonParallelStream xmi:id="_bvXJwJwGEeqtYeWRPe0-4Q" base_InformationFlow="_TImIQJwGEeqtYeWRPe0-4Q"/>
-  <StreamUML:DuplicatedStreamCsvFileSink xmi:id="_mUqpoJwIEeqtYeWRPe0-4Q" base_Class="_hhzZQJYCEeqv0v2oWOTJKw" filepath="/home/cablan/Desktop/thesisFiles/outputs/stats.txt"/>
+  <StreamUML:CsvFileSink xmi:id="_6FcoEJ8fEeqA3bKyJWwhaw" base_Class="_hhzZQJYCEeqv0v2oWOTJKw" filepath="/home/cablan/Desktop/thesisFiles/outputs/stats.txt"/>
 </xmi:XMI>

@@ -45,7 +45,7 @@ In summary, Hadoop MapReduce works breaking the incoming datasets into independe
 
 Spark is an open source platform that allows general-purpose and fast cluster computing. It is an engine that allows to process large volumes of data.
 
-Spark enables users to access repeatedly to datasets in order to perform streaming, machine learning or SQL workloads by means of high-level APIs in Java, Scala, Python and R. It also allows users to accomplish batch processing or stream processing.
+Spark enables users to access repeatedly to datasets in order to perform streaming, machine learning or SQL workloads by means of high-level APIs in Java, Scala, Python and R. It also allows users to accomplish batch processing or stream processing. Stream processing can be defined, according to \cite{streamprocessing}, as to compute on data just when it is received or produced.
 
 Moreover, Spark can be integrated with any other data-intensive tool due to its design. Spark is compatible with Hadoop as it is able to access Hadoop data sources and run on Hadoop clusters. This platform extends MapReduce, the engine of Hadoop, by including iterative queries and stream processing.
 
@@ -69,7 +69,7 @@ In conclusion, Spark can be differentiated from Hadoop in its cluster management
 
 \subsubsection{Apache Flink}
 
-Apache Flink is an open source platform which allows data streaming computation because of its data flow engine. According to \cite{streamprocessing}, data stream processing is to compute on data just when it is received or produced. Moreover, as happens with Spark, Apache Flink is able to execute stream processing and batch processing and it is also compatible with Hadoop.
+Apache Flink is an open source platform which allows data streaming computation because of its data flow engine. Moreover, as happens with Spark, Apache Flink is able to execute stream processing and batch processing and it is also compatible with Hadoop.
 
 Apache Flink can undertake efficiently some different types of processing, becoming in the most potent open source platform in the market to handle them. Such processing types, according to \cite{flinkwebsite}, are:
 
@@ -408,8 +408,15 @@ Once the user has defined the UML model, the java application configuration must
 
 Currently, StreamGen allows code generation for Spark and Flink. As can be seen in its model stereotypes, also there is an intention to develop Apex codes in the future.
 
+\section{Discussion}
 
+The appearance of Big Data has generated a growth in IT research. Firstly, with the irruption of Hadoop framework, the firsts DIAs were developed. Since then, more development frameworks, as Spark or Flink, have been improving Hadoop features until arriving to the targeted stream processing where data is computed just when it is received or produced.
 
+Due to the fact that currently data-intensive applications provide speed besides performance, usually we can find them in our day to day and, with the generalization of DIAs in our lives, two new challenges in IT research appeared.
+
+The first one is relative to the privacy of the large amount of data that DIAs are handling. Since DIAs are used in several fields and some of these fields, as it is the case of the bank industry, work with sensitive data, data must be modified in order to keep the privacy of the data owner what means to preserve the data privacy. Some regulations in this regard have been legislated in the last years but they are not enough. In addition to the legislation some technical approaches in order to apply the regulations have been studying. This is the case of privacy policies as View Creation Policies and Data Subject Eviction Policies.
+
+Regarding to the second challenge, coding data-intensive applications from scratch is no longer efficient. At this point is where techniques as metamodeling appear to have an important role in the new software development scenario. The well-known UML language used by software developers to avoid programming from scratch can be used for such purpose. Moreover, there are already some approaches in this regard. This is the case of StreamGen, a model-driven approach to support the design of DIAs and the automated code generation for two target platforms, Flink and Spark. However, StreamGen does not provide a way to automate code generation for privacy-aware DIAs.
 
 
 

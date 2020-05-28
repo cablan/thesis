@@ -25,7 +25,7 @@
 \contentsline {chapter}{\numberline {4}Solution}{43}{chapter.4}
 \contentsline {section}{\numberline {4.1}Privacy Policy Language}{43}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}PrivacyProtectingStream}{43}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}PrivacyPolicySources}{44}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}PrivacyPolicyPackage}{44}{subsection.4.1.2}
 \contentsline {subsubsection}{\numberline {4.1.2.1}PrivacyContextSource}{44}{subsubsection.4.1.2.1}
 \contentsline {subsubsection}{\numberline {4.1.2.2}PrivacyPolicySource}{46}{subsubsection.4.1.2.2}
 \contentsline {section}{\numberline {4.2}Privacy Policy Translation}{46}{section.4.2}

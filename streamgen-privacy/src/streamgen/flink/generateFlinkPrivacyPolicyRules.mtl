@@ -1,0 +1,34 @@
+[comment encoding = UTF-8 /]
+[module generateFlinkPrivacyPolicyRules('http://www.eclipse.org/emf/2002/Ecore', 'http://www.eclipse.org/uml2/5.0.0/UML')]
+[import streamgen::main::queryUtils /]
+
+[template public generateFlinkPrivacyPolicyRules(psub : Package)]
+!!it.deib.polimi.diaprivacy.model.ApplicationPrivacy
+policiesPerStream:
+  ? concreteStream: null
+    fields:
+	[for (prop:Property | psub.getStereotypeProperty('PrivacyPolicyStreamPackage', 'fields')) ]
+    - {name: [prop.name/]}
+	[/for]
+    id: [psub.getStereotypeProperty('PrivacyPolicyStreamPackage', 'streamId').toString()/]
+    isSubjectSpecific: [psub.getStereotypeProperty('PrivacyPolicyStreamPackage', 'isSubjectSpecific').toString().toBoolean()/]
+    sourceId: null
+  : [if psub.getStereotypeProperty('PrivacyPolicyStreamPackage', 'isEmpty').toString().toBoolean()]
+['['/][']'/]
+	[else]
+	[for (c:Class | psub.eContents(Class)) ]
+	[if hasStereotype(c, 'PrivacyPolicy')]
+- !!it.deib.polimi.diaprivacy.model.[c.getStereotypeProperty('PrivacyPolicy', 'privPolType').eGet('name')/]
+    dataSubject: [c.getStereotypeProperty('PrivacyPolicy', 'dataSubject')/]
+    generalization: 
+    totalAmount: 1
+    pastConditions:
+    - {lowerTemporalBound: [c.getStereotypeProperty('PrivacyPolicy', 'pastConditions').eGet('lowerTemporalBound').toString().toInteger()/], operator: [c.getStereotypeProperty('PrivacyPolicy', 'pastConditions').eGet('operator').eGet('name')/], type: [c.getStereotypeProperty('PrivacyPolicy', 'pastConditions').eGet('type').eGet('name')/], upperTemporalBound: [c.getStereotypeProperty('PrivacyPolicy', 'pastConditions').eGet('upperTemporalBound').toString().toInteger()/], value: [c.getStereotypeProperty('PrivacyPolicy', 'pastConditions').eGet('value').toString().toInteger()/], variable: [c.getStereotypeProperty('PrivacyPolicy', 'pastConditions').eGet('variable').eGet('name')/], containerStreamId: [c.getStereotypeProperty('PrivacyPolicy', 'pastConditions').eGet('containerStreamId').toString()/]}
+    privacyContext: {purpose: [c.getStereotypeProperty('PrivacyPolicy', 'privacyContext').eGet('purpose')/], role: [c.getStereotypeProperty('PrivacyPolicy', 'privacyContext').eGet('role')/], timestamp: [c.getStereotypeProperty('PrivacyPolicy', 'privacyContext').eGet('timeStamp').toString().toInteger()/], userId: [c.getStereotypeProperty('PrivacyPolicy', 'privacyContext').eGet('observerId')/]}
+    simpleConditions:
+    - {operator: [c.getStereotypeProperty('PrivacyPolicy', 'simpleConditions').eGet('operator').eGet('name')/], type: [c.getStereotypeProperty('PrivacyPolicy', 'simpleConditions').eGet('type').eGet('name')/], value: [c.getStereotypeProperty('PrivacyPolicy', 'simpleConditions').eGet('value').toString().toInteger()/], variable: [c.getStereotypeProperty('PrivacyPolicy', 'simpleConditions').eGet('variable').eGet('name')/], containerStreamId: [c.getStereotypeProperty('PrivacyPolicy', 'simpleConditions').eGet('containerStreamId').toString()/]}
+	[/if]
+	[/for]
+	[/if]
+
+[/template]

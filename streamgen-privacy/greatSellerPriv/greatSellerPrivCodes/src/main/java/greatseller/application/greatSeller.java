@@ -45,6 +45,7 @@ public class greatSeller {
        //env.setParallelism(1);
 
 			// privacy init
+	
 			// begin privacy source definition
 			DataStream<String> contextString = env.readTextFile("/home/cablan/Desktop/thesisFiles/inputs/scvFile.txt")
 				;

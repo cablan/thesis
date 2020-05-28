@@ -5,6 +5,7 @@
 [import streamgen::flink::generateFlinkSources/]
 [import streamgen::flink::generateFlinkTransformations/]
 [import streamgen::flink::generateFlinkSinks/]
+[import streamgen::flink::generateFlinkPrivacyPolicyYamlFile/]
 
 [template public generateFlinkApplication(aModel : Model)]
 
@@ -74,7 +75,8 @@ public class [aModel.name/] {
 [if (aModel.eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
 			// privacy init
 [for (p:Package | aModel.eContents(Package)) ]
-[if hasStereotype(p, 'PrivacyPolicySources')]
+[if hasStereotype(p, 'PrivacyPolicyPackage')]
+	[generateFlinkPrivacyPolicyYamlFile(p)/]
 	[for (c:Class | p.eContents(Class)) ]
 		[if hasStereotype(c, 'PrivPolYamlFileSource')]
 		[generateFlinkPrivacyPolicyYamlFileSource(c)/]

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_dKK5EJ6yEeqAKJ_vxj5tPg/150" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_dKK5EJ6yEeqAKJ_vxj5tPg/150 ../profile/StreamUML.profile.uml#_dKUDAJ6yEeqAKJ_vxj5tPg">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_R-1yEKDAEeqyPLsjcPg2Iw/156" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_R-1yEKDAEeqyPLsjcPg2Iw/156 ../profile/StreamUML.profile.uml#_R_NlgKDAEeqyPLsjcPg2Iw">
   <uml:Model xmi:id="_p5Zr8HKYEeqlctBysCk6rQ" name="greatSellerApp">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_zixZ8HKYEeqlctBysCk6rQ">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -68,18 +68,21 @@
       <packagedElement xmi:type="uml:Package" xmi:id="_p2L00I6wEeqJhohJvnJHhg" name="PrivacyPolicyInputs">
         <packagedElement xmi:type="uml:Class" xmi:id="_1qbe8I6wEeqJhohJvnJHhg" name="StaticContextVariablesSource"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_7edTEI6wEeqJhohJvnJHhg" name="PrivacyPolicySource"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_J9NXoJ_0EeqQZP-maPZsag" name="streamS3">
+          <packagedElement xmi:type="uml:Class" xmi:id="_A748AJ-PEeqCMdU_4S9KBw" name="test"/>
+        </packagedElement>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zgPDUHKYEeqlctBysCk6rQ">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ut8DgJwIEeqtYeWRPe0-4Q" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ut8DgZwIEeqtYeWRPe0-4Q" key="Version" value="0.0.144"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ut8DgpwIEeqtYeWRPe0-4Q" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ut8Dg5wIEeqtYeWRPe0-4Q" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ut8DhJwIEeqtYeWRPe0-4Q" key="Date" value="2020-05-22"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ut8DhZwIEeqtYeWRPe0-4Q" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_i9TeUKDAEeqyPLsjcPg2Iw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i9TeUaDAEeqyPLsjcPg2Iw" key="Version" value="0.0.157"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i9TeUqDAEeqyPLsjcPg2Iw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i9TeU6DAEeqyPLsjcPg2Iw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i9TeVKDAEeqyPLsjcPg2Iw" key="Date" value="2020-05-28"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i9TeVaDAEeqyPLsjcPg2Iw" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zgb3oHKYEeqlctBysCk6rQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_dKUDAJ6yEeqAKJ_vxj5tPg"/>
+        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_R_NlgKDAEeqyPLsjcPg2Iw"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
     </profileApplication>
@@ -131,8 +134,14 @@
   <StreamUML:PrivacyProtectingStream xmi:id="_HShN4I4rEeqn8L6Ndt0qzw" base_InformationFlow="_BO8IcHdOEeqEm_3mTdKlkw" protectedByDSEP="true">
     <protectedStreamConf xmi:type="StreamUML:ProtectedStreamConfiguration" xmi:id="_agICEI62EeqJhohJvnJHhg" timestampServerPort="-1" topologyParallelism="1" logDir="/home/cablan/Desktop/thesisFiles/log/greatSeller"/>
   </StreamUML:PrivacyProtectingStream>
-  <StreamUML:PrivacyPolicySources xmi:id="_s_JJ0I6wEeqJhohJvnJHhg" base_Package="_p2L00I6wEeqJhohJvnJHhg"/>
+  <StreamUML:PrivacyPolicyPackage xmi:id="_s_JJ0I6wEeqJhohJvnJHhg" base_Package="_p2L00I6wEeqJhohJvnJHhg"/>
   <StreamUML:PrivPolYamlFileSource xmi:id="_D9c4oI6xEeqJhohJvnJHhg" base_Class="_7edTEI6wEeqJhohJvnJHhg" pathToFile="/home/cablan/Desktop/thesisFiles/config/privacy-config.yml"/>
   <StreamUML:PrivContTextFileSource xmi:id="_R5mLII74EeqAfJhZuCVunA" base_Class="_1qbe8I6wEeqJhohJvnJHhg" pathToFile="/home/cablan/Desktop/thesisFiles/inputs/scvFile.txt"/>
   <StreamUML:TextFileSink xmi:id="_Ua1_MJ63EeqrI592BvI8_w" base_Class="_p_eLAH8KEeqfKe16nTK7Jg" filepath="/home/cablan/Desktop/thesisFiles/outputs/resultsS3priv.txt"/>
+  <StreamUML:PrivacyPolicy xmi:id="_aFk9QJ-PEeqCMdU_4S9KBw" privPolType="VCP" dataSubject="Bob" base_Class="_A748AJ-PEeqCMdU_4S9KBw">
+    <pastConditions xmi:type="StreamUML:PastCondition" xmi:id="_H295UJ_zEeqQZP-maPZsag" upperTemporalBound="3000" operator="GREATER_OR_EQUAL" value="3" variable="_tK4bEHKpEeqor8468tpfFw" containerStreamId="streamS2"/>
+    <privacyContext xmi:type="StreamUML:PrivacyContext" xmi:id="_Cee00KC7EeqyPLsjcPg2Iw" purpose="analytics" role="employee" timeStamp="-1" observerId="MarketConsult"/>
+    <simpleConditions xmi:type="StreamUML:SimpleCondition" xmi:id="_ctVuYKC7EeqyPLsjcPg2Iw" operator="GREATER" value="100" variable="_9uUYMHKpEeqor8468tpfFw" containerStreamId="streamS3"/>
+  </StreamUML:PrivacyPolicy>
+  <StreamUML:PrivacyPolicyStreamPackage xmi:id="_Rv3boJ_0EeqQZP-maPZsag" base_Package="_J9NXoJ_0EeqQZP-maPZsag" fields="_9uUYMHKpEeqor8468tpfFw" streamId="streamS3" isSubjectSpecific="true"/>
 </xmi:XMI>

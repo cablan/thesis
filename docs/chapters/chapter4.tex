@@ -25,19 +25,19 @@ In the figure \ref{fig:PrivacyProtectingStream UML Profile}, the UML profile for
 \label{fig:PrivacyProtectingStream UML Profile}
 \end{figure}
 
-\subsection{PrivacyPolicySources} % What about call this 'ExternalSources', this name is weird taking into account the PrivacyPolicySource
+\subsection{PrivacyPolicyPackage}
 
-StreamGen uses a package called StreamDatatypes in order to collect all the DataTypes that are flowing through the streams. The DataTypes that are specified inside the package allow the users to specify the different values that are conveyed in a stream but inside the same tuple. Following these approach, a new package called PrivacyPolicySources has been added to the UML profile in order to collect all the sources involved in the privacy policies applications, SCV sources and user privacy policies.
+StreamGen uses a package called StreamDatatypes in order to collect all the DataTypes that are flowing through the streams. The DataTypes that are specified inside the package allow the users to specify the different values that are conveyed in a stream but inside the same tuple. Following these approach, a new package called PrivacyPolicyPackage has been added to the UML profile in order to collect all the sources involved in the privacy policies applications, SCV sources and user privacy policies.
 
 These sources are not going to be connected directly to the streams or to the transformations of the DIA but they are going to allow the users to specify from where the different variables required to protected the streams are taken. As they are not going to be connected, a package to put all of them together is added to the language.
 
-In the figure \ref{fig:PrivacyPolicySources Package UML Profile} can be seen the UML profile of this package.
+In the figure \ref{fig:PrivacyPolicyPackage UML Profile} can be seen the UML profile of this package.
 
 \begin{figure}
 \centering
-{\includegraphics[scale=0.3]{./chapter4/umlProfile/PrivacyPolicySourcesUMLProfile.png}}
-\caption{PrivacyPolicySources Package UML Profile}
-\label{fig:PrivacyPolicySources Package UML Profile}
+{\includegraphics[scale=0.3]{./chapter4/umlProfile/PrivacyPolicyPackageUMLProfile.png}}
+\caption{PrivacyPolicyPackage UML Profile}
+\label{fig:PrivacyPolicyPackage UML Profile}
 \end{figure}
 
 
@@ -74,13 +74,13 @@ In addition to SCVs, StreamGen requires some user specified rules to guarantee p
 
 Following the approach of DataSource stereotype, a new stereotype called PrivacyPolicySource is created as a generalization of the DataSource stereotype. The goal with this stereotype is to have the possibility to add different type of sources as currently is happening with the SCV source. From the PrivacyPolicySource stereotype, a new generalization is created in order to make the relationship with a new stereotype called PrivPolYamlFileSource. This stereotype represents the insertion of the YAML file to the DIA. In order to specify the path where the YAML file is located, a new property (pathToFile, String) is added to the stereotype. With this property, the user is able to define the location where the file is stored and from where the DIA must read the privacy policy rules written by the user.
 
-In the figure \ref{fig:PrivacyPolicySources Classes UML Profile} can be seen the language of the PrivacyContextSource and PrivacyPolicySource represented in a UML profile diagram.
+In the figure \ref{fig:PrivacyPolicyDataSources Classes UML Profile} can be seen the language of the PrivacyContextSource and PrivacyPolicySource represented in a UML profile diagram.
 
 \begin{figure}
 \centering
 {\includegraphics[scale=0.3]{./chapter4/umlProfile/PrivacyPolicyDataSourceUMLProfile.png}}
-\caption{PrivacyPolicySources Classes UML Profile}
-\label{fig:PrivacyPolicySources Classes UML Profile}
+\caption{PrivacyPolicyDataSources Classes UML Profile}
+\label{fig:PrivacyPolicyDataSources Classes UML Profile}
 \end{figure}
 
 \section{Privacy Policy Translation}

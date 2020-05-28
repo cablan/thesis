@@ -1,0 +1,19 @@
+!!it.deib.polimi.diaprivacy.model.ApplicationPrivacy
+policiesPerStream:
+  ? concreteStream: null
+    fields:
+    - {name: totalAmount}
+    id: streamS3
+    isSubjectSpecific: true
+    sourceId: null
+  : - !!it.deib.polimi.diaprivacy.model.VCP
+    dataSubject: Bob
+    generalization: 
+    totalAmount: 1
+    pastConditions:
+    - {lowerTemporalBound: 0, operator: GREATER_OR_EQUAL, type: INTEGER, upperTemporalBound: 3000, value: 3, variable: NTransactions, containerStreamId: streamS2}
+    privacyContext: {purpose: analytics, role: employee, timestamp: -1, userId: MarketConsult}
+    simpleConditions:
+    - {operator: GREATER, type: INTEGER, value: 100, variable: totalAmount, containerStreamId: streamS3}
+
+

@@ -16,4 +16,13 @@ policiesPerStream:
     simpleConditions:
     - {operator: GREATER, type: INTEGER, value: 100, variable: totalAmount, containerStreamId: streamS3}
 
+  ? concreteStream: null
+    fields:
+    - {name: transactionId}
+    - {name: amount}
+    - {name: recipientId}
+    id: streamS1
+    isSubjectSpecific: true
+    sourceId: null
+  : []
 

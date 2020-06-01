@@ -3,8 +3,6 @@
 [import streamgen::main::queryUtils /]
 
 [template public generateFlinkPrivacyPolicyRules(psub : Package)]
-!!it.deib.polimi.diaprivacy.model.ApplicationPrivacy
-policiesPerStream:
   ? concreteStream: null
     fields:
 	[for (prop:Property | psub.getStereotypeProperty('PrivacyPolicyStreamPackage', 'fields')) ]
@@ -30,5 +28,4 @@ policiesPerStream:
 	[/if]
 	[/for]
 	[/if]
-
 [/template]

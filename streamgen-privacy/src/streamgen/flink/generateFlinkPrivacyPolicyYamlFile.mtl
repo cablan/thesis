@@ -5,6 +5,8 @@
 
 [template public generateFlinkPrivacyPolicyYamlFile(p : Package)]
 [file (p.getModel().name.toLower().concat('/privacypolicies/privacy-config.yml'), false)]
+!!it.deib.polimi.diaprivacy.model.ApplicationPrivacy
+policiesPerStream:
 [for (psub:Package | p.eContents(Package)) ]
 [if hasStereotype(psub, 'PrivacyPolicyStreamPackage')]
 [generateFlinkPrivacyPolicyRules(psub)/]

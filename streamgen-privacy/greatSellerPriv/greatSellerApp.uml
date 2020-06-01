@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_R-1yEKDAEeqyPLsjcPg2Iw/156" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_R-1yEKDAEeqyPLsjcPg2Iw/156 ../profile/StreamUML.profile.uml#_R_NlgKDAEeqyPLsjcPg2Iw">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_K4y7cKDLEeqyPLsjcPg2Iw/157" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_K4y7cKDLEeqyPLsjcPg2Iw/157 ../profile/StreamUML.profile.uml#_K47eUKDLEeqyPLsjcPg2Iw">
   <uml:Model xmi:id="_p5Zr8HKYEeqlctBysCk6rQ" name="greatSellerApp">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_zixZ8HKYEeqlctBysCk6rQ">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -71,18 +71,19 @@
         <packagedElement xmi:type="uml:Package" xmi:id="_J9NXoJ_0EeqQZP-maPZsag" name="streamS3">
           <packagedElement xmi:type="uml:Class" xmi:id="_A748AJ-PEeqCMdU_4S9KBw" name="test"/>
         </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_1MB3kKDLEeqyPLsjcPg2Iw" name="streamS1"/>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zgPDUHKYEeqlctBysCk6rQ">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_i9TeUKDAEeqyPLsjcPg2Iw" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i9TeUaDAEeqyPLsjcPg2Iw" key="Version" value="0.0.157"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i9TeUqDAEeqyPLsjcPg2Iw" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i9TeU6DAEeqyPLsjcPg2Iw" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i9TeVKDAEeqyPLsjcPg2Iw" key="Date" value="2020-05-28"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i9TeVaDAEeqyPLsjcPg2Iw" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kDV4UKDLEeqyPLsjcPg2Iw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kDV4UaDLEeqyPLsjcPg2Iw" key="Version" value="0.0.158"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kDV4UqDLEeqyPLsjcPg2Iw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kDV4U6DLEeqyPLsjcPg2Iw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kDV4VKDLEeqyPLsjcPg2Iw" key="Date" value="2020-05-28"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kDV4VaDLEeqyPLsjcPg2Iw" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zgb3oHKYEeqlctBysCk6rQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_R_NlgKDAEeqyPLsjcPg2Iw"/>
+        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_K47eUKDLEeqyPLsjcPg2Iw"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
     </profileApplication>
@@ -144,4 +145,5 @@
     <simpleConditions xmi:type="StreamUML:SimpleCondition" xmi:id="_ctVuYKC7EeqyPLsjcPg2Iw" operator="GREATER" value="100" variable="_9uUYMHKpEeqor8468tpfFw" containerStreamId="streamS3"/>
   </StreamUML:PrivacyPolicy>
   <StreamUML:PrivacyPolicyStreamPackage xmi:id="_Rv3boJ_0EeqQZP-maPZsag" base_Package="_J9NXoJ_0EeqQZP-maPZsag" fields="_9uUYMHKpEeqor8468tpfFw" streamId="streamS3" isSubjectSpecific="true"/>
+  <StreamUML:PrivacyPolicyStreamPackage xmi:id="_49sLUKDLEeqyPLsjcPg2Iw" base_Package="_1MB3kKDLEeqyPLsjcPg2Iw" fields="_vi2NcHKoEeqor8468tpfFw _GwL2wHKpEeqor8468tpfFw _NwHdUHKpEeqor8468tpfFw" streamId="streamS1" isSubjectSpecific="true" isEmpty="true"/>
 </xmi:XMI>

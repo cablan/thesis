@@ -21,25 +21,29 @@
 \BOOKMARK [3][-]{subsubsection.2.3.3.1}{DIA Generation Process}{subsection.2.3.3}% 21
 \BOOKMARK [1][-]{section.2.4}{Discussion}{chapter.2}% 22
 \BOOKMARK [0][-]{chapter.3}{Requirements and Design}{}% 23
-\BOOKMARK [1][-]{section.3.1}{Great Seller DIA}{chapter.3}% 24
-\BOOKMARK [0][-]{chapter.4}{Solution}{}% 25
-\BOOKMARK [1][-]{section.4.1}{Privacy Policy Language}{chapter.4}% 26
-\BOOKMARK [2][-]{subsection.4.1.1}{PrivacyProtectingStream}{section.4.1}% 27
-\BOOKMARK [2][-]{subsection.4.1.2}{PrivacyPolicyPackage}{section.4.1}% 28
-\BOOKMARK [3][-]{subsubsection.4.1.2.1}{PrivacyContextSource}{subsection.4.1.2}% 29
-\BOOKMARK [3][-]{subsubsection.4.1.2.2}{PrivacyPolicySource}{subsection.4.1.2}% 30
-\BOOKMARK [1][-]{section.4.2}{Privacy Policy Translation}{chapter.4}% 31
-\BOOKMARK [2][-]{subsection.4.2.1}{Privacy Policy Codes Structure}{section.4.2}% 32
-\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Library Import}{subsection.4.2.1}% 33
-\BOOKMARK [3][-]{subsubsection.4.2.1.2}{Privacy Policy Initialization}{subsection.4.2.1}% 34
-\BOOKMARK [3][-]{subsubsection.4.2.1.3}{Streams Declaration}{subsection.4.2.1}% 35
-\BOOKMARK [1][-]{section.4.3}{DIA Examples}{chapter.4}% 36
-\BOOKMARK [2][-]{subsection.4.3.1}{Great Seller DIA}{section.4.3}% 37
-\BOOKMARK [2][-]{subsection.4.3.2}{Cool Analyst DIA}{section.4.3}% 38
-\BOOKMARK [1][-]{section.4.4}{Project Creation}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.5}{Files Generation}{chapter.4}% 40
-\BOOKMARK [2][-]{subsection.4.5.1}{Source Files Generation}{section.4.5}% 41
-\BOOKMARK [2][-]{subsection.4.5.2}{Java Codes Generation}{section.4.5}% 42
-\BOOKMARK [1][-]{section.4.6}{Requirements}{chapter.4}% 43
-\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 44
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 45
+\BOOKMARK [0][-]{chapter.4}{Solution}{}% 24
+\BOOKMARK [1][-]{section.4.1}{Privacy Policy Language}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.1.1}{PrivacyProtectingStream}{section.4.1}% 26
+\BOOKMARK [2][-]{subsection.4.1.2}{PrivacyPolicyPackage}{section.4.1}% 27
+\BOOKMARK [3][-]{subsubsection.4.1.2.1}{PrivacyContextSource}{subsection.4.1.2}% 28
+\BOOKMARK [3][-]{subsubsection.4.1.2.2}{PrivacyPolicySource}{subsection.4.1.2}% 29
+\BOOKMARK [1][-]{section.4.2}{Privacy Policy Translation}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.2.1}{Privacy Policy Codes Structure}{section.4.2}% 31
+\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Library Import}{subsection.4.2.1}% 32
+\BOOKMARK [3][-]{subsubsection.4.2.1.2}{Privacy Policy Initialization}{subsection.4.2.1}% 33
+\BOOKMARK [3][-]{subsubsection.4.2.1.3}{Streams Declaration}{subsection.4.2.1}% 34
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 35
+\BOOKMARK [1][-]{section.5.1}{Great Seller DIA}{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.1.1}{Great Seller Source}{section.5.1}% 37
+\BOOKMARK [2][-]{subsection.5.1.2}{Great Seller Transformations}{section.5.1}% 38
+\BOOKMARK [2][-]{subsection.5.1.3}{Great Seller Sinks}{section.5.1}% 39
+\BOOKMARK [1][-]{section.5.2}{Cool Analyst DIA}{chapter.5}% 40
+\BOOKMARK [2][-]{subsection.5.2.1}{Cool Analyst Sources}{section.5.2}% 41
+\BOOKMARK [2][-]{subsection.5.2.2}{Cool Analyst Transformations}{section.5.2}% 42
+\BOOKMARK [2][-]{subsection.5.2.3}{Cool Analyst Sinks}{section.5.2}% 43
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 44
+\BOOKMARK [0][-]{section*.23}{Appendices}{}% 45
+\BOOKMARK [0][-]{Appendix.1.A}{Papyrus Project Creation}{}% 46
+\BOOKMARK [1][-]{section.1.A.1}{Files Generation}{Appendix.1.A}% 47
+\BOOKMARK [2][-]{subsection.1.A.1.1}{Source Files Generation}{section.1.A.1}% 48
+\BOOKMARK [2][-]{subsection.1.A.1.2}{Java Codes Generation}{section.1.A.1}% 49

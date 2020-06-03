@@ -72,6 +72,7 @@ public class greatSeller {
 				.map(new TupleParser())
 				;
 		
+		
 			app.getStreamByID("streamS1").setConcreteStream(streamS1);
 			// finish stream definition
 		
@@ -82,6 +83,7 @@ public class greatSeller {
 		        .timeWindow(Time.seconds(10))
 		        .apply(new OP1())
 				;
+		
 		
 			app.getStreamByID("streamS2").setConcreteStream(streamS2);
 			// finish stream definition
@@ -109,6 +111,7 @@ public class greatSeller {
 		        .apply(new OP2())
 				;
 		
+		
 			app.getStreamByID("streamS3").setConcreteStream(streamS3);
 			// finish stream definition
 			
@@ -135,6 +138,8 @@ public class greatSeller {
 		        .apply(new OP3())
 				;
 		
+		
+			app.getStreamByID("streamS4").setConcreteStream(streamS4);
 			// finish stream definition
 		
 			// begin sink definition

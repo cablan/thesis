@@ -23,7 +23,7 @@
 		;
 		[/if]
 
-	[if not(input.hasStereotype('PrivacyProtectingStream')) and (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
+	[if (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -49,7 +49,7 @@
 		;
 		[/if]
 
-	[if not(input.hasStereotype('PrivacyProtectingStream')) and (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
+	[if (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -81,7 +81,7 @@
 		;
 		[/if]
 
-	[if not(first.hasStereotype('PrivacyProtectingStream')) and not(second.hasStereotype('PrivacyProtectingStream')) and (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
+	[if (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -111,7 +111,7 @@
 		;
 		[/if]
 
-		[if not(first.hasStereotype('PrivacyProtectingStream')) and not(second.hasStereotype('PrivacyProtectingStream')) and (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
+		[if (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
 		app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 		[/if]
 		// finish stream definition
@@ -141,7 +141,7 @@
 		;
 		[/if]
 
-	[if not(input.hasStereotype('PrivacyProtectingStream')) and (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
+	[if (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -183,7 +183,7 @@
 		;
 		[/if]
 
-	[if not(input.hasStereotype('PrivacyProtectingStream')) and (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
+	[if (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition
@@ -221,8 +221,8 @@
 		[else]
 		;
 		[/if]
-
-	[if not(input.hasStereotype('PrivacyProtectingStream')) and (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
+	
+	[if (aClass.getModel().eAllContents(DirectedRelationship) -> exists(stream | hasStereotype(stream, 'PrivacyProtectingStream')))]
 	app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 	[/if]
 	// finish stream definition

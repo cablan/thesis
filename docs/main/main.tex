@@ -13,6 +13,7 @@
 \pagestyle{fancy}
 \usepackage[gen]{eurosym}
 \usepackage[toc,page]{appendix}
+\usepackage{listings}
 
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
@@ -75,12 +76,6 @@ a) la definizione di una lingua, come parte di un profilo UML, sarà richiesta p
 b) dal linguaggio definito e tramite Acceleo, verrà sviluppata un'implementazione di una trasformazione da modello a codice che consente agli utenti di automatizzare la generazione del codice DIA ottimizzato per la privacy, indirizzando Flink come piattaforma finale.
 c) la valutazione dell'approccio sarà effettuata sfruttando due casi studio. Nel primo caso, verrà sviluppata una DIA al fine di preservare la privacy degli utenti che effettuano transazioni diverse tra un magazzino fisso. In secondo luogo, verrà modificata una DIA. Questa DIA prende le temperature da due stanze e calcola due statistiche, la temperatura massima e quella media, e la previsione della temperatura delle stanze in un dato tempo. Questa applicazione verrà modificata per evitare il calcolo della previsione quando le temperature provengono dalla seconda stanza.
 
-\chapter*{Dedication}
-To mum and dad
-
-\chapter*{Declaration}
-I declare that..
-
 \chapter*{Acknowledgements}
 I want to thank...
 
@@ -100,11 +95,12 @@ I want to thank...
 
 \input{chapters/conclusions}
 
-\begin{appendices}
-\chapter{Papyrus Project Creation}
-\input{chapters/appendix1}
-\end{appendices}
-
 \input{chapters/references}
+
+\begin{appendices}
+\input{chapters/appendix1}
+\input{chapters/appendix2}
+\input{chapters/appendix3}
+\end{appendices}
 
 \end{document}

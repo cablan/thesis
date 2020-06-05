@@ -68,10 +68,6 @@
       <packagedElement xmi:type="uml:Package" xmi:id="_p2L00I6wEeqJhohJvnJHhg" name="PrivacyPolicyInputs">
         <packagedElement xmi:type="uml:Class" xmi:id="_1qbe8I6wEeqJhohJvnJHhg" name="StaticContextVariablesSource"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_7edTEI6wEeqJhohJvnJHhg" name="PrivacyPolicySource"/>
-        <packagedElement xmi:type="uml:Package" xmi:id="_J9NXoJ_0EeqQZP-maPZsag" name="streamS3">
-          <packagedElement xmi:type="uml:Class" xmi:id="_A748AJ-PEeqCMdU_4S9KBw" name="test"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Package" xmi:id="_1MB3kKDLEeqyPLsjcPg2Iw" name="streamS1"/>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zgPDUHKYEeqlctBysCk6rQ">
@@ -137,13 +133,6 @@
   </StreamUML:PrivacyProtectingStream>
   <StreamUML:PrivacyPolicyPackage xmi:id="_s_JJ0I6wEeqJhohJvnJHhg" base_Package="_p2L00I6wEeqJhohJvnJHhg"/>
   <StreamUML:PrivPolYamlFileSource xmi:id="_D9c4oI6xEeqJhohJvnJHhg" base_Class="_7edTEI6wEeqJhohJvnJHhg" pathToFile="/home/cablan/Desktop/thesisFiles/config/privacy-config.yml"/>
-  <StreamUML:PrivContTextFileSource xmi:id="_R5mLII74EeqAfJhZuCVunA" base_Class="_1qbe8I6wEeqJhohJvnJHhg" pathToFile="/home/cablan/Desktop/thesisFiles/inputs/scvFile.txt"/>
   <StreamUML:TextFileSink xmi:id="_Ua1_MJ63EeqrI592BvI8_w" base_Class="_p_eLAH8KEeqfKe16nTK7Jg" filepath="/home/cablan/Desktop/thesisFiles/outputs/resultsS3priv.txt"/>
-  <StreamUML:PrivacyPolicy xmi:id="_aFk9QJ-PEeqCMdU_4S9KBw" privPolType="VCP" dataSubject="Bob" base_Class="_A748AJ-PEeqCMdU_4S9KBw">
-    <pastConditions xmi:type="StreamUML:PastCondition" xmi:id="_H295UJ_zEeqQZP-maPZsag" upperTemporalBound="3000" operator="GREATER_OR_EQUAL" value="3" variable="_tK4bEHKpEeqor8468tpfFw" containerStreamId="streamS2"/>
-    <privacyContext xmi:type="StreamUML:PrivacyContext" xmi:id="_Cee00KC7EeqyPLsjcPg2Iw" purpose="analytics" role="employee" timeStamp="-1" observerId="MarketConsult"/>
-    <simpleConditions xmi:type="StreamUML:SimpleCondition" xmi:id="_ctVuYKC7EeqyPLsjcPg2Iw" operator="GREATER" value="100" variable="_9uUYMHKpEeqor8468tpfFw" containerStreamId="streamS3"/>
-  </StreamUML:PrivacyPolicy>
-  <StreamUML:PrivacyPolicyStreamPackage xmi:id="_Rv3boJ_0EeqQZP-maPZsag" base_Package="_J9NXoJ_0EeqQZP-maPZsag" fields="_9uUYMHKpEeqor8468tpfFw" streamId="streamS3" isSubjectSpecific="true"/>
-  <StreamUML:PrivacyPolicyStreamPackage xmi:id="_49sLUKDLEeqyPLsjcPg2Iw" base_Package="_1MB3kKDLEeqyPLsjcPg2Iw" fields="_vi2NcHKoEeqor8468tpfFw _GwL2wHKpEeqor8468tpfFw _NwHdUHKpEeqor8468tpfFw" streamId="streamS1" isSubjectSpecific="true" isEmpty="true"/>
+  <StreamUML:PrivContSocketSource xmi:id="_UtATcKdNEeqZG7WYOwis-w" base_Class="_1qbe8I6wEeqJhohJvnJHhg" host="localhost" port="9998"/>
 </xmi:XMI>

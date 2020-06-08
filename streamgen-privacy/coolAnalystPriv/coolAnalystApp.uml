@@ -64,6 +64,10 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_2KW3UJwFEeqtYeWRPe0-4Q" name="CleanDataSink"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_CG4TsJwGEeqtYeWRPe0-4Q" name="tempTupleStream" conveyed="_iYPugJYBEeqv0v2oWOTJKw" informationSource="_LMT98JYCEeqv0v2oWOTJKw" informationTarget="_o87MsJwFEeqtYeWRPe0-4Q"/>
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_TImIQJwGEeqtYeWRPe0-4Q" name="cleanDataStream" conveyed="_iYPugJYBEeqv0v2oWOTJKw" informationSource="_o87MsJwFEeqtYeWRPe0-4Q" informationTarget="_2KW3UJwFEeqtYeWRPe0-4Q"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_8XrHIKmYEeqTgMCG7W9Anw" name="ExternalPrivacySources">
+        <packagedElement xmi:type="uml:Class" xmi:id="_QuHb0KmZEeqTgMCG7W9Anw" name="SCVSource"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LBYGAKmaEeqTgMCG7W9Anw" name="PrivacyRulesSource"/>
+      </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_UEcHIJYAEeqv0v2oWOTJKw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_joIK4JwIEeqtYeWRPe0-4Q" source="PapyrusVersion">
@@ -154,11 +158,14 @@
 		
 		return new roomTemp(fields[0],Double.parseDouble(fields[2]));</maps>
   </StreamUML:NMapTransformation>
-  <StreamUML:FilterTransformation xmi:id="_uj-UwJwFEeqtYeWRPe0-4Q" base_Class="_o87MsJwFEeqtYeWRPe0-4Q" filteringCondition="tuple.getTemperature() &lt; 9999 &amp; &#xA;tuple.getTemperature() > -9999 &amp; &#xA;tuple.getTemperature() != null  &amp;&#xA;tuple.getRoomId() !=  null"/>
+  <StreamUML:FilterTransformation xmi:id="_uj-UwJwFEeqtYeWRPe0-4Q" base_Class="_o87MsJwFEeqtYeWRPe0-4Q" filteringCondition="tuple.getRoomTemp() &lt; 9999 &amp; &#xA;tuple.getRoomTemp() > -9999 &amp; &#xA;tuple.getRoomTemp() != null  &amp;&#xA;tuple.getRoomId() !=  null"/>
   <StreamUML:CsvFileSink xmi:id="_7Yw14JwFEeqtYeWRPe0-4Q" base_Class="_2KW3UJwFEeqtYeWRPe0-4Q" filepath="/home/cablan/Desktop/thesisFiles/outputs/cleanData.txt"/>
   <StreamUML:KeyedStream xmi:id="_L_184JwGEeqtYeWRPe0-4Q" base_InformationFlow="_CG4TsJwGEeqtYeWRPe0-4Q" key="_o5NhIJYBEeqv0v2oWOTJKw"/>
   <StreamUML:NonParallelStream xmi:id="_bvXJwJwGEeqtYeWRPe0-4Q" base_InformationFlow="_TImIQJwGEeqtYeWRPe0-4Q"/>
   <StreamUML:PrivacyProtectingStream xmi:id="_BuwdYKmVEeqTgMCG7W9Anw" base_InformationFlow="_4rVgoJYCEeqv0v2oWOTJKw" protectedByDSEP="true">
     <protectedStreamConf xmi:type="StreamUML:ProtectedStreamConfiguration" xmi:id="_C3b8sKmVEeqTgMCG7W9Anw" timestampServerPort="-1" topologyParallelism="1" logDir="/home/cablan/Desktop/thesis/conf/"/>
   </StreamUML:PrivacyProtectingStream>
+  <StreamUML:PrivacyPolicyPackage xmi:id="_CsHgsKmZEeqTgMCG7W9Anw" base_Package="_8XrHIKmYEeqTgMCG7W9Anw"/>
+  <StreamUML:PrivContTextFileSource xmi:id="_bExGkKmZEeqTgMCG7W9Anw" base_Class="_QuHb0KmZEeqTgMCG7W9Anw" pathToFile="/home/cablan/Desktop/thesis/conf/observers.txt"/>
+  <StreamUML:PrivPolYamlFileSource xmi:id="_OXjXoKmaEeqTgMCG7W9Anw" base_Class="_LBYGAKmaEeqTgMCG7W9Anw" pathToFile="/home/cablan/Desktop/thesis/conf/privacy-config.yml"/>
 </xmi:XMI>

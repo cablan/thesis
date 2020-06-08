@@ -76,7 +76,9 @@ public class [aModel.name/] {
 			// privacy init
 [for (p:Package | aModel.eContents(Package)) ]
 [if hasStereotype(p, 'PrivacyPolicyPackage')]
+	[comment]
 	[generateFlinkPrivacyPolicyYamlFile(p)/]
+	[/comment]
 	[for (c:Class | p.eContents(Class)) ]
 		[if hasStereotype(c, 'PrivPolYamlFileSource')]
 		[generateFlinkPrivacyPolicyYamlFileSource(c)/]

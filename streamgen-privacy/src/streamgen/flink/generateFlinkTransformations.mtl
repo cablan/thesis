@@ -90,6 +90,8 @@
 [template public generateFlinkCoMapTransformation(aClass : Class)
 	{first : DirectedRelationship = getInputs(aClass)->at(1);
 	 second : DirectedRelationship = getInputs(aClass)->at(2);}]
+
+	// begin stream definition
 	DataStream<[getOutputsConveyed(aClass) ->first()/]> [getOutputNames(aClass)->first()/] = [first.eGet('name')/]
 		[if first.hasStereotype('KeyedStream') ]
       	.keyBy("[getStereotypeProperty(first, 'KeyedStream', 'key').eGet('name')/]")
@@ -115,7 +117,6 @@
 		app.getStreamByID("[getOutputNames(aClass)->first()/]").setConcreteStream([getOutputNames(aClass)->first()/]);
 		[/if]
 		// finish stream definition
-
 [/template]
 
 [template public generateFlinkReduceTransformation(aClass : Class)]

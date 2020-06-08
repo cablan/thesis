@@ -25,27 +25,30 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Great Seller Data Types Package}}{55}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Great Seller StreamGen DIA}}{58}{figure.5.2}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Great Seller Privacy Aware StreamGen DIA}}{59}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Great Seller Privacy Aware StreamGen DIA}}{59}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Temperature Chamber 1 Model}}{61}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Temperature Chamber 2 Model}}{61}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Cool Analyst Dataflow model}}{63}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Cool Analyst StreamGen DIA}}{63}{figure.5.8}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Great Seller Privacy Policy Package}}{60}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Cool Analyst Data Types Package}}{62}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Temperature Chamber 1 Model}}{63}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Temperature Chamber 2 Model}}{63}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces NMap Transformation StreamGen}}{64}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Double StreamGen Type}}{64}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Cool Analyst StreamGen DIA}}{65}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Cool Analyst Privacy Aware StreamGen DIA}}{66}{figure.5.11}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces New Papyrus Project}}{71}{figure.1.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Architecture Context}}{72}{figure.1.A.2}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Project Name Definition}}{72}{figure.1.A.3}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Representation Kind}}{72}{figure.1.A.4}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Papyrus Project Definition}}{73}{figure.1.A.5}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces New Papyrus Project}}{73}{figure.1.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Architecture Context}}{74}{figure.1.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Project Name Definition}}{74}{figure.1.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Representation Kind}}{74}{figure.1.A.4}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Papyrus Project Definition}}{75}{figure.1.A.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Java Project Creation}}{79}{figure.1.C.1}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Java Project Initial Structure}}{80}{figure.1.C.2}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Java Project Final Structure}}{80}{figure.1.C.3}
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Maven Project Structure Creation}}{80}{figure.1.C.4}
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Maven Project Source Folder Creation}}{80}{figure.1.C.5}
-\contentsline {figure}{\numberline {C.6}{\ignorespaces Maven Project Properties}}{81}{figure.1.C.6}
-\contentsline {figure}{\numberline {C.7}{\ignorespaces Maven Project Structure}}{81}{figure.1.C.7}
-\contentsline {figure}{\numberline {C.8}{\ignorespaces POM File Creation}}{81}{figure.1.C.8}
-\contentsline {figure}{\numberline {C.9}{\ignorespaces Final Maven Project}}{82}{figure.1.C.9}
-\contentsline {figure}{\numberline {C.10}{\ignorespaces Run Configuration}}{82}{figure.1.C.10}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Java Project Creation}}{85}{figure.1.C.1}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Java Project Initial Structure}}{86}{figure.1.C.2}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Java Project Final Structure}}{86}{figure.1.C.3}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Maven Project Structure Creation}}{86}{figure.1.C.4}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Maven Project Source Folder Creation}}{86}{figure.1.C.5}
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Maven Project Properties}}{87}{figure.1.C.6}
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Maven Project Structure}}{87}{figure.1.C.7}
+\contentsline {figure}{\numberline {C.8}{\ignorespaces POM File Creation}}{87}{figure.1.C.8}
+\contentsline {figure}{\numberline {C.9}{\ignorespaces Final Maven Project}}{88}{figure.1.C.9}
+\contentsline {figure}{\numberline {C.10}{\ignorespaces Run Configuration}}{88}{figure.1.C.10}

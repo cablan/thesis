@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_dKK5EJ6yEeqAKJ_vxj5tPg/150" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_dKK5EJ6yEeqAKJ_vxj5tPg/150 ../profile/StreamUML.profile.uml#_dKUDAJ6yEeqAKJ_vxj5tPg">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_K4y7cKDLEeqyPLsjcPg2Iw/157" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_K4y7cKDLEeqyPLsjcPg2Iw/157 ../profile/StreamUML.profile.uml#_K47eUKDLEeqyPLsjcPg2Iw">
   <uml:Model xmi:id="_SYkbMJYAEeqv0v2oWOTJKw" name="coolAnalystApp">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_UFKf4JYAEeqv0v2oWOTJKw">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -66,15 +66,15 @@
       <packagedElement xmi:type="uml:InformationFlow" xmi:id="_TImIQJwGEeqtYeWRPe0-4Q" name="cleanDataStream" conveyed="_iYPugJYBEeqv0v2oWOTJKw" informationSource="_o87MsJwFEeqtYeWRPe0-4Q" informationTarget="_2KW3UJwFEeqtYeWRPe0-4Q"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_UEcHIJYAEeqv0v2oWOTJKw">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_joIK4JwIEeqtYeWRPe0-4Q" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_joIK4ZwIEeqtYeWRPe0-4Q" key="Version" value="0.0.144"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_joIK4pwIEeqtYeWRPe0-4Q" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_joIK45wIEeqtYeWRPe0-4Q" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_joIK5JwIEeqtYeWRPe0-4Q" key="Date" value="2020-05-22"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_joIK5ZwIEeqtYeWRPe0-4Q" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uXkAAKlkEeq-KbV9EWCD5Q" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uXkAAalkEeq-KbV9EWCD5Q" key="Version" value="0.0.158"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uXkAAqlkEeq-KbV9EWCD5Q" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uXkAA6lkEeq-KbV9EWCD5Q" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uXkABKlkEeq-KbV9EWCD5Q" key="Date" value="2020-05-28"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uXkABalkEeq-KbV9EWCD5Q" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UFAu4JYAEeqv0v2oWOTJKw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_dKUDAJ6yEeqAKJ_vxj5tPg"/>
+        <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_K47eUKDLEeqyPLsjcPg2Iw"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
     </profileApplication>

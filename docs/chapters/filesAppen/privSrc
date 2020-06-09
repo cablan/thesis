@@ -1,0 +1,27 @@
+[comment StreamGen Privacy Policies Sources/]
+[if(aModel.eAllContents(DirectedRelationship)
+    ->exists(stream|
+         hasStereotype(stream,'PrivacyProtectingStream')))]
+			// privacy init
+[for (p:Package | aModel.eContents(Package)) ]
+[if hasStereotype(p, 'PrivacyPolicyPackage')]
+	[comment]
+	[generateFlinkPrivacyPolicyYamlFile(p)/]
+	[/comment]
+	[for (c:Class | p.eContents(Class)) ]
+	     [if hasStereotype(c, 'PrivPolYamlFileSource')]
+	     [generateFlinkPrivacyPolicyYamlFileSource(c)/]
+	     [elseif hasStereotype(c, 'PrivContFixedSource')]
+	     [generateFlinkPrivacyContextFixedSource(c)/]
+	     [elseif hasStereotype(c, 'PrivContKafkaSource')]
+	     [generateFlinkPrivacyContextKafkaSource(c)/]
+	     [elseif hasStereotype(c, 'PrivContTextFileSource')]
+	     [generateFlinkPrivacyContextTextFileSource(c)/]
+	     [elseif hasStereotype(c, 'PrivContSocketSource')]
+	     [generateFlinkPrivacyContextSocketSource(c)/]
+	     [/if]
+	[/for]
+[/if]
+[/for]
+			// finish privacy init
+[/if]

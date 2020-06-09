@@ -1,9 +1,9 @@
-\chapter[Chapter 4]{Solution}
+\chapter[Chapter 4]{Solution Design}
 \label{sec:chapter4}
 
 \section{Privacy Policy Modeling Language}
 
-StreamGen uses its own language in order to develop DIAs. In this document, StreamGen language is expanded in order to allow users to protect the streams with privacy policies. This expansion consists of a new data stream stereotype in order to specify which streams are protected and with which privacy policy type (VCP or DSEP). Moreover, the sources that generate the Static Context Variables (SCV) and the privacy rules written by the users are also added to the StreamGen language. SCVs are possibly supplied by different sources whilst privacy policies will be supplied only by one data source type. This sources are going to be inserted in a package which represents the external sources of the DIA following the already existing approach of the StreamGen data types.
+StreamGen uses its own language in order to develop DIAs. In this document, StreamGen language is expanded in order to allow users to protect the streams with privacy policies. This expansion consists of a new data stream stereotype in order to specify which streams are protected and with which privacy policy type (VCP or DSEP). Moreover, the sources that generate the Static Context Variables (SCV) and the privacy rules written by the users are also added to the StreamGen language. SCVs are possibly supplied by different sources whilst privacy policies are supposed to be supplied only by one data source type. This sources are inserted in a package which represents the external sources of the DIA following the already existing approach of the StreamGen data types.
 
 Thus, when a stream is protected, the PrivacyProtectingStream stereotype is added to the stream and some properties are filled in order to configure the type of protection. However, defining how the streams must be protected is not enough. Privacy policies require some external data, SCVs and privacy rules, in order to be applied. This two external data are introduced into the DIA by means of two sources, SCV source and privacy rules source. Regarding to the SCVs sources, four different types can be found in this approach. All these types are specified following the already existing approaches of data sources in StreamGen. On the other hand, for the privacy rules source, only one type is defined because the privacy rules file is supposed to be always the same. This two different sources, SCVs source and privacy rules source, are introduced in the application inside of a package stereotype called PrivacyPolicyPackage in order to make more intuitive the approach to the DIA developers.
 
@@ -11,16 +11,18 @@ Thus, when a stream is protected, the PrivacyProtectingStream stereotype is adde
 
 StreamGen represents the flows of data flowing in DIAs by means of the UML metaclass Information Flow. These flows are known as streams and StreamGen allows to generate some different types as Keyed Stream or Windowed Stream. Each of these types have different characteristics and allow users to generate different behaviors. Moreover, these different streams can be applied all together generating a stream which can be, as in this case, windowed and keyed.
 
-Following this approach, a new stereotype has been added to the UML profile of StreamGen. This stereotype has been called PrivacyProtectingStream and it is a generalization of the DataStream stereotype, which in turn is an extension of the InformationFlow metaclass. In the figure \ref{fig:PrivacyProtectingStream UML Profile}, the UML profile for the PrivacyProtectingStream is shown.
+Following this approach, a new stereotype is added to the UML profile of StreamGen. This stereotype is called PrivacyProtectingStream and it is a generalization of the DataStream stereotype, which in turn is an extension of the InformationFlow metaclass. In the figure \ref{fig:PrivacyProtectingStream UML Profile}, the UML profile for the PrivacyProtectingStream is shown.
 
 \begin{figure}
 \centering
-{\includegraphics[scale=0.3]{./chapter4/umlProfile/PrivacyProtectingStreamUMLProfile.png}}
+{\includegraphics[scale=0.5]{./chapter4/umlProfile/PrivacyProtectingStreamUMLProfile.png}}
 \caption{PrivacyProtectingStream UML Profile}
 \label{fig:PrivacyProtectingStream UML Profile}
 \end{figure}
 
-This new stereotype is going to have some properties in addition to the already existing property of the DataStream stereotype, isObservable. These properties are:
+Regarding to the e-commerce company example explained in the chapter \ref{sec:chapter3}, lets imagine that a user defines a VCP and a DSEP in the same way that they were explained above for such example. The DIA developer, in the profile field of the property window, must specify the PrivacyProtectingStream as an applied stereotypes of the streams S2 and S3, in addition to the required stereotypes (window, keyed, etc.) for these streams. 
+
+Furthermore, PrivacyProtectingStream stereotype have some properties in addition to the already existing property of the DataStream stereotype, isObservable. These properties are:
 
 \begin{itemize}
 \item ProtectedByVCP.
@@ -72,31 +74,35 @@ ProtectedByVCP and protectedByDSEP properties are added in order to specify how 
 \label{ProtectedStreamConfiguration Data Type}
 \end{table}
 
+Regarding to the e-commerce example again, for the stream S2 the protectedByVCP property would be specified as true and for the stream S3 the protectedByDSEP property would be specify to true. Moreover, the values of the ProtectedStreamConfiguration data type would be specified according to the wanted protected stream that the user wants to generate.
+
 The PrivacyProtectingStream allows to easily specify which are the streams that must be protected and with which privacy policy types. This approach does not require any knowledge about the privacy policy types. Moreover, the ProtectedStreamConfiguration can be filled always with the same values, then with an example using such configuration, all the other DIAs could be defined with the same values. The unique value that can vary is the logDir property which is a path and it is not difficult to define a path by a DIA developer. Finally, this approach allows to define the non-privacy-aware dataflow application and, from that application, to add the corresponding privacy configurations over the streams. However, there is no way to specify the SCVs and from where the privacy rules must be read. In order to specify such sources, the PrivacyPolicyPackage is developed.
 
 \subsection{PrivacyPolicyPackage}
 
-StreamGen uses a package stereotype called StreamDatatypes in order to collect all the data types that are flowing through the streams. The data types that are specified inside the package allow users to specify the different values that are conveyed in a stream but inside the same tuple. Following these approach, a new package called PrivacyPolicyPackage is added to the UML profile in order to collect all the privacy sources involved in the privacy-aware dataflow applications, SCV sources and privacy rules source.
+StreamGen uses a package stereotype called StreamDatatypes in order to collect all the data types that are flowing through the streams. The data types that are specified inside the package allow users to specify the different values that are conveyed in a stream but inside the same tuple. Following this approach, a new package called PrivacyPolicyPackage is added to the UML profile in order to collect all the privacy sources involved in the privacy-aware dataflow applications, SCV sources and privacy rules source.
 
-These sources are not directly connected to the streams or to the transformations of the DIA but they allow users to specify from where the different external variables required to protected the streams are taken. As they are not directly connected to any operator of the DIA, a package to put all of them together is added to the StreamGen language in order to make the approach more intuitive for the dataflow application developers.
+These sources are not directly connected to the streams or to the transformations of the DIA but they allow users to specify from where the different external variables required to protect the streams are taken. As they are not directly connected to any operator of the DIA, a package to put all of them together is added to the StreamGen language in order to make the approach more intuitive for the dataflow application developers.
 
-In the figure \ref{fig:PrivacyPolicyPackage UML Profile} can be seen the UML profile of this package.
+In the figure \ref{fig:PrivacyPolicyPackage UML Profile} can be seen the UML profile of this package. In this image can be seen how the already existing Package metaclass is extended with a stereotype called PrivacyPolicyPackage which goal is to make more intuitive for the DIA developer how to introduce the SCV source and the privacy rules source.
 
 \begin{figure}
 \centering
-{\includegraphics[scale=0.3]{./chapter4/umlProfile/PrivacyPolicyPackageUMLProfile.png}}
+{\includegraphics[scale=0.5]{./chapter4/umlProfile/PrivacyPolicyPackageUMLProfile.png}}
 \caption{PrivacyPolicyPackage UML Profile}
 \label{fig:PrivacyPolicyPackage UML Profile}
 \end{figure}
 
-Moreover, in the figure \ref{fig:PrivacyPolicyDataSources Classes UML Profile} can be seen the language of the PrivacyContextSource and PrivacyPolicySource represented in a UML profile diagram.
+Moreover, in the figure \ref{fig:PrivacyPolicyDataSources Classes UML Profile} can be seen the language of the PrivacyContextSource and PrivacyPolicySource represented in a UML profile diagram. In this figure can be seen how the already existing DataSource stereotype is extended by means of two stereotypes, PrivacyContextSource and PrivacyPolicySource. Moreover, each of these stereotypes are extended as well. As it is explained later, the PrivacyContextSource stereotype is extended by four stereotypes (PrivContTextFileSource, PrivContSocketSource, PrivContKafkaSource, PrivContFixedSource) because the SCV source can be represented by four different type of sources. On the other hand, the PrivacyPolicySource stereotype is extended only by one stereotype (PrivPolYamlFileSource) because it can be represented only by this specific source.
 
 \begin{figure}
 \centering
-{\includegraphics[scale=0.3]{./chapter4/umlProfile/PrivacyPolicyDataSourceUMLProfile.png}}
+{\includegraphics[scale=0.5]{./chapter4/umlProfile/PrivacyPolicyDataSourceUMLProfile.png}}
 \caption{PrivacyPolicyDataSources Classes UML Profile}
 \label{fig:PrivacyPolicyDataSources Classes UML Profile}
 \end{figure}
+
+In order to give an idea about the implementation of this approach, once the PrivacyProtectingStream stereotype is applied on the required streams of the DIA, a package is added to the application model and the PrivacyPolicyPackage stereotype is applied on it in order to make more intuitive to the DIA developer how the external privacy sources would be introduce later.
 
 In summary, independently of the developed DIA, two external sources are always required. A SCV source that specifies the privacy context of the application and a privacy rules source that introduces the privacy policies defined by the users. Moreover, in order to make the approach more intuitive, a package called PrivacyPolicyPackage containing both external sources is added to the StreamGen language.
 
@@ -152,6 +158,8 @@ In the tables \ref{Privacy Context Source Properties Abstract} can be seen an ab
 \label{Privacy Context Source Properties Abstract}
 \end{table}
 
+In order to apply this privacy approach, after defining the PrivacyPolicyPackage stereotype in the corresponding package node. A class node is introduced in such package and one of the four generalization stereotypes of the PrivacyContextSource stereotype is applied on it. Such stereotype represents the observer of the DIA, in the example of the chapter \ref{sec:chapter3} this sources represents by means of a tuple the employees of a market consultancy.
+
 \subsubsection{PrivacyPolicySource}
 
 In addition to SCVs, StreamGen requires some user specified rules to guarantee privacy. Such privacy rules can be only some simple conditions that have to be satisfied over the stream where the privacy policy is applied or, also, some past conditions satisfied in any stream of the application, both the stream where the privacy policy is applied and any other stream of the application. These rules are supposed to be written in a YAML file that must be inputed to the DIA in order to feed the privacy library Flink codes. In order to handle the YAML file, the library snakeyaml (org.yaml.snakeyaml.Yaml) is used. This is the unique type of sources for such purpose as the rules are supposed to be specified by the user and then stored in a YAML file.
@@ -172,6 +180,8 @@ Following the approach of DataSource stereotype, a new stereotype called Privacy
 \end{table}
 
 This stereotype follows the example of the TextFileSource stereotype as happened with the PrivContTextFileSource stereotype. However, it is supposed to introduce a YAML file instead of a text file to the dataflow application.
+
+Following how this approach would be applied, after applying the corresponding PrivacyContextSource stereotype in its class, a new class would be introduced in the package with the applied PrivacyPolicyPackage stereotype and the PrivPolYamlFileSource would be applied on it. This source represents the set of privacy rules that the users define, in the example of the chapter \ref{sec:chapter3} the client of the e-commerce company, and that must be applied on the corresponding protected streams.
 
 \section{Privacy Policy Code Generation}
 
@@ -204,7 +214,11 @@ In the Library Import part all the required libraries for the correct code gener
 
 \subsubsection{Library Import}
 
-First of all, a condition is required in order to import the libraries of \cite{privacypoliciesarticle} only when they are required. Then, libraries are imported when in the application model exists at least one PrivacyProtectingStream stereotype. If the DIA is non-privacy-aware, there is no PrivacyProtectingStream stereotype and the different libraries are not imported. Such libraries are imported in the file where they are going to be used (generateFlinkApplication.mtl) and the generated piece of code can be seen in the figure \ref{fig:Triggering Imports Privacy Libraries}. The imported libraries are:
+First of all, a condition is required in order to import the libraries of \cite{privacypoliciesarticle} only when they are required. Then, libraries are imported when in the application model exists at least one PrivacyProtectingStream stereotype. If the DIA is non-privacy-aware, there is no PrivacyProtectingStream stereotype and the different libraries are not imported. Such libraries are imported in the file where they are going to be used (generateFlinkApplication.mtl) and the generated piece of code is the following:
+
+\lstinputlisting{./chapters/filesAppen/importedLibraries}
+
+As it can be seen, the imported libraries are:
 
 \begin{itemize}
 \item import org.apache.commons.io.FileUtils;
@@ -225,25 +239,19 @@ The library it.deib.polimi.diaprivacy.library can be found in the repository \ur
 
 Regarding to the library it.deib.polimi.diaprivacy.model, it can be found in the repository \url{https://github.com/MicheleGuerriero/common/tree/master/src/main/java/it/deib/polimi/diaprivacy/model}.
 
-Finally, the org.yaml.snakeyaml.Yaml library must be imported from the POM file. In order to do this, in the POM file generation Acceleo file (generateFlinkPom.mtl), a dependency is triggled when a PrivacyProtectingStream exists in the application model. In the figure \ref{fig:Yaml Dependency POM File} can be seen such generated piece of code.
+Finally, the org.yaml.snakeyaml.Yaml library must be imported from the POM file. In order to do this, in the POM file generation Acceleo file (generateFlinkPom.mtl), a dependency is triggled when a PrivacyProtectingStream exists in the application model.In the figure \ref{fig:Yaml Dependency POM File} can be seen such generated piece of code.
 
-\begin{figure}
-\centering
-{\includegraphics[scale=0.3]{./chapter4/codeStructure/importedLibraries.png}}
-\caption{Triggering Imports Privacy Libraries}
-\label{fig:Triggering Imports Privacy Libraries}
-\end{figure}
+This is the generated piece of code for such purpose:
 
-\begin{figure}
-\centering
-{\includegraphics[scale=0.4]{./chapter4/codeStructure/yamlDependencyPom.png}}
-\caption{Yaml Dependency POM File}
-\label{fig:Yaml Dependency POM File}
-\end{figure}
+\lstinputlisting{./chapters/filesAppen/pomModified}
 
 \subsubsection{Privacy Policy Initialization}
 
-At this part, StreamGen extracts the information supplied by the user in the PrivacyPolicyPackage stereotype. StreamGen generates the corresponding SCV source Flink code and the privacy rules source Flink code. In order to do this, each of the packages contained in the application model are taken and if the package is the PrivacyPolicyPackage, for each of the classes contained in the package a different action is applied taking into account the class type. In the figure \ref{fig:Privacy Sources Generation Algorithm} can be seen the written generation algorithm for the privacy sources. The class types that can be contained in the PrivacyPolicyPackage are:
+At this part, StreamGen extracts the information supplied by the user in the PrivacyPolicyPackage stereotype. StreamGen generates the corresponding SCV source Flink code and the privacy rules source Flink code. In order to do this, each of the packages contained in the application model are taken and if the package is the PrivacyPolicyPackage, for each of the classes contained in the package a different action is applied taking into account the class type. In the following Acceleo code can be seen the written generation algorithm for the privacy sources.
+
+\lstinputlisting{./chapters/filesAppen/privSrc}
+
+The class types that can be contained in the PrivacyPolicyPackage are:
 
 \begin{itemize}
 \item PrivPolYamlFileSource.
@@ -278,39 +286,15 @@ In the table \ref{Applied Actions for Class Stereotypes in PrivacyPolicySources 
 
 All the actions are applied when there is any of the class stereotypes specified in the table \ref{Applied Actions for Class Stereotypes in PrivacyPolicySources Package} are written in the generateFlinkSources.mtl file of the StreamGen Acceleo project as public templates.
 
-In the figures \ref{fig:GenerateFlinkPrivacyPolicyYamlFileSource Acceleo Template} and \ref{fig:GenerateFlinkPrivacyContextTextFileSource Acceleo Template} can be seen the examples of such generation actions for the class stereotypes PrivPolYamlFileSource and PrivContTextFileSource.
+In the following commented codes can be seen the examples of such generation actions for the class stereotypes PrivPolYamlFileSource and PrivContTextFileSource.
 
-\begin{figure}
-\centering
-{\includegraphics[scale=0.3]{./chapter4/codeStructure/GeneratingPrivacySources.png}}
-\caption{Privacy Sources Generation Algorithm}
-\label{fig:Privacy Sources Generation Algorithm}
-\end{figure}
-
-\begin{figure}
-\centering
-{\includegraphics[scale=0.3]{./chapter4/codeStructure/GenerateFlinkPrivacyPolicyYamlFileSource.png}}
-\caption{GenerateFlinkPrivacyPolicyYamlFileSource Acceleo Template}
-\label{fig:GenerateFlinkPrivacyPolicyYamlFileSource Acceleo Template}
-\end{figure}
-
-\begin{figure}
-\centering
-{\includegraphics[scale=0.3]{./chapter4/codeStructure/GenerateFlinkPrivacyContextTextFileSource.png}}
-\caption{GenerateFlinkPrivacyContextTextFileSource Acceleo Template}
-\label{fig:GenerateFlinkPrivacyContextTextFileSource Acceleo Template}
-\end{figure}
+\lstinputlisting{./chapters/filesAppen/privSrcExamples}
 
 \subsubsection{Streams Declaration}
 
-This document works with the already defined YAML file structure in the repository of \cite{privacypoliciesarticle}. This YAML file owns a field called concreteStream that is null when the YAML file is introduced. This field must be filled for all the streams flowing through the application because later the field is used by the library to protect the streams in the Streams Protection part. Then, after generating and parsing the SCVs and the privacy policy YAML file in the Privacy Policy Initialization part, StreamGen declares all those streams that are introduced to a transformation and that the PrivacyProtectingStream stereotype is not applied on them. Regardless of what stream is considered, they are non-protected once in the application. If the application does not protected a stream, the stream exists only without privacy protection. However, if the stream is protected, first of all the non-protected version of the stream is generated and, then, the stream is protected. This is why, every generated stream by a transformation that is not protected, it is declared in the YAML file. In order to do this, a condition must be taken in account every time that a stream is generated by means of a transformation. Such condition is the same condition considered in order to import the libraries; when in the application model exists at least one PrivacyProtectingStream stereotype, then the the output stream of the transformation must be declared in the YAML file. In the figure \ref{fig:Stream Declaration} can be seen the piece of code written for such purpose. This piece of code is replicated in all the existing transformations of StreamGen (generateFlinkTransformations.mtl).
+This document works with the already defined YAML file structure in the repository of \cite{privacypoliciesarticle}. This YAML file owns a field called concreteStream that is null when the YAML file is introduced. This field must be filled for all the streams flowing through the application because later the field is used by the library to protect the streams in the Streams Protection part. Then, after generating and parsing the SCVs and the privacy policy YAML file in the Privacy Policy Initialization part, StreamGen declares all those streams that are introduced to a transformation and that the PrivacyProtectingStream stereotype is not applied on them. Regardless of what stream is considered, they are non-protected once in the application. If the application does not protected a stream, the stream exists only without privacy protection. However, if the stream is protected, first of all the non-protected version of the stream is generated and, then, the stream is protected. This is why, every generated stream by a transformation that is not protected, it is declared in the YAML file. In order to do this, a condition must be taken in account every time that a stream is generated by means of a transformation. Such condition is the same condition considered in order to import the libraries; when in the application model exists at least one PrivacyProtectingStream stereotype, then the the output stream of the transformation must be declared in the YAML file. In the following Acceleo code can be seen the piece of code written for such purpose. This piece of code is replicated in all the existing transformations of StreamGen (generateFlinkTransformations.mtl).
 
-\begin{figure}
-\centering
-{\includegraphics[scale=0.3]{./chapter4/codeStructure/StreamDeclaration.png}}
-\caption{Stream Declaration}
-\label{fig:Stream Declaration}
-\end{figure}
+\lstinputlisting{./chapters/filesAppen/streamDeclaration}
 
 Thus, any time that a transformation is generated, after generating the piece of code corresponding to the transformation, one conditions is taken into account. This condition checks that exists at least one PrivacyProtectingStream stereotype in the application model. If such condition is satisfied, then, the stream is set into the privacy policy YAML file.
 

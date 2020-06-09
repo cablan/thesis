@@ -1,0 +1,6 @@
+[if(aClass.getModel().eAllContents(DirectedRelationship)
+    ->exists(stream|
+        hasStereotype(stream,'PrivacyProtectingStream')))]
+app.getStreamByID("[getOutputNames(aClass)->first()/]")
+   .setConcreteStream([getOutputNames(aClass)->first()/]);
+[/if]

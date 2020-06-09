@@ -31,11 +31,37 @@ Minimize the number of movements required by each data along the different compu
 
 Due to the fact that DIAs work with high amounts of data, the probability for the hardware to fail is greater than in other computing systems but the same happens with the probability of communications errors and software bugs. This is why, DIAs are designed to be fault resilient. In order to make these applications available and reliable, on the storage disk of such systems redundant copies of all data files or intermediate processing results can be found. But also they are provided with systems capable to detect the failure of any node or processing failures and, once such failures are detected, then re-compute the results.
 
-\subsubsection*{Node Variability}
+\subsubsection*{Scalability}
 
-Depending on the hardware and software architecture of the data-intensive application, the required number of nodes and processing tasks and its variability along the runtime can be fix or variable. This is due to the fact that it is very important to achieve a comfortable processing independently of the amount of data and, also, to reduce the critical time of computation by adding some nodes.
+Depending on the hardware architecture of the data-intensive application, the required number of nodes for processing and the working nodes along the run time can be fix or variable. Due to the fact that the workload of a system, for example a database, can vary over time, systems can be scaled for higher processing speed. A system can be scaled horizontally or vertically. Taking into account the database example, the hard disk capacity can be raised reaching a database with more capacity. This is the case of the vertical scale. However, a database can be seen its size increased by adding more hard disks with lower capacity reaching a final database with higher capacity.
+
+In the figure \ref{fig:Data Intensive Application Scalability} can be seen the explained database example.
+
+\begin{figure}
+\centering
+{\includegraphics[scale=0.5]{./chapter2/scalability.png}}
+\caption{Data Intensive Application Scalability}
+\label{fig:Data Intensive Application Scalability}
+\end{figure}
 
 \subsection{Frameworks}
+
+Nowadays, several architectures are able to deal with data-intensive applications but, before arriving to the current situation, processing frameworks have been developed by means of different approaches.
+
+At the beginning, the very first type of processing was the interactive processing (\cite{interactiveprocessing}). In this processing type there was not any user interface. Users had to control program executions in a computer by writing the commands manually.
+
+After that, batch processing appeared. Batch processing, according to \cite{interactiveprocessing}, allows to plan the work execution and execute them without user interaction. This was the first approach to parallel processing. However, batch processing requires to store data in a database, file system or any other storage unit before executing it. After data storage, data is queried for execution.
+
+The most optimized approach for processing is stream processing. This approach allows to the queries exist continuously (\cite{streamprocessing}), computing on data just when it is received or produced.
+
+Currently, batch processing and stream processing are the most used processing approaches all around the world. Moreover, there are a lot of frameworks which are able to handle them. However, the most important framework for such processing approaches are:
+
+\begin{itemize}
+\item Apache Hadoop.
+\item Spark.
+\item Apache Flink.
+\end{itemize}
+
 \subsubsection{Apache Hadoop}
 
 Apache Hadoop is an open source software framework that supports distributed applications. As any other DIA, Hadoop allows to work with thousands of nodes and petabytes of data. This framework is composed by a processing layer called MapReduce which was inspired by Google documentation.
@@ -48,7 +74,7 @@ In summary, Hadoop MapReduce works breaking the incoming datasets into independe
 
 Spark is an open source platform that allows general-purpose and fast cluster computing. It is an engine that allows to process large volumes of data.
 
-Spark enables users to access repeatedly to datasets in order to perform streaming, machine learning or SQL workloads by means of high-level APIs in Java, Scala, Python and R. It also allows users to accomplish batch processing or stream processing. Stream processing can be defined, according to \cite{streamprocessing}, as to compute on data just when it is received or produced.
+Spark enables users to access repeatedly to datasets in order to perform streaming, machine learning or SQL workloads by means of high-level APIs in Java, Scala, Python and R. It also allows users to accomplish batch processing or stream processing.
 
 Moreover, Spark can be integrated with any other data-intensive tool due to its design. Spark is compatible with Hadoop as it is able to access Hadoop data sources and run on Hadoop clusters. This platform extends MapReduce, the engine of Hadoop, by including iterative queries and stream processing.
 

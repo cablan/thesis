@@ -1,0 +1,16 @@
+[if(aModel.eAllContents(DirectedRelationship)
+   ->exists(stream|
+      hasStereotype(stream,'PrivacyProtectingStream')))]
+import org.apache.commons.io.FileUtils;
+import java.io.File;
+import org.yaml.snakeyaml.Yaml;
+import it.deib.polimi.diaprivacy.library.GeneralizationFunction;
+import it.deib.polimi.diaprivacy.library.ProtectedStream;
+import it.deib.polimi.diaprivacy.model.ApplicationDataStream;
+import it.deib.polimi.diaprivacy.model.ApplicationPrivacy;
+import it.deib.polimi.diaprivacy.model.DSEP;
+import it.deib.polimi.diaprivacy.model.PrivacyContext;
+import it.deib.polimi.diaprivacy.library.PrivacyContextParser;
+import it.deib.polimi.diaprivacy.model.VCP;
+import it.deib.polimi.diaprivacy.library.PrivacyContextFixedSource;
+[/if]

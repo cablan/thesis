@@ -1,0 +1,36 @@
+[comment PrivPolYamlFileSource/]
+[template public generateFlinkPrivacyPolicyYamlFileSource
+					      (aClass:Class)]
+
+Yaml yaml = new Yaml();
+	
+String content = FileUtils.readFileToString(
+	new File("[getStereotypeProperty(aClass,
+		'PrivPolYamlFileSource','pathToFile')/]"),
+						    "UTF-8");
+	
+ApplicationPrivacy app=yaml.loadAs(
+	content,ApplicationPrivacy.class);
+
+[/template]
+
+[comment PrivContTextFileSource/]
+[template public generateFlinkPrivacyContextTextFileSource
+					       (aClass:Class)]
+// begin privacy source definition
+DataStream<String>contextString=
+	env.readTextFile("[getStereotypeProperty(aClass,
+		'PrivContTextFileSource', 'pathToFile')/]")
+	[if getParallelism(aClass,
+		'PrivContTextFileSource').toString()
+			.toInteger()>1]
+		.setParallelism([getParallelism(aClass,
+			'PrivContTextFileSource')/]);
+	[else]
+	;
+	[/if]
+
+DataStream<PrivacyContext>contextStream=
+	contextString.map(new PrivacyContextParser());
+// finish privacy source definition
+[/template]

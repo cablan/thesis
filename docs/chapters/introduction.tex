@@ -1,8 +1,34 @@
-\chapter[Chapter 1]{Introduction}
+\chapter[Introduction]{Introduction}
 \label{sec:introduction}
 
-This is a test.
-\section{Section 1}
-This a test for the first section.
-\section{Section 2}
-And this is a test for the second section.
+The development of Information Technologies (IT) during the last century has generated new necessities in our society. In 1936, Alan Turing presents the first machine which is able to compute anything computable (\cite{computinghistory}). Since then, researchers have been developing computing technologies until arriving to the current situation where technologies are able to handle large amount of data, terabytes and petabytes (\cite{cloudcomputing}).
+
+At the beginning, computing machines were not able to process a program with more than one instruction. Users had to introduce manually each of the instructions composing the program. This processing mode is known as interactive processing and there was not any user interface (\cite{interactiveprocessing}). Some time later, batch computing revolutionized computer science field. This new processing type was able to compute programs with more than one instruction automatically and, in addition to that, batch computing introduced the firsts parallel pipelines (\cite{interactiveprocessing}). Currently, computers are able to use stream processing which goes one step ahead than batch processing. Stream processing is able to query data continuously, computing data just when it is received (\cite{streamprocessing}).
+
+Due to the fact that data calculation capacity has not stopped growing during the last century, currently more and more data are produced by the processors of our digital devices such as mobile phones, laptops or tablets among others. This has given rise to the well-known Big Data which is being exploited by many companies in order to extract useful information from the generated data of our digital devices.
+
+To this purpose, complex platforms have been conceived that support the development of so-called Data Intensive Applications (DIAs). Creating a DIA, though, still requires a complex design process that, besides the problems related to ensuring high performance and availability, includes also the need to provide guarantees in terms of data privacy and to allow the users to define and update privacy policies based on their own preferences.
+
+In order to guarantee data privacy, some laws has been legislated by public administrations in the last years. In the European Union (EU) the General Data Protection Regulation (GDPR), according to its web page \cite{gdprwebpage}, is in charge of harmonizing data privacy laws across all member states of the EU. However, some legislation in this regard is not enough to guarantee data privacy in digital devices. This is why, some researches, such as \cite{privacypoliciesarticle}, about how privacy policies can be applied in data-intensive applications have been made during the last years.
+
+On the other hand, the development of DIA cannot be faced writing codes from scratch. This is why complex platforms based on metamodeling techniques have been conceived in order to reach efficiency in the DIA design process. This is the case of StreamGen, a model-driven approach to support the design of DIAs and the automated code generation for two target platforms, Flink and Spark. Moreover, StreamGen is designed with the goal to be easy to handle by users with few knowledge about DIA. However, StreamGen does not provide a way to automate code generation for privacy-aware DIAs.
+
+Then, the purpose of this thesis is to extend StreamGen to make it privacy policies-aware. In order to reach such purpose:
+
+\begin{enumerate}
+\item The definition of a language, as part of a UML profile, is required in order to allow users to define for a DIA two types of privacy policies: View Creation Policies (VCP) and Data Subject Eviction Policies (DSEP). VCPs modify the incoming data taking into account the data subject and some predefined conditions which have to be specified. DSEPs remove the data from the stream when the data comes from a data subject and it satisfies some predefined conditions. Such language is defined taking into account the dataflow model of DIAs and its sources, transformations and sinks approach, making the definition sufficiently simple to be handled by users who are not familiar with DIAs.
+\item From the defined language and by means of Acceleo, an implementation of a model-to-code transformation will be developed allowing users to automate the generation of the privacy-enhanced DIA code, targeting Flink as final platform.
+\item The evaluation of the approach will be done by exploiting two case studies. In the first case, a DIA will be developed in order to preserve the privacy of the users who make different transactions among a fixed shop stock. Secondly, a DIA will be modified. This DIA takes the temperatures from two rooms and it computes three statistics, the maximum, the minimum and the average temperatures, and the prediction of the temperature of the rooms in a given time. This application will be modified in order to avoid the computation of the prediction when the temperatures come from the second room.
+\end{enumerate}
+
+Regarding to the solutions provided along this document in order to reach the purpose of the paper, the definition of the language is based on a new data stream stereotype which allows DIA developers to define which streams are protected and which privacy policy types (VCP and DSEP) protect them. In addition to this stereotype, the language is extended with two more stereotypes which are represented by means of two generalizations of a data source stereotype. One of the extended data source stereotypes introduces the privacy rules that must be applied in order to guarantee data privacy whilst the second stereotype introduces the viewer of the DIA who is not allowed to see the streams flowing through the application without being encrypted by the privacy policies. Finally, a package where the two new data source stereotypes must be introduced is presented in order to make the approach of the external privacy sources more intuitive for the DIA developer.
+
+Finally, it is important to remark how the document is structured and which is the content of each of the chapters. Chapter \ref{sec:chapter2} consists of three main sections. Firstly, an approach to data-intensive applications is made giving the main characteristics of such applications and the most important frameworks that support them. Secondly, the main concepts about IT security are introduced and, then, how they influence to data privacy is remarked. Finally, modeling and metamodeling techniques for software engineering is presented giving the most popular modeling languages and an introduction to a metamodel platform for DIA design such as StreamGen.
+
+After that, in chapter \ref{sec:chapter3}, some literature of researches in privacy policy is presented and a problematic in the modeling of such researches is identified. Then, the objectives of this paper are stated and under which requirements they must be satisfied. Finally, in this chapter is presented how the developed approach is evaluated.
+
+In chapter \ref{sec:chapter4} the development of the approach is made giving an example in order to make the approach more intuitive for the reader. Moreover, the approach is classified in two parts. The part regarding to the language extension with the three main stereotypes explained above and the part referring to the Acceleo code generation in order to automatize the Flink codes generation.
+
+In chapter \ref{sec:chapter5} two case studies are developed in order to check the approach and in order to see if the objectives stated in chapter \ref{sec:chapter3} are satisfied.
+
+Finally, in chapter \ref{sec:conclusions}, some conclusions about the new approach are made.

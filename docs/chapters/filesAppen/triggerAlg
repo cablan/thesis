@@ -1,0 +1,17 @@
+for (c:Class | aModel.eContents(Class)) ]
+	[if hasStereotype(c, 'SocketSource')]
+		[generateFlinkSocketSource(c)/]
+	[elseif (hasStereotype(c, 'MapTransformation'))]
+		[generateFlinkMapTransformation(c)/]
+		[if(c.getOutputs()->
+		    exists(output|hasStereotype(output,
+		           'PrivacyProtectingStream')))]
+		[generateFlinkPrivPolicies(c.getOutputs()->
+		    select(output | hasStereotype(output,
+			'PrivacyProtectingStream'))->
+				first())/]
+		[/if]
+	[elseif (hasStereotype(c, 'TextFileSink'))]
+		[generateFlinkTextFileSink(c)/]
+	[/if]
+[/for]

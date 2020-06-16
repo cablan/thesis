@@ -1,0 +1,5 @@
+[for (p: Property | aClass.attribute) separator('\n')]
+    private [p.type.name.substitute('ELong','Long')
+			.substitute('EDouble', 'Double')/]
+	    [p.name/];
+[/for]

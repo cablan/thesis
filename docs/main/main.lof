@@ -1,50 +1,43 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Data Intensive Application Scalability}}{21}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Modeling Method Components}}{30}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces UML Metamodel}}{31}{figure.2.3}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Data Intensive Application Scalability}}{23}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Modeling Method Components}}{32}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces UML Metamodel}}{33}{figure.2.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Great Seller Dataflow Model}}{38}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Great Seller Privacy Dataflow Model}}{39}{figure.3.2}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Great Seller Dataflow Model}}{40}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Great Seller Privacy Dataflow Model}}{41}{figure.3.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces PrivacyProtectingStream UML Profile}}{42}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces PrivacyPolicyPackage UML Profile}}{44}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces PrivacyPolicyDataSources Classes UML Profile}}{44}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Stream Declaration}}{53}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Triggering SocketSource Privacy StreamGen Version}}{54}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Triggering MapTransformation Privacy StreamGen Version}}{54}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Triggering TextFileSink Privacy StreamGen Version}}{54}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Calling Declared Stream}}{55}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Adding Privacy Policies}}{55}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Applying Privacy Policies}}{55}{figure.4.10}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces PrivacyProtectingStream UML Profile}}{46}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces PrivacyPolicyPackage UML Profile}}{48}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces PrivacyPolicyPackage Example}}{48}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces PrivacyPolicyDataSources Classes UML Profile}}{49}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces PrivacySources Example}}{51}{figure.4.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Great Seller Data Types Package}}{59}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Great Seller StreamGen DIA}}{62}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Great Seller Privacy Aware StreamGen DIA}}{63}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Great Seller Privacy Policy Package}}{64}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Cool Analyst Data Types Package}}{66}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Temperature Chamber 1 Model}}{67}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Temperature Chamber 2 Model}}{67}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces NMap Transformation StreamGen}}{68}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Double StreamGen Type}}{68}{figure.5.9}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Cool Analyst StreamGen DIA}}{69}{figure.5.10}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Cool Analyst Privacy Aware StreamGen DIA}}{70}{figure.5.11}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Great Seller Data Types Package}}{64}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Great Seller StreamGen DIA}}{67}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Great Seller Privacy Aware StreamGen DIA}}{68}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Great Seller Privacy Policy Package}}{69}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Cool Analyst Data Types Package}}{72}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Temperature Chamber 1 Model}}{73}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Temperature Chamber 2 Model}}{73}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Cool Analyst StreamGen DIA}}{76}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Cool Analyst Privacy Aware StreamGen DIA}}{77}{figure.5.9}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces New Papyrus Project}}{79}{figure.1.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Architecture Context}}{80}{figure.1.A.2}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Project Name Definition}}{80}{figure.1.A.3}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Representation Kind}}{80}{figure.1.A.4}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Papyrus Project Definition}}{81}{figure.1.A.5}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces New Papyrus Project}}{85}{figure.1.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Architecture Context}}{86}{figure.1.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Project Name Definition}}{86}{figure.1.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Representation Kind}}{86}{figure.1.A.4}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Papyrus Project Definition}}{87}{figure.1.A.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Java Project Creation}}{91}{figure.1.C.1}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Java Project Initial Structure}}{92}{figure.1.C.2}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Java Project Final Structure}}{92}{figure.1.C.3}
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Maven Project Structure Creation}}{92}{figure.1.C.4}
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Maven Project Source Folder Creation}}{92}{figure.1.C.5}
-\contentsline {figure}{\numberline {C.6}{\ignorespaces Maven Project Properties}}{93}{figure.1.C.6}
-\contentsline {figure}{\numberline {C.7}{\ignorespaces Maven Project Structure}}{93}{figure.1.C.7}
-\contentsline {figure}{\numberline {C.8}{\ignorespaces POM File Creation}}{93}{figure.1.C.8}
-\contentsline {figure}{\numberline {C.9}{\ignorespaces Final Maven Project}}{94}{figure.1.C.9}
-\contentsline {figure}{\numberline {C.10}{\ignorespaces Run Configuration}}{94}{figure.1.C.10}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Java Project Creation}}{97}{figure.1.C.1}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Java Project Initial Structure}}{98}{figure.1.C.2}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Java Project Final Structure}}{98}{figure.1.C.3}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Maven Project Structure Creation}}{98}{figure.1.C.4}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Maven Project Source Folder Creation}}{98}{figure.1.C.5}
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Maven Project Properties}}{99}{figure.1.C.6}
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Maven Project Structure}}{99}{figure.1.C.7}
+\contentsline {figure}{\numberline {C.8}{\ignorespaces POM File Creation}}{99}{figure.1.C.8}
+\contentsline {figure}{\numberline {C.9}{\ignorespaces Final Maven Project}}{100}{figure.1.C.9}
+\contentsline {figure}{\numberline {C.10}{\ignorespaces Run Configuration}}{100}{figure.1.C.10}

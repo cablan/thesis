@@ -5,7 +5,7 @@ Big Data has transformed our society in the last years. The capability to develo
 
 In section \nameref{Data-Intensive Applications}, first of all, a classification of these kind of application is made distinguishing between compute-intensive and data-intensive. After that, the main characteristics of data-intensive applications are explained in order to define them. Finally, in this section some frameworks as Hadoop, Spark or Flink are explained giving some characteristics and what makes them different.
 
-In section \nameref{Privacy Policies in IT} some concepts relative to computer security and how such concepts impact on data privacy are developed. After that, some different approaches to generate private data are exposed and, at the end of the section, it is emphasized how privacy policies can be applied in the already known data-intensive applications.
+In section \nameref{Data Privacy} some concepts relative to computer security and how such concepts impact on data privacy are developed. After that, some distinctions between data security and data privacy are made and, at the end of the section, it is emphasized how privacy policies can be applied in the already known data-intensive applications.
 
 Finally, in section \nameref{Modeling and Metamodeling}, first of all the main concepts of metamodeling are exposed. After that, the Unified Model Language is explained and, at the end of the section, a model-driven approach to support data-intensive application design called StreamGen is introduced.
 
@@ -22,7 +22,7 @@ As any type of application which takes advantage of data-parallelism, DIAs need 
 
 \subsection{Characteristics}
 
-Data-intensive applications are modeled in a different way than any other computing application due to the property of DIAs to be processed in a cluster infrastructure. Moreover, as any other system, DIAs need to reach a high performance in order to make efficient applications; this is possible by means of the minimization of the number of movements of the data. Other important properties required by DIAs are that they must be available when they are called, and that they must be reliable to the number of failures; both properties are accomplished due to data-intensive applications are fault resilient. Last but not least, data-intensive applications must be able to change the number of required nodes taking into account the workload. Then, four characteristics, according to \cite{distributedcomputing} and \cite{scalablecomputing}, can be defined in order to distinguish data-intensive applications from any other kind of computing system:
+Data-intensive applications are modeled in a different way than any other computing application due to the property of DIAs to be processed in a cluster infrastructure. Moreover, as any other system, DIAs need to reach a high performance in order to make efficient applications; this is possible by means of the minimization of the number of movements of the data. Other important properties required by DIAs are that they must be available when they are called, and that they must be reliable to the number of failures; both properties are accomplished due to data-intensive applications are fault resilient. Last but not least, data-intensive applications must be able to change the number of required nodes for processing purpose taking into account the workload. Then, four characteristics, according to \cite{distributedcomputing} and \cite{scalablecomputing}, can be defined in order to distinguish data-intensive applications from any other kind of computing system:
 
 \subsubsection*{Dataflow Model}
 
@@ -57,7 +57,7 @@ At the beginning, the very first type of processing was the interactive processi
 
 After that, batch processing appeared. Batch processing, according to \cite{interactiveprocessing}, allows to plan the work execution and execute them without user interaction. This was the first approach to parallel processing. However, batch processing requires to store data in a database, file system or any other storage unit before executing it. After data storage, data is queried for execution.
 
-The most optimized approach for processing is stream processing. This approach allows to the queries exist continuously (\cite{streamprocessing}), computing on data just when it is received or produced.
+The most optimized approach for processing is stream processing. This approach allows to the queries exist continuously, computing on data just when it is received or produced (\cite{streamprocessing}).
 
 Currently, batch processing and stream processing are the most used processing approaches all around the world. Moreover, there are a lot of frameworks which are able to handle them. However, the most important framework for such processing approaches are:
 
@@ -97,7 +97,7 @@ Some features make Spark more efficient than Hadoop. The following features, tha
 
 \end{itemize}
 
-The in memory computing feature reduces the number of read-write to disk operations what achieves a data processing performance 100 times faster in memory and 10 times faster on the disk. Due to the high amount of operators that Spark provides, to achieve parallel applications is easier with Spark. Regarding to fault tolerance, Sparks handles the failure of the nodes in the cluster by means of Resilient Distributed Datasets (RDDs) which its specific design makes to reduce the number of failures to zero.
+The in memory computing feature reduces the number of read-write to disk operations what achieves a data processing performance 100 times faster in memory and 10 times faster on the disk (\cite{sparkwebsite}). Due to the high amount of operators that Spark provides, to achieve parallel applications is easier with Spark. Regarding to fault tolerance, Sparks handles the failure of the nodes in the cluster by means of Resilient Distributed Datasets (RDDs) which its specific design makes to reduce the number of failures to zero (\cite{sparkwebsite}).
 
 In conclusion, Spark can be differentiated from Hadoop in its cluster management system. On the other hand, regarding to the similarities between Spark and Hadoop, Spark takes advantage of Hadoop for storage.
 
@@ -120,7 +120,7 @@ Apache Flink can undertake efficiently some different types of processing, becom
 
 Apache Flink reduces the complexity that other platforms as Spark faced by means of some improvements. Such improvements include the integration of query optimization in MapReduce processing layer, some concepts from database systems and efficient parallel in-memory and out-of-core algorithms. These optimizations are given due to the fact that Flink architecture is designed taking into account the streaming model. Such design improves the micro-batch approach taken in Spark for data streaming processing making Flink faster and with lower latency for such kind of processing.
 
-Following the example of Spark, Apache Flink is provided with three APIs (DataStream, DataSet and Table APIs) in order to use its engine. DataStream and DataSet APIs are two regular programs used by Flink in order to perform transformations on data streams (filtering, aggregating, update state...) and data sets (joining, grouping, mapping...) respectively. On the other hand Table API is used for relational operations and it can be integrated into DataStream API for relational stream processing and into DataSet API for relational batch processing.
+Following the example of Spark, Apache Flink is provided with three APIs (DataStream, DataSet and Table APIs) in order to use its engine. DataStream and DataSet APIs are two regular programs used by Flink in order to perform transformations on data streams (filtering, aggregating, update state...) and data sets (joining, grouping, mapping...) respectively. On the other hand, Table API is used for relational operations and it can be integrated into DataStream API for relational stream processing and into DataSet API for relational batch processing.
 
 Finally, it is important to remark the five features that can be found in \cite{flinkwebsite} about Apacha Flink:
 
@@ -145,7 +145,7 @@ Data privacy and data security can be treated interchangeably. However, they are
 
 Every computer system that ensures data security, it must accomplish the well-known CIA paradigm, as it is explained in \cite{computersecurityslides}. "C" stands for Confidentiality, "I" for Integrity and "A" for Availability and they are the three basic requirements that compose such paradigm. Any computer security system has to grant that any piece of data has to be accessed only by those who are authorized, accomplishing such requirement, information is confidential. Moreover, such systems have to be able to allow data modifications only to those how are authorized for it and only in the way that they are entitled to modify them, this requirement makes information to be integrated. Finally, data must be available to everyone who has a right over them within some time constraints, this makes information to be available. These three requirements raise an engineering problem and it is that availability conflicts with confidentiality and integrity due to the fact that if a data is available then it could not be confidential as anybody may modify it and it could not be integrated as anybody could modify then.
 
-Data privacy can be classified, according to \cite{dataprivacy}, as the branch of data security concerned with the proper handling of data. Due to the fact that the information of many entities (persons, companies, etc.) are involve in such complex problem, there are some legal instruments to handle the design of data privacy. This is the case of privacy policies. Privacy policies are statements or legal documents that reveal how an entity can collect, use or handle data from another entity. Privacy policies can differ from one country to another. This is why there are some agreements in order to handle them. In the European Union (EU) the General Data Protection Regulation (GDPR), according to its web page \cite{gdprwebpage}, is in charge of harmonizing data privacy laws across all member states of the EU. But GDPR is not the unique privacy regulatory restriction referring to data privacy. Some other regulations pointing to different fields can be found. Such are the cases of Health Insurance Portability and Accountability Act (HIPAA, \cite{hipaablog}), Gramm-Leach-Bliley Act for US financial industry (GLBA, \cite{glbablog}) or California Consumer Privacy Act (CCPA, \cite{ccpablog}) which is the first consumer privacy act in the US.
+Data privacy can be classified, according to \cite{dataprivacy}, as the branch of data security concerned with the proper handling of data. Due to the fact that the information of many entities (persons, companies, etc.) are involve in such complex problem, there are some legal instruments to handle the design of data privacy. This is the case of privacy policies. According to \cite{privpoldef}, privacy policies, in the context of Information Technologies (IT), is a document that tells readers how a technology or other product or service will use their personal information. Privacy policies can differ from one country to another. This is why there are some agreements in order to handle them. In the European Union (EU) the General Data Protection Regulation (GDPR), according to its web page \cite{gdprwebpage}, is in charge of harmonizing data privacy laws across all member states of the EU. But GDPR is not the unique privacy regulatory restriction referring to data privacy. Some other regulations pointing to different fields can be found. Such are the cases of Health Insurance Portability and Accountability Act (HIPAA, \cite{hipaablog}), Gramm-Leach-Bliley Act for US financial industry (GLBA, \cite{glbablog}) or California Consumer Privacy Act (CCPA, \cite{ccpablog}) which is the first consumer privacy act in the US.
 
 In addition to these regulatory restrictions, some technical tools are required in order to apply privacy policies from an engineering point of view. Some researchers haven been studying about the development of formal languages in order to specify them in a logical way. This is the case of some literature \cite{XACMLlanguage} where XACML is used to specify privacy policies by means of some logic rules in order to reach a set of policies. This formal language (XACML) also can be used for other reasons as it is the case of user authentication in distributed systems \cite{XACMLforAuthentication}.
 
@@ -171,9 +171,10 @@ Another remarkable point is the importance of threats, that are potential violat
 
 In conclusion, the concept of computer security involves many fields but when dealing with the design of DIAs, it is very important to take into account not only the CIA paradigm but also the design techniques from the threat agent perspective in order to reach secure DIAs, always under the legal framework of privacy policies. Furthermore, what makes security on DIAs reliable is the balance on its conflicting requirements what is a complex engineering problem. Finally, systems with a high amount of vulnerabilities but with no threats, are secure systems. However, systems with many threats and only a few vulnerabilities become in the most attacked systems and, then, the ones that need more security measures.
 }
+
 \subsection{Privacy Policies in DIAs}
 
-Due to the fact that DIAs are constantly managing data from different entities, it is very important the way in which privacy policies are applied on them. The final goal of applying them is that, in case of threats, threat agents cannot obtain such data. This reduces the probability of threats as there is no sensitive data that can be obtained and, then, the CIA paradigm cannot be broken.
+Due to the fact that DIAs are constantly managing data from different entities, it is very important the way in which privacy policies are applied on them. The final goal of applying them is that non-allowed third parties can handle those sensitive data that users do not want to be accessible by them.
 
 When dealing with DIAs, sensitive data are sent in data streams. Such data streams are composed of tuples which can contain a high variety of data. Each tuple of a data stream contains a finite set of data that are always ordered in the same way. Due to the fact that all the tuples contained in a data stream have the same structure, when speaking about data streams, each of the data of the tuple is considered as a field of the data stream. Due to this distinction on the fields of the data streams, some literature \cite{privacypoliciesarticle} classifies data streams into three different sets:
 
@@ -185,7 +186,7 @@ When dealing with DIAs, sensitive data are sent in data streams. Such data strea
 
 \end{itemize}
 
-A subject-specific stream is a stream composed of a field referring to the data subject. This means that each tuple of the stream contains a data which is the owner of the tuple. A subject-generic stream is a stream without data subject. However, subject-generic streams are produced by an operator whose input is a subject-specific stream. Finally, a non-personal stream is a stream without data subject and that it has not been produced by an operator whose input is a subject-specific stream.
+A subject-specific stream is a stream composed of a field referring to the data subject. This means that each tuple of the stream contains a data which specifies who is the owner of the tuple. A subject-generic stream is a stream without data subject. However, subject-generic streams are produced by an operator whose input is a subject-specific stream. Finally, a non-personal stream is a stream without data subject and that it has not been produced by an operator whose input is a subject-specific stream.
 
 The context in which a tuple is conveyed is also important. Depending of the context in which data are transferred, an entity could want that the data of the tuple are private or public. This context is specified by means of three variables in \cite{privacypoliciesarticle}:
 
@@ -199,7 +200,7 @@ The context in which a tuple is conveyed is also important. Depending of the con
 
 The first variable is the observer of the data, the entity who demands the usability of the data. The second variable is the role that the requesting entity is playing. The requesting entity can be a person but also a company. In the case of the company, many persons working for such company can be demanding the data of the tuple and each person has a role inside the company, this is why the role is an important variable in order to define the context in which a privacy policy can be applied. Finally, the third variable that defines the context is the purpose. The purpose for which the requesting entity demands the data of the tuple. Then, the context in which a privacy policy has to be applied is defined by means of three variables that are called static context variables (SCV) as, once they are defined, they are not going to change and because of this they are static.
 
-Another important distinction is the one given by the data that compose a tuple. Each of these data can be strings or numbers. Because of this, a classification on the type of each data of the tuple has to be defined. Each of the data that compose a tuple are known as fields of the stream as well. Moreover, following the approach given by the SCVs, each of these values are considered as a variable as the values of a field of a given stream can change depending on the tuple that is referred. Then, the variables that compose a field of a stream, according to \cite{privacypoliciesarticle}, are:
+Another important distinction is the one given by the data that compose a tuple. Each of these data can be strings or numbers. Because of this, a classification on the type of each data of the tuple has to be defined. Each of the data that compose a tuple are known as fields of the stream as well. Moreover, following the approach given by the SCVs, each of these values are considered as a variable since the values of a field of a given stream can change depending on the tuple that is referred. Then, the variables that compose a field of a stream, according to \cite{privacypoliciesarticle}, are:
 
 \begin{itemize}
 
@@ -260,7 +261,7 @@ In conclusion, in order to define a DSEP, first of all, a set of rules have to b
 
 Data Intensive Applications are used when large amount of data have to be handle with high performance. In order to reach such high performance, DIAs require complex designs and a lot of resources to achieve their goal. One of these resources is the number of software developers who are needed to write the application codes. On the other hand, when some specific requirements are added to the DIAs, as it is the case of privacy policies managing the privacy of the users, developing DIAs becomes in a really difficult task which cannot be faced writing codes from scratch. At this point is where other approaches to write application codes take advantage. Such is the case of modeling and metamodeling techniques applied to software development.
 
-A model is a representation of a reality in order to explore, to redesign or to transform it (\cite{modelwebsite}). This representation can be externalized by means of a diagram in a paper or in a computer software (\cite{modelwebsite}). Modeling is the method that has to be developed in order to reach a model. A modeling method consists of a modeling technique and a mechanism or algorithm working on the model (\cite{modelwebsite}). Moreover, a modeling technique consists of a modeling language and a modeling procedure (\cite{metamodelwebsite}). A modeling procedure is a sequential process composed of several steps but also an iterative process since the procedure can be repeated many times until the final model is reached (\cite{modelwebsite}). In spite of several modeling procedures can be accomplish in order to create a model, as it can be found in \cite{modelwebsite}, all these approaches share some common steps:
+A model is a representation of a reality in order to explore, to redesign or to transform it (\cite{modelwebsite}). This representation can be externalized by means of a diagram in a paper or in a computer software (\cite{modelwebsite}). Modeling is the method that has to be developed in order to reach a model. A modeling method consists of a modeling technique and a mechanism or algorithm working on the model (\cite{metamodelwebsite}). Moreover, a modeling technique consists of a modeling language and a modeling procedure (\cite{metamodelwebsite}). A modeling procedure is a sequential process composed of several steps but also an iterative process since the procedure can be repeated many times until the final model is reached (\cite{metamodelwebsite}). In spite of several modeling procedures can be accomplish in order to create a model, as it can be found in \cite{modelwebsite}, all these approaches share some common steps:
 
 \begin{itemize}
 
@@ -300,11 +301,11 @@ The first component of a modeling technique that is a modeling language is a set
 
 The semantics of a modeling language describe the meaning of the language by means of a semantic domain and a semantic mapping.
 
-Finally, the formal notation describes how the modeling language is visualized. Some symbols are used in order to represent the represent the syntax of the language in a diagram.
+Finally, the formal notation describes how the modeling language is visualized. Some symbols are used in order to represent the syntax of the language in a diagram.
 
 On the other hand, the finality of the mechanism is to check that the model written with the modeling language by means of the modeling method is correct and satisfies the purpose of the model. There are three main types of mechanisms and algorithms: generic, specific and hybrid.
 
-In the figure \ref{fig:Modeling Method Components} o model of a modeling method is shown.
+In the figure \ref{fig:Modeling Method Components} o model of a modeling method is shown. In this figure can be seen that a modeling method is composed of a modeling technique and a mechanism or algorithm. The mechanism or algorithm can be of three different types: generic, specific and hybrid. On the other hand, a modeling technique is composed of a modeling language and a modeling procedure and a classification can be made about both components. The modeling language is composed of a notation, a syntax and a semantics and the modeling procedure is composed of some steps.
 
 \begin{figure}
 \centering
@@ -334,7 +335,7 @@ A UML diagram making a description of all the UML diagrams can be seen in the fi
 
 \subsubsection{UML Diagrams}
 
-In spite of UML allows developers to use fourteen diagrams for modeling, some of such diagrams are the most commonly used. According to \cite{umlwebsite}, this is the case of the following ones:
+In spite of UML allows developers to use fourteen diagrams for modeling, some of such diagrams are the most commonly used. According to \cite{umlwebsite}, this is the case of the class diagram and the profile diagram.
 
 \subsubsection*{Class Diagram}
 
@@ -346,15 +347,15 @@ Class diagrams are commonly used to represent the metamodel of the syntax of a m
 
 A profile diagram allows to create the model domain by adding model elements called stereotypes and making the corresponding relationships between them. The most commonly used relationships in this kind of diagrams are the composition and the generalization.
 
-\subsubsection{UML Frameworks}
+\subsubsection{UML Frameworks} % Add references here
 
-Due to the UML popularity among software developers, there are several frameworks working with it in order to make software development easier. Different platforms can be used for UML modeling but also platforms for converting a model to a source code can be found.
+UML can be found in a wide amalgam of platforms due to its utility for modeling. However, there are some platforms that are the most commonly used for software development. This is the case of Eclipse.  Eclipse is the most popular Java Integrated Development Environment which allows a large amount of plugins in order to increase its functionalities. Moreover, among such functionalities can be found UML modeling or converting a UML model to a source code.
+
+For UML modeling one of the plugins that can be integrated in Eclipse for such purpose is Papyrus which is an open-source UML tool. On the other hand, to convert a UML model to a source code Acceleo appears as an open-source plugin for Eclipse.
 
 \subsubsection*{Papyrus}
 
-UML can be found in a wide amalgam of platforms due to its utility for modeling. Moreover, there are some platforms that are the most commonly used for software development. This is the case of Eclipse.  Eclipse is the most popular Java Integrated Development Environment which allows a large amount of plugins in order to increase its functionalities.
-
-One of the plugins provided by Eclipse is Papyrus, an open-source UML tool. In spite of Papyrus was developed by the French Alternative Energies and Atomic Energy Commission (CEA-List), currently it is one of the most used UML tools for software development as it can be expanded with UML profile diagrams giving a wide functionality for modeling software applications.
+Papyrus is one of the plugins provided by Eclipse, an open-source UML tool for UML modeling. In spite of Papyrus was developed by the French Alternative Energies and Atomic Energy Commission (CEA-List), currently it is one of the most used UML tools for software development as it can be expanded with UML profile diagrams giving a wide functionality for modeling software applications.
 
 \subsubsection*{Acceleo}
 
@@ -365,7 +366,7 @@ Acceleo uses its own language in order to generate the source codes. Such langua
 
 Finally, it is import to remark that Acceleo can extract the information from different types of models, such as EMF, UML or DSL and it is able to generate different source languages such as C, Java or Python.
 
-\subsection{Object Constraint Language (OCL)}
+\subsubsection{Object Constraint Language (OCL)}
 
 Object Constraint Language (OCL) is a language to describe formal expressions in UML models. These expressions represent invariants, preconditions, postconditions, initializations, guards, derivation rules, as well as queries to objects in order to determine its state conditions. 
 
@@ -400,13 +401,13 @@ The different steps that have to be followed in order to generate a DIA with Str
 First of all, the user must create a UML model by exploiting a predefined language in a UML profile diagram. This language consists of four metaclasses:
 
 \begin{itemize}
-\item Class
-\item InformationFlow
-\item Model
-\item Package
+\item Class.
+\item InformationFlow.
+\item Model.
+\item Package.
 \end{itemize}
 
-The class metaclass represents the streaming operators stereotypes which are data sources, data sinks and data stream transformation. Moreover, this three stereotypes can be represented by means of several generalization. In the table \ref{StreamGen Classes} can be shown such stereotypes.
+The class metaclass represents the streaming operators stereotypes which are data sources, data sinks and data stream transformation. Moreover, this three stereotypes can be represented by means of several generalizations. In the table \ref{StreamGen Classes} can be shown such stereotypes.
 
 \begin{table}[h!]
 \centering
@@ -451,11 +452,11 @@ The last metaclass, the package, is extended by the stream data types stereotype
 
 \subsubsection*{Application code generation}
 
-Once the user has defined the UML model, the java application configuration must be run in order to generate the application codes. This is possible because of the development of an Acceleo code. This Acceleo program is able to take as inputs the generated UML model and, depending on the different stereotypes contained in such model, generate a DIA code for Flink or Spark.
+Once the user has defined the UML model, such model must be transformed into some application codes. This is possible because of the development of an Acceleo code. This Acceleo program is able to take as inputs the generated UML model and, depending on the different stereotypes contained in such model, generate a DIA code for Flink or Spark.
 
 \subsubsection*{Application execution}
 
-Currently, StreamGen allows code generation for Spark and Flink. As can be seen in its model stereotypes, also there is an intention to develop Apex codes in the future.
+Once the UML model is transformed into Flink or Spark codes, the application is ready to be executed. For such purpose, first of all, the data sources are prepared and the codes are sent to the master server in order to distribute the processing tasks. This last step is the same one that any code using a batch or a streaming platform for processing.
 
 \section{Discussion}
 

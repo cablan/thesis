@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  16 JUN 2020 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.1)  22 JUN 2020 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -734,21 +734,21 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [31]
-<images/./chapter2/compModelMethod.png, id=677, 1044.90375pt x 545.03625pt>
+<images/./chapter2/compModelMethod.png, id=681, 1044.90375pt x 545.03625pt>
 File: images/./chapter2/compModelMethod.png Graphic file (type png)
 <use images/./chapter2/compModelMethod.png>
 Package pdftex.def Info: images/./chapter2/compModelMethod.png  used on input l
-ine 311.
+ine 312.
 (pdftex.def)             Requested size: 313.47354pt x 163.51213pt.
  [32 <./images/./chapter2/compModelMethod.png>]
-<images/./chapter2/umlMetamodel.png, id=692, 1095.09125pt x 482.80376pt>
+<images/./chapter2/umlMetamodel.png, id=696, 1095.09125pt x 482.80376pt>
 File: images/./chapter2/umlMetamodel.png Graphic file (type png)
 <use images/./chapter2/umlMetamodel.png>
 Package pdftex.def Info: images/./chapter2/umlMetamodel.png  used on input line
- 330.
+ 331.
 (pdftex.def)             Requested size: 328.5299pt x 144.84224pt.
  [33 <./images/./chapter2/umlMetamodel.png>] [34]
-Overfull \hbox (4.1028pt too wide) in paragraph at lines 382--383
+Overfull \hbox (4.1028pt too wide) in paragraph at lines 383--384
 []\OT1/cmr/m/n/12 To pro-vide a platform-independent and graph-i-cal mod-el-ing
  lan-guage for stream-
  []
@@ -757,7 +757,7 @@ Overfull \hbox (4.1028pt too wide) in paragraph at lines 382--383
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [35] [36]
-Overfull \hbox (4.39447pt too wide) in paragraph at lines 468--469
+Overfull \hbox (4.39447pt too wide) in paragraph at lines 469--470
 []\OT1/cmr/m/n/12 Regarding to the sec-ond chal-lenge, cod-ing data-intensive a
 p-pli-ca-tions from scratch
  []
@@ -767,14 +767,14 @@ p-pli-ca-tions from scratch
 ]
 Chapter 3.
 [39]
-<images/./chapter3/greatSellerApp.png, id=736, 502.87875pt x 231.86626pt>
+<images/./chapter3/greatSellerApp.png, id=740, 502.87875pt x 231.86626pt>
 File: images/./chapter3/greatSellerApp.png Graphic file (type png)
 <use images/./chapter3/greatSellerApp.png>
 Package pdftex.def Info: images/./chapter3/greatSellerApp.png  used on input li
 ne 18.
 (pdftex.def)             Requested size: 251.43875pt x 115.93283pt.
  [40 <./images/./chapter3/greatSellerApp.png>]
-<images/./chapter3/greatSellerPriv.png, id=747, 653.44125pt x 330.23375pt>
+<images/./chapter3/greatSellerPriv.png, id=752, 653.44125pt x 330.23375pt>
 File: images/./chapter3/greatSellerPriv.png Graphic file (type png)
 <use images/./chapter3/greatSellerPriv.png>
 Package pdftex.def Info: images/./chapter3/greatSellerPriv.png  used on input l
@@ -792,13 +792,19 @@ Overfull \hbox (28.65857pt too wide) in paragraph at lines 52--53
 ee / master / src / main / java /
  []
 
-[41 <./images/./chapter3/greatSellerPriv.png>] [42]) (./chapters/chapter4.tex
-[43] [44
+[41 <./images/./chapter3/greatSellerPriv.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./chapters/chapter4.tex [42] [43] [44
 
 ]
 Chapter 4.
 [45]
-<images/./chapter4/umlProfile/PrivacyProtectingStreamUMLProfile.png, id=787, 15
+<images/./chapter4/umlProfile/PrivacyProtectingStreamUMLProfile.png, id=791, 15
 1.56625pt x 342.27875pt>
 File: images/./chapter4/umlProfile/PrivacyProtectingStreamUMLProfile.png Graphi
 c file (type png)
@@ -815,7 +821,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [46 <./images/./chapter4/umlProfile/PrivacyProtectingStreamUMLProfile.png>]
 [47]
-<images/./chapter4/umlProfile/PrivacyPolicyPackageUMLProfile.png, id=802, 126.4
+<images/./chapter4/umlProfile/PrivacyPolicyPackageUMLProfile.png, id=806, 126.4
 725pt x 201.75375pt>
 File: images/./chapter4/umlProfile/PrivacyPolicyPackageUMLProfile.png Graphic f
 ile (type png)
@@ -823,13 +829,13 @@ ile (type png)
 Package pdftex.def Info: images/./chapter4/umlProfile/PrivacyPolicyPackageUMLPr
 ofile.png  used on input line 91.
 (pdftex.def)             Requested size: 63.23608pt x 100.87662pt.
-<images/./chapter4/privPackageEx.png, id=805, 588.1975pt x 312.16624pt>
+<images/./chapter4/privPackageEx.png, id=809, 588.1975pt x 312.16624pt>
 File: images/./chapter4/privPackageEx.png Graphic file (type png)
 <use images/./chapter4/privPackageEx.png>
 Package pdftex.def Info: images/./chapter4/privPackageEx.png  used on input lin
 e 100.
 (pdftex.def)             Requested size: 294.09802pt x 156.08273pt.
-<images/./chapter4/umlProfile/PrivacyPolicyDataSourceUMLProfile.png, id=807, 56
+<images/./chapter4/umlProfile/PrivacyPolicyDataSourceUMLProfile.png, id=811, 56
 6.115pt x 502.87875pt>
 File: images/./chapter4/umlProfile/PrivacyPolicyDataSourceUMLProfile.png Graphi
 c file (type png)
@@ -847,7 +853,7 @@ Overfull \hbox (18.48657pt too wide) in paragraph at lines 150--167
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/./chapter4/scvSrc.png, id=825, 588.1975pt x 312.16624pt>
+<images/./chapter4/scvSrc.png, id=829, 588.1975pt x 312.16624pt>
 File: images/./chapter4/scvSrc.png Graphic file (type png)
 <use images/./chapter4/scvSrc.png>
 Package pdftex.def Info: images/./chapter4/scvSrc.png  used on input line 175.
@@ -970,7 +976,7 @@ ount,purchasedProduct'.
  []
 
 [62]
-<images/./chapter4/greatSellerDiagram/greatSellerDataTypes.png, id=1117, 1075.0
+<images/./chapter4/greatSellerDiagram/greatSellerDataTypes.png, id=1121, 1075.0
 1625pt x 475.7775pt>
 File: images/./chapter4/greatSellerDiagram/greatSellerDataTypes.png Graphic fil
 e (type png)
@@ -991,7 +997,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Underfull \vbox (badness 1881) has occurred while \output is active []
 
  [64 <./images/./chapter4/greatSellerDiagram/greatSellerDataTypes.png>] [65]
-<images/./chapter3/greatSellerStreamGen.png, id=1136, 1092.08pt x 547.04375pt>
+<images/./chapter3/greatSellerStreamGen.png, id=1140, 1092.08pt x 547.04375pt>
 File: images/./chapter3/greatSellerStreamGen.png Graphic file (type png)
 <use images/./chapter3/greatSellerStreamGen.png>
 Package pdftex.def Info: images/./chapter3/greatSellerStreamGen.png  used on in
@@ -1015,7 +1021,7 @@ Overfull \hbox (40.44313pt too wide) in paragraph at lines 219--236
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/./chapter5/privacyGreatSellerApp.png, id=1147, 1087.06125pt x 541.02126
+<images/./chapter5/privacyGreatSellerApp.png, id=1151, 1087.06125pt x 541.02126
 pt>
 File: images/./chapter5/privacyGreatSellerApp.png Graphic file (type png)
 <use images/./chapter5/privacyGreatSellerApp.png>
@@ -1029,7 +1035,7 @@ Overfull \hbox (8.02545pt too wide) in paragraph at lines 244--245
 
 [67 <./images/./chapter3/greatSellerStreamGen.png>] [68 <./images/./chapter5/pr
 ivacyGreatSellerApp.png>]
-<images/./chapter5/privacyPolicyPackage.png, id=1158, 511.9125pt x 208.78pt>
+<images/./chapter5/privacyPolicyPackage.png, id=1163, 511.9125pt x 208.78pt>
 File: images/./chapter5/privacyPolicyPackage.png Graphic file (type png)
 <use images/./chapter5/privacyPolicyPackage.png>
 Package pdftex.def Info: images/./chapter5/privacyPolicyPackage.png  used on in
@@ -1039,7 +1045,7 @@ put line 259.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [69 <./images/./chapter5/privacyPolicyPackage.png>] [70]
-<images/./chapter5/coolAnalystDataTypes.png, id=1176, 654.445pt x 251.94125pt>
+<images/./chapter5/coolAnalystDataTypes.png, id=1180, 654.445pt x 251.94125pt>
 File: images/./chapter5/coolAnalystDataTypes.png Graphic file (type png)
 <use images/./chapter5/coolAnalystDataTypes.png>
 Package pdftex.def Info: images/./chapter5/coolAnalystDataTypes.png  used on in
@@ -1051,13 +1057,13 @@ Overfull \hbox (31.31705pt too wide) in paragraph at lines 320--321
  []
 
 [71]
-<images/./chapter3/room1TempModel.png, id=1185, 462.528pt x 346.896pt>
+<images/./chapter3/room1TempModel.png, id=1189, 462.528pt x 346.896pt>
 File: images/./chapter3/room1TempModel.png Graphic file (type png)
 <use images/./chapter3/room1TempModel.png>
 Package pdftex.def Info: images/./chapter3/room1TempModel.png  used on input li
 ne 329.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
-<images/./chapter3/room2TempModel.png, id=1186, 462.528pt x 346.896pt>
+<images/./chapter3/room2TempModel.png, id=1190, 462.528pt x 346.896pt>
 File: images/./chapter3/room2TempModel.png Graphic file (type png)
 <use images/./chapter3/room2TempModel.png>
 Package pdftex.def Info: images/./chapter3/room2TempModel.png  used on input li
@@ -1081,7 +1087,7 @@ Overfull \hbox (3.25792pt too wide) in paragraph at lines 41--42
  []
 
 ) [74] (./chapters/filesAppen/doubleDT)
-<images/./chapter3/coolAnalystStreamGen.png, id=1252, 1107.13625pt x 541.02126p
+<images/./chapter3/coolAnalystStreamGen.png, id=1256, 1107.13625pt x 541.02126p
 t>
 File: images/./chapter3/coolAnalystStreamGen.png Graphic file (type png)
 <use images/./chapter3/coolAnalystStreamGen.png>
@@ -1098,7 +1104,7 @@ Overfull \hbox (40.44313pt too wide) in paragraph at lines 380--397
  [][] 
  []
 
-<images/./chapter5/coolAnalystPrivacyDIA.png, id=1265, 1111.15125pt x 549.05125
+<images/./chapter5/coolAnalystPrivacyDIA.png, id=1270, 1111.15125pt x 549.05125
 pt>
 File: images/./chapter5/coolAnalystPrivacyDIA.png Graphic file (type png)
 <use images/./chapter5/coolAnalystPrivacyDIA.png>
@@ -1128,26 +1134,26 @@ help / services / hpc /
  []
 
 [81]
-Overfull \hbox (283.91159pt too wide) in paragraph at lines 90--92
+Overfull \hbox (283.91159pt too wide) in paragraph at lines 94--96
 []$\OT1/cmtt/m/n/12 https : / / www . varonis . com / blog / we-[]need-[]to-[]t
 alk-[]about-[]gramm-[]leach-[]bliley-[]glb-[]the-[]safeguards-[]rule-[]will-[]b
 e-[]changing/$[] 
  []
 
 
-Overfull \hbox (1.03645pt too wide) in paragraph at lines 94--96
+Overfull \hbox (1.03645pt too wide) in paragraph at lines 98--100
 []$\OT1/cmtt/m/n/12 https : / / www . varonis . com / blog / california-[]consu
 mer-[]privacy-[]act-[]ccpa/$[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
 []$\OT1/cmtt/m/n/12 https : / / www . transentis . com / methods-[]techniques /
 
  []
 
 
-Overfull \hbox (13.38646pt too wide) in paragraph at lines 116--118
+Overfull \hbox (13.38646pt too wide) in paragraph at lines 120--122
 []$\OT1/cmtt/m/n/12 https : / / www . visual-[]paradigm . com / guide / uml-[]u
 nified-[]modeling-[]language /
  []
@@ -1157,35 +1163,35 @@ nified-[]modeling-[]language /
 
 ] [84] (./chapters/appendix1.tex
 Appendix A.
-<images/./chapter4/projPapyrus/Selection_001.png, id=1330, 458.46281pt x 377.91
+<images/./chapter4/projPapyrus/Selection_001.png, id=1335, 458.46281pt x 377.91
 188pt>
 File: images/./chapter4/projPapyrus/Selection_001.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_001.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_001.png  used 
 on input line 8.
 (pdftex.def)             Requested size: 137.5399pt x 113.37444pt.
-<images/./chapter4/projPapyrus/Selection_002.png, id=1332, 496.10344pt x 554.82
+<images/./chapter4/projPapyrus/Selection_002.png, id=1337, 496.10344pt x 554.82
 281pt>
 File: images/./chapter4/projPapyrus/Selection_002.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_002.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_002.png  used 
 on input line 17.
 (pdftex.def)             Requested size: 148.83217pt x 166.44812pt.
-<images/./chapter4/projPapyrus/Selection_003.png, id=1334, 500.62032pt x 554.07
+<images/./chapter4/projPapyrus/Selection_003.png, id=1339, 500.62032pt x 554.07
 pt>
 File: images/./chapter4/projPapyrus/Selection_003.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_003.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_003.png  used 
 on input line 26.
 (pdftex.def)             Requested size: 150.18726pt x 166.22227pt.
-<images/./chapter4/projPapyrus/Selection_004.png, id=1336, 694.7556pt x 384.958
+<images/./chapter4/projPapyrus/Selection_004.png, id=1341, 694.7556pt x 384.958
 2pt>
 File: images/./chapter4/projPapyrus/Selection_004.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_004.png>
 Package pdftex.def Info: images/./chapter4/projPapyrus/Selection_004.png  used 
 on input line 35.
 (pdftex.def)             Requested size: 208.42828pt x 115.48834pt.
-<images/./chapter4/projPapyrus/Selection_005.png, id=1338, 497.60907pt x 555.57
+<images/./chapter4/projPapyrus/Selection_005.png, id=1343, 497.60907pt x 555.57
 562pt>
 File: images/./chapter4/projPapyrus/Selection_005.png Graphic file (type png)
 <use images/./chapter4/projPapyrus/Selection_005.png>
@@ -1293,7 +1299,7 @@ Overfull \hbox (24.40788pt too wide) in paragraph at lines 14--15
 
 )) (./chapters/appendix3.tex [96]
 Appendix C.
-<images/./chapter4/javaCodesGeneration/Selection_001.png, id=1747, 472.01344pt 
+<images/./chapter4/javaCodesGeneration/Selection_001.png, id=1752, 472.01344pt 
 x 557.08125pt>
 File: images/./chapter4/javaCodesGeneration/Selection_001.png Graphic file (typ
 e png)
@@ -1301,7 +1307,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_001.pn
 g  used on input line 8.
 (pdftex.def)             Requested size: 141.60512pt x 167.12566pt.
-<images/./chapter4/javaCodesGeneration/Selection_002.png, id=1750, 597.23125pt 
+<images/./chapter4/javaCodesGeneration/Selection_002.png, id=1755, 597.23125pt 
 x 400.49625pt>
 File: images/./chapter4/javaCodesGeneration/Selection_002.png Graphic file (typ
 e png)
@@ -1309,7 +1315,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_002.pn
 g  used on input line 17.
 (pdftex.def)             Requested size: 179.17075pt x 120.1498pt.
-<images/./chapter4/javaCodesGeneration/Selection_003.png, id=1751, 597.23125pt 
+<images/./chapter4/javaCodesGeneration/Selection_003.png, id=1756, 597.23125pt 
 x 396.48125pt>
 File: images/./chapter4/javaCodesGeneration/Selection_003.png Graphic file (typ
 e png)
@@ -1317,7 +1323,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_003.pn
 g  used on input line 24.
 (pdftex.def)             Requested size: 179.17075pt x 118.94528pt.
-<images/./chapter4/javaCodesGeneration/Selection_004.png, id=1753, 602.25pt x 4
+<images/./chapter4/javaCodesGeneration/Selection_004.png, id=1758, 602.25pt x 4
 35.12563pt>
 File: images/./chapter4/javaCodesGeneration/Selection_004.png Graphic file (typ
 e png)
@@ -1325,7 +1331,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_004.pn
 g  used on input line 33.
 (pdftex.def)             Requested size: 180.67639pt x 130.53868pt.
-<images/./chapter4/javaCodesGeneration/Selection_005.png, id=1756, 347.79938pt 
+<images/./chapter4/javaCodesGeneration/Selection_005.png, id=1761, 347.79938pt 
 x 402.00188pt>
 File: images/./chapter4/javaCodesGeneration/Selection_005.png Graphic file (typ
 e png)
@@ -1333,7 +1339,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_005.pn
 g  used on input line 42.
 (pdftex.def)             Requested size: 104.3406pt x 120.60149pt.
-<images/./chapter4/javaCodesGeneration/Selection_006.png, id=1757, 603.0028pt x
+<images/./chapter4/javaCodesGeneration/Selection_006.png, id=1762, 603.0028pt x
  435.87843pt>
 File: images/./chapter4/javaCodesGeneration/Selection_006.png Graphic file (typ
 e png)
@@ -1347,7 +1353,7 @@ g  used on input line 49.
 hapter4/javaCodesGeneration/Selection_002.png> <./images/./chapter4/javaCodesGe
 neration/Selection_003.png> <./images/./chapter4/javaCodesGeneration/Selection_
 004.png> <./images/./chapter4/javaCodesGeneration/Selection_005.png>]
-<images/./chapter4/javaCodesGeneration/Selection_007.png, id=1774, 596.2275pt x
+<images/./chapter4/javaCodesGeneration/Selection_007.png, id=1779, 596.2275pt x
  395.4775pt>
 File: images/./chapter4/javaCodesGeneration/Selection_007.png Graphic file (typ
 e png)
@@ -1355,7 +1361,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_007.pn
 g  used on input line 58.
 (pdftex.def)             Requested size: 178.86963pt x 118.64417pt.
-<images/./chapter4/javaCodesGeneration/Selection_008.png, id=1775, 456.95718pt 
+<images/./chapter4/javaCodesGeneration/Selection_008.png, id=1780, 456.95718pt 
 x 400.49625pt>
 File: images/./chapter4/javaCodesGeneration/Selection_008.png Graphic file (typ
 e png)
@@ -1363,7 +1369,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_008.pn
 g  used on input line 65.
 (pdftex.def)             Requested size: 137.0882pt x 120.1498pt.
-<images/./chapter4/javaCodesGeneration/Selection_009.png, id=1776, 621.32124pt 
+<images/./chapter4/javaCodesGeneration/Selection_009.png, id=1781, 621.32124pt 
 x 413.545pt>
 File: images/./chapter4/javaCodesGeneration/Selection_009.png Graphic file (typ
 e png)
@@ -1371,7 +1377,7 @@ e png)
 Package pdftex.def Info: images/./chapter4/javaCodesGeneration/Selection_009.pn
 g  used on input line 72.
 (pdftex.def)             Requested size: 186.39781pt x 124.06445pt.
-<images/./chapter4/javaCodesGeneration/Selection_010.png, id=1778, 764.10469pt 
+<images/./chapter4/javaCodesGeneration/Selection_010.png, id=1783, 764.10469pt 
 x 484.05844pt>
 File: images/./chapter4/javaCodesGeneration/Selection_010.png Graphic file (typ
 e png)
@@ -1391,27 +1397,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
 (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: FE6E035172AB8442C2C0DEBAB8F80EF7;4678.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: E6333DF8DEBACE846A4CF2D6DD6C6BA3;4678
-(rerunfilecheck)             After:  EEBD0A50B24AE54F77695291D9F3743C;4668.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 9295 strings out of 492982
- 138346 string characters out of 6134897
- 254488 words of memory out of 5000000
+ 9296 strings out of 492982
+ 138359 string characters out of 6134897
+ 254511 words of memory out of 5000000
  11762 multiletter control sequences out of 15000+600000
  10399 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1426,10 +1423,10 @@ ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/eurosy
 m/feymr10.pfb>
-Output written on main.pdf (100 pages, 1840549 bytes).
+Output written on main.pdf (100 pages, 1842965 bytes).
 PDF statistics:
- 2011 PDF objects out of 2073 (max. 8388607)
- 1821 compressed objects within 19 object streams
- 892 named destinations out of 1000 (max. 500000)
+ 2016 PDF objects out of 2073 (max. 8388607)
+ 1826 compressed objects within 19 object streams
+ 893 named destinations out of 1000 (max. 500000)
  672 words of extra memory for PDF output out of 10000 (max. 10000000)
 

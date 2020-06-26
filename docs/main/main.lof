@@ -8,36 +8,38 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Great Seller Privacy Dataflow Model}}{41}{figure.3.2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces PrivacyProtectingStream UML Profile}}{46}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces PrivacyPolicyPackage UML Profile}}{48}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces PrivacyPolicyPackage Example}}{48}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces PrivacyPolicyDataSources Classes UML Profile}}{49}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces PrivacySources Example}}{51}{figure.4.5}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Privacy and Non-Privacy Aware Stream}}{46}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces PrivacyPolicyPackage UML Profile}}{48}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces PrivacyPolicyPackage Example}}{49}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces PrivacyPolicyDataSources Classes UML Profile}}{49}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Dataflow Model Context Stream Generation}}{51}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces PrivacySources Example}}{52}{figure.4.7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Great Seller Data Types Package}}{64}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Great Seller StreamGen DIA}}{67}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Great Seller Privacy Aware StreamGen DIA}}{68}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Great Seller Privacy Policy Package}}{69}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Cool Analyst Data Types Package}}{72}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Temperature Chamber 1 Model}}{73}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Temperature Chamber 2 Model}}{73}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Cool Analyst StreamGen DIA}}{76}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Cool Analyst Privacy Aware StreamGen DIA}}{77}{figure.5.9}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces New Papyrus Project}}{85}{figure.1.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Architecture Context}}{86}{figure.1.A.2}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Project Name Definition}}{86}{figure.1.A.3}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Representation Kind}}{86}{figure.1.A.4}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Papyrus Project Definition}}{87}{figure.1.A.5}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Great Seller Data Types Package}}{66}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Great Seller StreamGen DIA}}{69}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Great Seller Privacy Aware StreamGen DIA}}{70}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Great Seller Privacy Policy Package}}{71}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Cool Analyst Data Types Package}}{74}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Temperature Chamber 1 Model}}{75}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Temperature Chamber 2 Model}}{75}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Cool Analyst StreamGen DIA}}{78}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Cool Analyst Privacy Aware StreamGen DIA}}{79}{figure.5.9}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Java Project Creation}}{97}{figure.1.C.1}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Java Project Initial Structure}}{98}{figure.1.C.2}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Java Project Final Structure}}{98}{figure.1.C.3}
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Maven Project Structure Creation}}{98}{figure.1.C.4}
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Maven Project Source Folder Creation}}{98}{figure.1.C.5}
-\contentsline {figure}{\numberline {C.6}{\ignorespaces Maven Project Properties}}{99}{figure.1.C.6}
-\contentsline {figure}{\numberline {C.7}{\ignorespaces Maven Project Structure}}{99}{figure.1.C.7}
-\contentsline {figure}{\numberline {C.8}{\ignorespaces POM File Creation}}{99}{figure.1.C.8}
-\contentsline {figure}{\numberline {C.9}{\ignorespaces Final Maven Project}}{100}{figure.1.C.9}
-\contentsline {figure}{\numberline {C.10}{\ignorespaces Run Configuration}}{100}{figure.1.C.10}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces New Papyrus Project}}{87}{figure.1.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Architecture Context}}{88}{figure.1.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Project Name Definition}}{88}{figure.1.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Representation Kind}}{88}{figure.1.A.4}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Papyrus Project Definition}}{89}{figure.1.A.5}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Java Project Creation}}{99}{figure.1.C.1}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Java Project Initial Structure}}{100}{figure.1.C.2}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Java Project Final Structure}}{100}{figure.1.C.3}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Maven Project Structure Creation}}{100}{figure.1.C.4}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Maven Project Source Folder Creation}}{100}{figure.1.C.5}
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Maven Project Properties}}{101}{figure.1.C.6}
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Maven Project Structure}}{101}{figure.1.C.7}
+\contentsline {figure}{\numberline {C.8}{\ignorespaces POM File Creation}}{101}{figure.1.C.8}
+\contentsline {figure}{\numberline {C.9}{\ignorespaces Final Maven Project}}{102}{figure.1.C.9}
+\contentsline {figure}{\numberline {C.10}{\ignorespaces Run Configuration}}{102}{figure.1.C.10}

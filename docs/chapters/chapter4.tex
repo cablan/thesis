@@ -1,9 +1,20 @@
 \chapter[Solution Design]{Solution Design}
 \label{sec:chapter4}
 
-% Make an introduction for this chapter
+The development of DIAs has generated new lines of investigation. This is the case of researches about how privacy policies can be applied to data-intensive applications. Moreover, with the aim to make the implementation of this kind of tools more efficient, metamodeling techniques based on UML language have been developed. One example of this kind of metamodeling tools for DIA development is StreamGen.
+
+In this document a new UML model to implement privacy-aware DIAs is presented. Such model is developed for the model-driven approach StreamGen by means of Papyrus which allows to improve the current profile of StreamGen in order to extend its language and make the model-driven approach privacy-aware.
+
+Moreover, a translation from the developed UML model to Flink code is made by means of Acceleo. The aim with such translation is to reach Flink privacy codes from the developed UML privacy language independently of the implemented DIA.
+
+In order to develop this two points, first of all, in the section \nameref{Privacy Policy Modeling Language}, the UML privacy language is explained. Such language consist of two main parts: Protected Streams Definition and Privacy External Sources Definition. In the first part all those streams which are affected by a privacy policy are defined by means of the application of a new stereotype with some meaningful properties over the corresponding streams. Secondly, the SCV source and the privacy rules source are introduced in the application by means of two data sources which are contained in a package in order to make the approach more intuitive to DIA developers.
+
+On the other hand, in order to make the translation from the UML language to the Flink codes, in section \nameref{Privacy Policy Code Generation}, all the required algorithms for such purpose are presented. These algorithms are written in Acceleo language and they are added to the already existing algorithms in StreamGen. This is why the files where they are added are remarked as well.
+
+Finally, a discussion is made explaining some of the properties reached by means of the developed privacy approach.
 
 \section{Privacy Policy Modeling Language}
+\label{Privacy Policy Modeling Language}
 
 StreamGen uses its own language in order to develop DIAs. In this document, StreamGen language is expanded in order to allow users to protect the streams with privacy policies. This expansion consists of a new data stream stereotype in order to specify which streams are protected and with which privacy policy type (VCP or DSEP). Moreover, the sources that generate the Static Context Variables (SCV) and the privacy rules written by the users are also added to the StreamGen language. SCVs are possibly supplied by different sources whilst privacy policies are supposed to be supplied only by one data source type. These sources are inserted in a package which represents the external sources of the DIA following the already existing approach of the StreamGen data types.
 
@@ -217,6 +228,8 @@ Following the approach of DataSource stereotype, a new stereotype called Privacy
 This stereotype follows the approach of the TextFileSource stereotype as happened with the PrivContTextFileSource stereotype. However, it is supposed to introduce a YAML file instead of a text file to the dataflow application.
 
 \section{Privacy Policy Code Generation}
+\label{Privacy Policy Code Generation}
+
 
 StreamGen exploits Acceleo in order to compile StreamGen language into Spark or Flink languages, depending on the target platform of the dataflow application. In this document, Acceleo is used in order to compile the StreamGen language explained above only into Flink code. Moreover, the developed privacy policy language must be translated in a general way allowing that, independently of the DIA, Flink code must not be modified by the application developer.
 
@@ -349,12 +362,15 @@ First of all, the stream declared in the Streams Declaration part is called and 
 
 \lstinputlisting{./chapters/filesAppen/callDeclaration}
 
+\section{Discussion}
 
+The evaluation of the developed privacy model is made in the following chapter in order to check if the model accomplishes the goals of this document. However, some conclusions can be extracted at this point.
 
+First of all, the developed privacy approach does not specify which streams are affected by a past condition. This casuistry is given due to the fact that the YAML file contains all the privacy rules which affect to each stream, this privacy rules are composed of the SCV, the simple conditions and the past conditions then, full filling the YAML file by means of the declaration step, the identification of those streams where past conditions are applied is not required. This approach makes the privacy model easier to apply by DIA developers with few knowledge about privacy policies.
 
+Secondly, in spite of the developed model does not connect the privacy sources to any transformation by means of a stream as it happens in \cite{privacypoliciesarticle}, the proposed privacy package allows to easily understand that SCVs and privacy rules are introduced in the application. Moreover, this approach gives security to the DIA developer as protected streams cannot be seen unprotected at any point of the UML model.
 
-
-
+However, the model must accomplish the goals of this document in order to be well-developed this why in the following chapter the evaluation of the privacy approach is made.
 
 
 
